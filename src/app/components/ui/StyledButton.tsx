@@ -43,6 +43,12 @@ const Button = styled.button`
   font-size: 30px;
   line-height: normal;
   letter-spacing: 1.5px;
+
+  @media (max-width: 768px) {
+    width: 236px;
+    height: 34px;
+    font-size: 18px;
+  }
 `;
 
 const StyledLink = styled.a`
