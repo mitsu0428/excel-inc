@@ -11,21 +11,21 @@ export const Component = () => {
       <CardBody>
         <Headtag.H3>News</Headtag.H3>
         <Image
-          src="/assets/logo-big.png"
+          src="/1枚目トップの画像.png"
           alt="Frontend Radio"
         />
       </CardBody>
       <CardBody>
         <Headtag.H3>News</Headtag.H3>
         <Image
-          src="/assets/logo-big.png"
+          src="/1枚目トップの画像.png"
           alt="Frontend Radio"
         />
       </CardBody>
       <CardBody>
         <Headtag.H3>News</Headtag.H3>
         <Image
-          src="/assets/logo-big.png"
+          src="/1枚目トップの画像.png"
           alt="Frontend Radio"
         />
       </CardBody>
@@ -39,7 +39,9 @@ const Card = styled.div`
   flex-direction: row;
   justify-content: space-between;
   padding: 32px;
+  gap: 8px;
 `;
+
 const CardBody = styled.div``;
 
 const Image = styled.img`

@@ -3,6 +3,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import * as Font from "../../styles/NextFont";
+
 export const Component = () => {
   return (
     <Container>
@@ -12,20 +14,30 @@ export const Component = () => {
       />
 
       <TextAreaLeft>
-        <TitleH2_About> ABOUT</TitleH2_About>
-        <TitleH2_Company>EXCEL inc.</TitleH2_Company>
-        <TitleH2_Concept>BEYOND EXPECTATIONS AND IMAGINATIONS.</TitleH2_Concept>
+        <TitleH2_About className={Font.Font.CustomJosefinSans.className}>
+          ABOUT
+        </TitleH2_About>
+        <TitleH2_Company className={Font.Font.CustomJosefinSans.className}>
+          EXCEL inc.
+        </TitleH2_Company>
+        <TitleH2_Concept className={Font.Font.CustomJosefinSansThin.className}>
+          BEYOND EXPECTATIONS AND IMAGINATIONS.
+        </TitleH2_Concept>
       </TextAreaLeft>
 
       <TextAreaRight>
         <TextRight>
-          革新的でワクワクする、それでいてクールなものを追求し、常に私たちが最前線で体現していく。
+          革新的でワクワクする要素を探究しながら、常にクールに。
         </TextRight>
         <TextRight>
-          明日さえも予測不可能な現代社会で、誰よりも深く思考し、
+          未来に翔ける先駆者として、私たちが道を切り開いていこう。
         </TextRight>
+        <br />
+        <TextRight>明日さえも予測不可能な現代社会で、</TextRight>
+        <TextRight>「誰よりも深く思考し」</TextRight>
+        <TextRight>「誰よりも熱く行動し続け」</TextRight>
         <TextRight>
-          誰よりも熱く行動し続け、クライアントの期待と想像を超えるサービスを提供していきます。
+          世の中の期待と想像を超えるサービスを提供していきます。
         </TextRight>
       </TextAreaRight>
     </Container>
@@ -62,7 +74,7 @@ const TextAreaRight = styled.div`
   right: 0;
   padding: 30px;
   text-align: left;
-  width: 432px;
+  width: 573px;
   word-wrap: break-word;
   @media (max-width: 768px) {
     width: 303px;
@@ -74,7 +86,7 @@ const TitleH2_About = styled.h2`
   text-align: left;
   font-weight: 600;
   color: #fff;
-  letter-spacing: 14px;
+  letter-spacing: 10px;
   margin: 0;
   opacity: 0.3;
   @media (max-width: 768px) {
@@ -88,7 +100,7 @@ const TitleH2_Company = styled.h2`
   text-align: left;
   font-weight: 600;
   color: #fff;
-  letter-spacing: 14px;
+  letter-spacing: 10px;
   margin: 0;
   @media (max-width: 768px) {
     font-size: 54px;
@@ -115,9 +127,10 @@ const TextRight = styled.p`
   color: #fff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 20px;
-  line-height: normal;
   font-weight: 200;
-  letter-spacing: 4px;
+  font-family: YuGothic;
+  line-height: 25px;
+  letter-spacing: 0.4px;
 
   @media (max-width: 768px) {
     font-size: 14px;

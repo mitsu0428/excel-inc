@@ -7,6 +7,13 @@ const CustomGafata = Gafata({
   preload: false,
 });
 
+const CustomJosefinSansThin = Josefin_Sans({
+  weight: "200",
+  style: "normal",
+  display: "swap",
+  preload: false,
+});
+
 const CustomJosefinSans = Josefin_Sans({
   weight: "400",
   style: "normal",
@@ -23,6 +30,7 @@ const CustomJosefinSansThick = Josefin_Sans({
 
 export const Font = {
   CustomGafata,
+  CustomJosefinSansThin,
   CustomJosefinSans,
   CustomJosefinSansThick,
 };
