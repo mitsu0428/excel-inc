@@ -8,10 +8,12 @@ import * as Font from "../../styles/NextFont";
 export const Component = () => {
   return (
     <Container>
-      <StyledImage
-        src="/2枚目の画像.png"
-        alt="2枚目のトップ画像"
-      />
+      <ImageWrap>
+        <StyledImage
+          src="/2枚目の画像.png"
+          alt="2枚目のトップ画像"
+        />
+      </ImageWrap>
 
       <TextAreaLeft>
         <TitleH2_About className={Font.Font.CustomJosefinSans.className}>
@@ -49,11 +51,17 @@ const Container = styled.div`
   width: 100%;
 `;
 
+const ImageWrap = styled.div`
+  width: 100%;
+`;
+
 const StyledImage = styled.img`
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   @media (min-width: 768px) {
     height: 100vh;
-    width: 100%;
   }
 `;
 
@@ -89,6 +97,7 @@ const TitleH2_About = styled.h2`
   letter-spacing: 10px;
   margin: 0;
   opacity: 0.3;
+
   @media (max-width: 768px) {
     font-size: 34px;
     line-height: 55px;
@@ -102,6 +111,7 @@ const TitleH2_Company = styled.h2`
   color: #fff;
   letter-spacing: 10px;
   margin: 0;
+
   @media (max-width: 768px) {
     font-size: 54px;
     line-height: 55px;
