@@ -8,13 +8,13 @@ import { useMediaQuery } from "react-responsive";
 import * as Font from "../../styles/NextFont";
 
 type renderMenuProps = {
-  isSmartsPhone: boolean;
+  issmartsphone: boolean;
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export const Component = () => {
-  const isSmartsPhone = useMediaQuery({
+  const issmartsphone = useMediaQuery({
     query: "(max-width: 768px)",
   });
   const [isOpen, setIsOpen] = React.useState(false);
@@ -24,17 +24,17 @@ export const Component = () => {
       <StyledImage
         src="/assets/logo.png"
         alt="Excel inc."
-        width={isSmartsPhone ? 59 : 78}
-        height={isSmartsPhone ? 44 : 58}
+        width={issmartsphone ? 59 : 78}
+        height={issmartsphone ? 44 : 58}
         layout={"absoluteFillObject"}
       />
-      {renderMenu(isSmartsPhone, isOpen, setIsOpen)}
+      {renderMenu(issmartsphone, isOpen, setIsOpen)}
     </Wrapper>
   );
 };
 
 const renderMenu = (
-  isSmartsPhone: boolean,
+  issmartsphone: boolean,
   isOpen: boolean,
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 ) => {

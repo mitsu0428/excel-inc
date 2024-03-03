@@ -5,14 +5,14 @@ import { useMediaQuery } from "react-responsive";
 import * as Font from "../../styles/NextFont";
 
 export const Component = () => {
-  const isSmartsPhone = useMediaQuery({
+  const issmartsphone = useMediaQuery({
     query: "(max-width: 768px)",
   });
 
   return (
     <Container>
       <TitleH2_BusinessDomain
-        isSmartsPhone={isSmartsPhone}
+        issmartsphone={issmartsphone}
         className={Font.Font.CustomGafata.className}
       >
         BUSINESS DOMAIN
@@ -20,7 +20,7 @@ export const Component = () => {
 
       <Wrap>
         <TitleH3_Description
-          isSmartsPhone={isSmartsPhone}
+          issmartsphone={issmartsphone}
           className={Font.Font.CustomGafata.className}
         >
           クリエイティブのチカラで、
@@ -31,32 +31,32 @@ export const Component = () => {
 
       <TextArea>
         <Description
-          isSmartsPhone={isSmartsPhone}
+          issmartsphone={issmartsphone}
           className={Font.Font.CustomGafata.className}
         >
           課題を整理し、正しく理解する。
         </Description>
         <Description
-          isSmartsPhone={isSmartsPhone}
+          issmartsphone={issmartsphone}
           className={Font.Font.CustomGafata.className}
         >
           解決方法を見つける。
         </Description>
         <Description
-          isSmartsPhone={isSmartsPhone}
+          issmartsphone={issmartsphone}
           className={Font.Font.CustomGafata.className}
         >
           具体的な形、仕組みとしてアウトプットを構築する。
         </Description>
         <Description
-          isSmartsPhone={isSmartsPhone}
+          issmartsphone={issmartsphone}
           className={Font.Font.CustomGafata.className}
         >
           時流の変化にあわせて変化を続ける。
         </Description>
         <br />
         <Description
-          isSmartsPhone={isSmartsPhone}
+          issmartsphone={issmartsphone}
           className={Font.Font.CustomGafata.className}
         >
           ビジネスを推進するすべての流れを私たちがプロデュースします。
@@ -83,8 +83,8 @@ const TextArea = styled.div`
   line-height: 40px;
 `;
 
-const TitleH2_BusinessDomain = styled.h2<{ isSmartsPhone: boolean }>`
-  font-size: ${({ isSmartsPhone }) => (isSmartsPhone ? "25px" : "70px")};
+const TitleH2_BusinessDomain = styled.h2<{ issmartsphone: boolean }>`
+  font-size: ${({ issmartsphone }) => (issmartsphone ? "25px" : "70px")};
   text-align: center;
   font-weight: 600;
   color: #fff;
@@ -92,8 +92,8 @@ const TitleH2_BusinessDomain = styled.h2<{ isSmartsPhone: boolean }>`
   margin-top: 138px;
 `;
 
-const TitleH3_Description = styled.h3<{ isSmartsPhone: boolean }>`
-  font-size: ${({ isSmartsPhone }) => (isSmartsPhone ? "18px" : "40px")};
+const TitleH3_Description = styled.h3<{ issmartsphone: boolean }>`
+  font-size: ${({ issmartsphone }) => (issmartsphone ? "18px" : "40px")};
   text-align: center;
   font-weight: 600;
   margin: 0;
@@ -101,8 +101,8 @@ const TitleH3_Description = styled.h3<{ isSmartsPhone: boolean }>`
   margin-top: 64px;
 `;
 
-const Description = styled.p<{ isSmartsPhone: boolean }>`
-  font-size: ${({ isSmartsPhone }) => (isSmartsPhone ? "10px" : "20px")};
+const Description = styled.p<{ issmartsphone: boolean }>`
+  font-size: ${({ issmartsphone }) => (issmartsphone ? "10px" : "20px")};
   text-align: left;
   font-weight: 600;
   text-align: center;

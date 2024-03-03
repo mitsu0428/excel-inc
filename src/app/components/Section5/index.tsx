@@ -1,23 +1,21 @@
 import React from "react";
-import Image from "next/image";
 import styled from "styled-components";
 
 import { useMediaQuery } from "react-responsive";
 
-import * as Headtag from "../ui/StyledH";
 import * as StyledButton from "../ui/StyledButton";
 import * as NewsCard from "../ui/NewsCard";
 import * as Font from "../../styles/NextFont";
 
 export const Component = () => {
-  const isSmartsPhone = useMediaQuery({
+  const issmartsphone = useMediaQuery({
     query: "(max-width: 768px)",
   });
 
   return (
     <Container>
       <TitleH2_News
-        isSmartsPhone={isSmartsPhone}
+        issmartsphone={issmartsphone}
         className={Font.Font.CustomGafata.className}
       >
         News
@@ -38,8 +36,8 @@ const Container = styled.div`
   height: 100%;
 `;
 
-const TitleH2_News = styled.h2<{ isSmartsPhone: boolean }>`
-  font-size: ${({ isSmartsPhone }) => (isSmartsPhone ? "25px" : "70px")};
+const TitleH2_News = styled.h2<{ issmartsphone: boolean }>`
+  font-size: ${({ issmartsphone }) => (issmartsphone ? "25px" : "70px")};
   text-align: center;
   font-weight: 600;
   color: #fff;

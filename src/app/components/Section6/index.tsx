@@ -1,28 +1,36 @@
 import React from "react";
 import styled from "styled-components";
 
-import * as Headtag from "../ui/StyledH";
+import { useMediaQuery } from "react-responsive";
+
 import * as Font from "../../styles/NextFont";
 
 // MEMO: スマホ画面のようなモーダルを表示するためのコンポーネント
 export const Component = () => {
-  return (
-    <Container>
-      <MobileView>
-        <MobileBorder />
-        <Headtag.H2B_WithUnderLine className={Font.Font.CustomGafata.className}>
-          OUR COMPANY
-        </Headtag.H2B_WithUnderLine>
+  const issmartsphone = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
 
-        <Contents>
-          <ContentsLeft>
-            <ContentsText>
+  return (
+    <Container issmartsphone={issmartsphone}>
+      <MobileView issmartsphone={issmartsphone}>
+        <MobileBorder />
+        <TitleH2_MobileView
+          issmartsphone={issmartsphone}
+          className={Font.Font.CustomGafata.className}
+        >
+          OUR COMPANY
+        </TitleH2_MobileView>
+
+        <Contents issmartsphone={issmartsphone}>
+          <ContentsLeft issmartsphone={issmartsphone}>
+            <ContentsText issmartsphone={issmartsphone}>
               [会社名]
               <br />
               EXCEL Inc.（エクセルインク）
             </ContentsText>
 
-            <ContentsText>
+            <ContentsText issmartsphone={issmartsphone}>
               [所在地]
               <br />
               〒107-0062
@@ -32,19 +40,19 @@ export const Component = () => {
               WISE 512ビル 305
             </ContentsText>
 
-            <ContentsText>
+            <ContentsText issmartsphone={issmartsphone}>
               [電話番号]
               <br />
               03-6824-4903
             </ContentsText>
 
-            <ContentsText>
+            <ContentsText issmartsphone={issmartsphone}>
               [資本金]
               <br />
               500万円
             </ContentsText>
 
-            <ContentsText>
+            <ContentsText issmartsphone={issmartsphone}>
               [事業内容]
               <br />
               ・ムービー制作事業
@@ -61,28 +69,31 @@ export const Component = () => {
             </ContentsText>
           </ContentsLeft>
 
-          <ContentsRight>何かしらのコンテンツが入る？？</ContentsRight>
+          <ContentsRight issmartsphone={issmartsphone}>
+            何かしらのコンテンツが入る？？
+          </ContentsRight>
         </Contents>
       </MobileView>
     </Container>
   );
 };
 
-const Container = styled.div`
+const Container = styled.div<{ issmartsphone: boolean }>`
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 50px;
+  padding: ${({ issmartsphone }) => (issmartsphone ? "33px" : "50px")};
+  margin-top: 138px;
   width: 100%;
   height: 100%;
 `;
 
-const MobileView = styled.div`
-  width: 1181px;
-  height: 1474px;
-  border-radius: 89px;
+const MobileView = styled.div<{ issmartsphone: boolean }>`
+  width: ${({ issmartsphone }) => (issmartsphone ? "324px" : "1181px")};
+  height: ${({ issmartsphone }) => (issmartsphone ? "760px" : "1474px")};
+  border-radius: ${({ issmartsphone }) => (issmartsphone ? "52px" : "89px")};
   background: #f9f9f9;
-  padding: 50px;
+  padding: ${({ issmartsphone }) => (issmartsphone ? "50px" : "20px")};
 `;
 
 const MobileBorder = styled.div`
@@ -94,38 +105,46 @@ const MobileBorder = styled.div`
   background: #d9d9d9;
 `;
 
-const Contents = styled.div`
+const Contents = styled.div<{ issmartsphone: boolean }>`
   display: flex;
   justify-content: center;
   align-items: top;
   width: 100%;
   height: 100%;
-  gap: 44px;
+  gap: ${({ issmartsphone }) => (issmartsphone ? "17px" : "44px")};
 `;
 
-const ContentsRight = styled.div`
+const ContentsRight = styled.div<{ issmartsphone: boolean }>`
   padding: 16px;
-  width: 50%;
-  height: 874px;
   text-align: center;
-  height: 797px;
+  width: 50%;
+  height: ${({ issmartsphone }) => (issmartsphone ? "276px" : "797px")};
   background: #d9d9d9;
 `;
 
-const ContentsLeft = styled.div`
+const ContentsLeft = styled.div<{ issmartsphone: boolean }>`
   padding: 16px;
-  width: 50%;
-  height: 874px;
-  border-radius: 50px;
   text-align: center;
+  width: 50%;
+  height: ${({ issmartsphone }) => (issmartsphone ? "276px" : "797px")};
 `;
 
-const ContentsText = styled.p`
+const ContentsText = styled.p<{ issmartsphone: boolean }>`
   color: #000;
   font-family: YuGothic;
-  font-size: 25px;
+  font-size: ${({ issmartsphone }) => (issmartsphone ? "8px" : "25px")};
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   text-align: left;
+`;
+
+const TitleH2_MobileView = styled.h2<{ issmartsphone: boolean }>`
+  font-size: ${({ issmartsphone }) => (issmartsphone ? "25px" : "70px")};
+  text-align: center;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: 14px;
+  margin-top: 138px;
+  text-decoration: underline;
 `;
