@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 import * as Font from "../styles/NextFont";
 
-export const Component = () => {
-  const [formData, setFormData] = useState({
+export default function Contact() {
+  const [formData, setFormData] = React.useState({
     name: "",
     company: "",
     email: "",
@@ -92,7 +92,7 @@ export const Component = () => {
       </Form>
     </Wrap>
   );
-};
+}
 
 const Wrap = styled.main`
   display: flex;
@@ -208,5 +208,3 @@ const Divider = styled.div`
   width: 303px;
   height: 1px;
 `;
-
-export default Component;
