@@ -38,7 +38,10 @@ export const Component = () => {
       <Text>
         マーケティング支援やサービスに関するご相談など、お問い合わせはこちらのフォームより受け付けております
       </Text>
-      <form onSubmit={handleSubmit}>
+
+      <Divider />
+
+      <Form onSubmit={handleSubmit}>
         <SubWrap>
           <TextLarge>
             Your Name
@@ -85,8 +88,8 @@ export const Component = () => {
             />
           </TextLarge>
         </SubWrap>
-        <button type="submit">Submit</button>
-      </form>
+        <Button type="submit">Submit</Button>
+      </Form>
     </Wrap>
   );
 };
@@ -107,7 +110,7 @@ const SubWrap = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: #383838;
-  width: 300px;
+  width: 450px;
 `;
 
 const TitleH2_Contact = styled.h2`
@@ -151,6 +154,8 @@ const Text = styled.p`
   }
 `;
 
+const Form = styled.form``;
+
 const Input = styled.input`
   border: none;
   border-bottom: 1px solid #000;
@@ -187,6 +192,21 @@ const TextArea = styled.textarea`
   @media (max-width: 768px) {
     font-size: 8px;
   }
+`;
+
+const Button = styled.button`
+  width: 167px;
+  height: 46px;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #383838;
+`;
+
+const Divider = styled.div`
+  background: #fff;
+  margin: 55px 0;
+  width: 303px;
+  height: 1px;
 `;
 
 export default Component;
