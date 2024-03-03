@@ -13,9 +13,11 @@ export const Component = () => {
       <TitleH2_Service className={Font.Font.CustomGafata.className}>
         SERVICE & PRODUCT
       </TitleH2_Service>
+
       <Slider.Component />
+
       <StyledButton.Component
-        linkTo="/"
+        linkTo="/contact"
         text="CONTACT→"
       />
     </Container>

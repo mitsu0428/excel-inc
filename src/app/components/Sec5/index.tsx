@@ -15,8 +15,9 @@ export const Component = () => {
       </TitleH2_News>
 
       <NewsCard.Component />
+
       <StyledButton.Component
-        linkTo="/"
+        linkTo="/contact"
         text="CONTACT→"
       />
     </Container>

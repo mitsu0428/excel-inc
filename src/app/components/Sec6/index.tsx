@@ -62,7 +62,7 @@ export const Component = () => {
             </ContentsText>
           </ContentsLeft>
 
-          <ContentsRight>何かしらのコンテンツが入る？？</ContentsRight>
+          <ContentsRight></ContentsRight>
         </Contents>
       </MobileView>
     </Container>
@@ -73,13 +73,8 @@ const Container = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 50px;
-  margin-top: 138px;
   width: 100%;
   height: 100%;
-  @media (max-width: 768px) {
-    padding: 33px;
-  }
 `;
 
 const MobileView = styled.div`
@@ -88,11 +83,14 @@ const MobileView = styled.div`
   border-radius: 89px;
   background: #f9f9f9;
   padding: 50px;
+  margin-top: 138px;
+
   @media (max-width: 768px) {
     width: 324px;
     border-radius: 52px;
     background: #f9f9f9;
     padding: 20px;
+    margin-top: 80px;
   }
 `;
 
