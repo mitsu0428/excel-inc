@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import styled from "styled-components";
 import { useMediaQuery } from "react-responsive";
 
@@ -12,14 +11,14 @@ export const Component = () => {
 
   return (
     <Container>
-      <Image
+      <StyledImage
         src={issmartsphone ? "/2枚目の画像SP.png" : "/2枚目の画像.png"}
         alt="2枚目のトップ画像"
         width={issmartsphone ? 390 : 1279}
         height={issmartsphone ? 844 : 832}
       />
 
-      <TextAreaLeft issmartsphone={issmartsphone}>
+      <TextAreaLeft>
         <TitleH2_About issmartsphone={issmartsphone}> ABOUT</TitleH2_About>
         <TitleH2_Company issmartsphone={issmartsphone}>
           EXCEL inc.
@@ -50,7 +49,12 @@ const Container = styled.div`
   height: 100%;
 `;
 
-const TextAreaLeft = styled.div<{ issmartsphone: boolean }>`
+const StyledImage = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
+const TextAreaLeft = styled.div`
   position: absolute;
   top: 0;
   left: 0;

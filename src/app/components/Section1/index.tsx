@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import styled from "styled-components";
 
 import * as Font from "../../styles/NextFont";
@@ -9,11 +8,9 @@ import * as Font from "../../styles/NextFont";
 export const Component = () => {
   return (
     <Container>
-      <Image
+      <StyledImage
         src="/1枚目トップの画像.png"
         alt="1枚目のトップ画像"
-        width={1279}
-        height={832}
       />
 
       <TextArea>
@@ -31,6 +28,11 @@ export const Component = () => {
 
 const Container = styled.div`
   position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+const StyledImage = styled.img`
   width: 100%;
   height: 100%;
 `;

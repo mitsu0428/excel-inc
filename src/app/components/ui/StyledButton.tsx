@@ -14,12 +14,12 @@ export const Component = (props: Props) => {
   return (
     <Wrap>
       <Button>
-        <a
+        <StyledLink
           className={Font.Font.CustomJosefinSans.className}
           href={linkToPage}
         >
           {props.text}
-        </a>
+        </StyledLink>
       </Button>
     </Wrap>
   );
@@ -43,4 +43,9 @@ const Button = styled.button`
   font-size: 30px;
   line-height: normal;
   letter-spacing: 1.5px;
+`;
+
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: #fff;
 `;
