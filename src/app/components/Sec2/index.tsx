@@ -11,10 +11,17 @@ export const Component = () => {
 
   return (
     <Container>
-      <StyledImage
-        src={issmartsphone ? "/2枚目の画像SP.png" : "/2枚目の画像.png"}
-        alt="2枚目のトップ画像"
-      />
+      {issmartsphone ? (
+        <StyledImage
+          src="/2枚目の画像SP.png"
+          alt="2枚目のトップ画像"
+        />
+      ) : (
+        <StyledImage
+          src="/2枚目の画像.png"
+          alt="2枚目のトップ画像"
+        />
+      )}
 
       <TextAreaLeft>
         <TitleH2_About> ABOUT</TitleH2_About>
@@ -45,7 +52,6 @@ const Container = styled.div`
 
 const StyledImage = styled.img`
   width: 100%;
-  height: 100%;
 `;
 
 const TextAreaLeft = styled.div`

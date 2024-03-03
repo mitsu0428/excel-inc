@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import styled from "styled-components";
-import { useMediaQuery } from "react-responsive";
 
 import * as Font from "../../styles/NextFont";
 
@@ -14,9 +13,6 @@ type renderMenuProps = {
 };
 
 export const Component = () => {
-  const issmartsphone = useMediaQuery({
-    query: "(max-width: 768px)",
-  });
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
@@ -24,21 +20,18 @@ export const Component = () => {
       <StyledImage
         src="/assets/logo.png"
         alt="Excel inc."
-        width={issmartsphone ? 59 : 78}
-        height={issmartsphone ? 44 : 58}
       />
-      {renderMenu(issmartsphone, isOpen, setIsOpen)}
+      {renderMenu(isOpen, setIsOpen)}
     </Wrapper>
   );
 };
 
 const renderMenu = (
-  issmartsphone: boolean,
   isOpen: boolean,
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
 ) => {
   return (
-    <StyledUl>
+    <StyledUl isOpen={isOpen}>
       <StyledLi className={Font.Font.CustomGafata.className}>MISSION</StyledLi>
       <StyledLi className={Font.Font.CustomGafata.className}>SERVISE</StyledLi>
       <StyledLi className={Font.Font.CustomGafata.className}>NEWS</StyledLi>
@@ -82,6 +75,15 @@ const StyledLi = styled.li`
   cursor: pointer;
 `;
 
-const StyledImage = styled(Image)`
+const StyledImage = styled.img`
+  width: 100%;
+  height: 100%;
+  max-width: 78px;
+  max-height: 58px;
   z-index: 2;
+
+  @media (max-width: 768px) {
+    max-width: 59px;
+    max-height: 44px;
+  }
 `;

@@ -104,15 +104,15 @@ const MobileBorder = styled.div`
   left: 0;
 
   margin: 0 439px;
+  margin-top: 50px;
   width: 303px;
   height: 13px;
-  margin-top: 50px;
 
   @media (max-width: 768px) {
     margin: 0 97px;
+    margin-top: 14px;
     width: 130px;
     height: 10px;
-    margin-top: 14px;
   }
 `;
 
@@ -163,14 +163,16 @@ const ContentsText = styled.p`
 `;
 
 const TitleH2_MobileView = styled.h2`
-  font-size: 70px;
   text-align: center;
   font-weight: 600;
   color: #000;
   letter-spacing: 14px;
+  font-size: 70px;
   margin-top: 138px;
+
   text-decoration: underline;
   @media (max-width: 768px) {
     font-size: 25px;
+    margin-top: 51px;
   }
 `;

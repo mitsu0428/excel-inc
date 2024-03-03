@@ -15,7 +15,7 @@ export const Component = () => {
 
       <TextArea>
         <Text className={Font.Font.CustomJosefinSansThick.className}>
-          BEYOND EXPECTATIONS&emsp;&emsp;&emsp;&nbsp;
+          BEYOND EXPECTATIONS
         </Text>
         <Text className={Font.Font.CustomJosefinSans.className}>
           AND IMAGINATIONS.
@@ -34,7 +34,6 @@ const Container = styled.div`
 
 const StyledImage = styled.img`
   width: 100%;
-  height: 100%;
 `;
 
 const TextArea = styled.div`
