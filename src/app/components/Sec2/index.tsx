@@ -1,10 +1,10 @@
-"use client";
-
 import React from "react";
 import styled from "styled-components";
+import { useMediaQuery } from "react-responsive";
 
 export const Component = () => {
-  const issmartsphone = window.matchMedia("(max-width: 768px)").matches;
+  const issmartsphone = useMediaQuery({ query: "(max-width: 768px)" });
+
   return (
     <Container>
       <StyledImage
