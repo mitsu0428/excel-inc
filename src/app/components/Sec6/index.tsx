@@ -1,20 +1,72 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
-
+import { motion, useAnimation } from "framer-motion";
 import * as Font from "../../styles/NextFont";
 
-// MEMO: スマホ画面のようなモーダルを表示するためのコンポーネント
 export const Component = () => {
+  const controls = useAnimation();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isExpanded, setIsExpanded] = useState(false); // MobileViewが拡張されているかどうかの状態
+
+  // MobileViewの初期表示位置（画面の50%）と完全表示時の位置（画面の上部）
+  const initialYPosition = useRef(0);
+  const expandedYPosition = useRef(0);
+
+  useEffect(() => {
+    const containerHeight = containerRef.current?.offsetHeight ?? 0;
+    const windowHeight = window.innerHeight;
+    initialYPosition.current = containerHeight / 2; // 画面の50%の位置
+    expandedYPosition.current = windowHeight * 0.1; // 画面の上部から90%の位置に設定
+
+    // 初期位置を設定
+    controls.start({
+      y: initialYPosition.current,
+      transition: { duration: 1, ease: "easeInOut" },
+    });
+  }, [controls]);
+
+  const handleClick = () => {
+    // MobileBorderがクリックされた時の挙動（アニメーションをさらにゆっくりにし、イージングを設定する）
+    if (isExpanded) {
+      controls.start({
+        y: initialYPosition.current,
+        transition: { duration: 1, ease: "easeInOut" },
+      });
+    } else {
+      controls.start({
+        y: expandedYPosition.current,
+        transition: { duration: 1, ease: "easeInOut" },
+      });
+    }
+    setIsExpanded(!isExpanded); // 状態をトグル
+  };
+
   return (
-    <Container>
-      <MobileView>
-        <MobileBorder />
+    <Container ref={containerRef}>
+      <StyledMobileView
+        drag="y"
+        dragConstraints={{ top: 0, bottom: 0 }}
+        dragElastic={0.5}
+        onDragEnd={(event, info) => {
+          // ドラッグ終了時に位置を調整
+          const endpoint = info.point.y;
+          if (endpoint < initialYPosition.current / 2) {
+            controls.start({ y: expandedYPosition.current });
+            setIsExpanded(true);
+          } else {
+            controls.start({ y: initialYPosition.current });
+            setIsExpanded(false);
+          }
+        }}
+        animate={controls}
+      >
+        <MobileBorder onClick={handleClick} />{" "}
+        {/* MobileBorderにクリックイベントを追加 */}
         <TitleH2_MobileView className={Font.Font.CustomGafata.className}>
           OUR COMPANY
         </TitleH2_MobileView>
-
         <Contents>
           <ContentsLeft>
             <ContentsText>
@@ -64,7 +116,7 @@ export const Component = () => {
 
           <ContentsRight></ContentsRight>
         </Contents>
-      </MobileView>
+      </StyledMobileView>
     </Container>
   );
 };
@@ -73,24 +125,27 @@ const Container = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
 `;
 
-const MobileView = styled.div`
-  position: relative;
-  width: 1181px;
+const StyledMobileView = styled(motion.div)`
+  position: absolute;
+  width: 100%;
+  max-width: 1181px;
+  height: 1000px;
   border-radius: 89px;
   background: #f9f9f9;
   padding: 50px;
-  margin-top: 138px;
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     width: 324px;
     border-radius: 52px;
     background: #f9f9f9;
     padding: 20px;
-    margin-top: 80px;
   }
 `;
 
@@ -99,16 +154,14 @@ const MobileBorder = styled.div`
   border-radius: 27px;
   background: #d9d9d9;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%); // 中央に配置
+  cursor: pointer; // クリック可能なことを示す
 
-  margin: 0 439px;
-  margin-top: 50px;
-  width: 303px;
-  height: 13px;
+  width: 130px;
+  height: 10px;
 
   @media (max-width: 768px) {
-    margin: 0 97px;
-    margin-top: 14px;
     width: 130px;
     height: 10px;
   }
