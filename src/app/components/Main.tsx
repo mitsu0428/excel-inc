@@ -4,7 +4,6 @@ import React from "react";
 import styled from "styled-components";
 
 import * as HearderNavigation from "./HeaderNavigation";
-import * as Section1 from "./Sec1";
 import * as Section2 from "./Sec2";
 import * as Section3 from "./Sec3";
 import * as Section4 from "./Sec4";
@@ -16,7 +15,7 @@ export const Component = () => {
   return (
     <Main>
       <HearderNavigation.Component />
-      <Section1.Component />
+      {/* Section1でローディングなのかMovieなのか。 */}
       <Section2.Component />
       <Section3.Component />
       <Section4.Component />

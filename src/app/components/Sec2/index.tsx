@@ -2,26 +2,14 @@
 
 import React from "react";
 import styled from "styled-components";
-import { useMediaQuery } from "react-responsive";
 
 export const Component = () => {
-  const issmartsphone = useMediaQuery({
-    query: "(max-width: 768px)",
-  });
-
   return (
     <Container>
-      {issmartsphone ? (
-        <StyledImage
-          src="/2枚目の画像SP.png"
-          alt="2枚目のトップ画像"
-        />
-      ) : (
-        <StyledImage
-          src="/2枚目の画像.png"
-          alt="2枚目のトップ画像"
-        />
-      )}
+      <StyledImage
+        src="/2枚目の画像.png"
+        alt="2枚目のトップ画像"
+      />
 
       <TextAreaLeft>
         <TitleH2_About> ABOUT</TitleH2_About>
@@ -90,14 +78,14 @@ const TitleH2_About = styled.h2`
 `;
 
 const TitleH2_Company = styled.h2`
-  font-size: 50px;
+  font-size: 70px;
   text-align: left;
   font-weight: 600;
   color: #fff;
   letter-spacing: 14px;
   margin: 0;
   @media (max-width: 768px) {
-    font-size: 34px;
+    font-size: 54px;
   }
 `;
 
@@ -120,8 +108,8 @@ const TextRight = styled.p`
   font-size: 20px;
   font-style: normal;
   font-weight: 200;
-  line-height: normal;
   letter-spacing: 4px;
+
   @media (max-width: 768px) {
     font-size: 14px;
     letter-spacing: 0.28px;
