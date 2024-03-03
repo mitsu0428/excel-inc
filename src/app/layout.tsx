@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import StyledComponentsRegistry from "./lib/registry";
+import * as HearderNavigation from "./components/HeaderNavigation";
 import "./styles/globals.css";
 
 export const metadata: Metadata = {
@@ -21,7 +22,10 @@ export default function RootLayout({
         />
       </head>
       <StyledComponentsRegistry>
-        <body>{children}</body>
+        <body>
+          <HearderNavigation.Component />
+          {children}
+        </body>
       </StyledComponentsRegistry>
     </html>
   );

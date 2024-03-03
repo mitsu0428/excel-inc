@@ -1,0 +1,192 @@
+"use client";
+
+import React, { useState } from "react";
+import styled from "styled-components";
+
+import * as Font from "../styles/NextFont";
+
+export const Component = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // todo: フォームデータを送信するためのロジック
+    console.log(formData);
+  };
+
+  return (
+    <Wrap>
+      <TitleH2_Contact className={Font.Font.CustomJosefinSans.className}>
+        CONTACT
+      </TitleH2_Contact>
+      <Text>
+        マーケティング支援やサービスに関するご相談など、お問い合わせはこちらのフォームより受け付けております
+      </Text>
+      <form onSubmit={handleSubmit}>
+        <SubWrap>
+          <TextLarge>
+            Your Name
+            <Input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+          </TextLarge>
+          <TextLarge>
+            Company
+            <Input
+              type="text"
+              name="company"
+              value={formData.company}
+              onChange={handleChange}
+            />
+          </TextLarge>
+          <TextLarge>
+            E-mail Address
+            <Input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </TextLarge>
+          <TextLarge>
+            Phone Number
+            <Input
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+            />
+          </TextLarge>
+          <TextLarge>
+            Message
+            <TextArea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+            />
+          </TextLarge>
+        </SubWrap>
+        <button type="submit">Submit</button>
+      </form>
+    </Wrap>
+  );
+};
+
+const Wrap = styled.main`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #383838;
+  width: 100%;
+  height: 100vh;
+`;
+
+const SubWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #383838;
+  width: 300px;
+`;
+
+const TitleH2_Contact = styled.h2`
+  font-size: 70px;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 14px;
+  margin-top: 83px;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
+`;
+
+const TextLarge = styled.label`
+  color: #fff;
+  font-family: YuGothic;
+  width: 100%;
+  text-align: left;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  @media (max-width: 768px) {
+    font-size: 8px;
+  }
+`;
+
+const Text = styled.p`
+  color: #fff;
+  font-family: YuGothic;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  @media (max-width: 768px) {
+    font-size: 8px;
+  }
+`;
+
+const Input = styled.input`
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  height: 100%;
+  background-color: #383838;
+  color: #fff;
+  font-family: YuGothic;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    font-size: 8px;
+  }
+`;
+
+const TextArea = styled.textarea`
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  height: 100%;
+  background-color: #383838;
+  color: #fff;
+  font-family: YuGothic;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    font-size: 8px;
+  }
+`;
+
+export default Component;
