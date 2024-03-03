@@ -4,12 +4,12 @@ import React from "react";
 import styled from "styled-components";
 
 import * as HearderNavigation from "./HeaderNavigation";
-import * as Section1 from "./Section1";
-import * as Section2 from "./Section2";
-import * as Section3 from "./Section3";
-import * as Section4 from "./Section4";
-import * as Section5 from "./Section5";
-import * as Section6 from "./Section6";
+import * as Section1 from "./Sec1";
+import * as Section2 from "./Sec2";
+import * as Section3 from "./Sec3";
+import * as Section4 from "./Sec4";
+import * as Section5 from "./Sec5";
+import * as Section6 from "./Sec6";
 import * as FooterNavigation from "./FooterNavigation";
 
 export const Component = () => {
