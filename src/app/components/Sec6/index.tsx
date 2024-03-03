@@ -18,7 +18,7 @@ export const Component = () => {
     const containerHeight = containerRef.current?.offsetHeight ?? 0;
     const windowHeight = window.innerHeight;
     initialYPosition.current = containerHeight / 2; // 画面の50%の位置
-    expandedYPosition.current = windowHeight * 0.1; // 画面の上部から90%の位置に設定
+    expandedYPosition.current = windowHeight * 0.2; // 画面の上部から90%の位置に設定
 
     // 初期位置を設定
     controls.start({
