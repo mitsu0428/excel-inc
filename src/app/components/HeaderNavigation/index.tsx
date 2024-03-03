@@ -1,42 +1,87 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
 import * as Font from "../../styles/NextFont";
 
-type renderMenuProps = {
-  issmartsphone: boolean;
-  isOpen: boolean;
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
 export const Component = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <Wrapper>
-      <StyledLink href={"/"}>
+      <StyledLink
+        href={"/"}
+        passHref
+      >
         <StyledImage
           src="/assets/logo.png"
           alt="Excel inc."
         />
       </StyledLink>
 
-      <StyledUl>
-        <StyledLi className={Font.Font.CustomGafata.className}>
-          MISSION
-        </StyledLi>
-        <StyledLi className={Font.Font.CustomGafata.className}>
-          SERVISE
-        </StyledLi>
-        <StyledLi className={Font.Font.CustomGafata.className}>NEWS</StyledLi>
-        <StyledLi className={Font.Font.CustomGafata.className}>
-          COMPANY
-        </StyledLi>
-        <StyledLi className={Font.Font.CustomGafata.className}>
-          CONTACT
-        </StyledLi>
-      </StyledUl>
+      <MenuToggle onClick={toggleMenu}>
+        <div />
+        <div />
+        <div />
+      </MenuToggle>
+
+      <Menu
+        isOpen={isOpen}
+        onClick={closeMenu}
+      >
+        <StyledUl isOpen={isOpen}>
+          <StyledLi className={Font.Font.CustomGafata.className}>
+            <Link
+              href={"/"}
+              passHref
+            >
+              <StyledAnchor onClick={closeMenu}>MISSION</StyledAnchor>
+            </Link>
+          </StyledLi>
+          <StyledLi className={Font.Font.CustomGafata.className}>
+            <Link
+              href={"/"}
+              passHref
+            >
+              <StyledAnchor onClick={closeMenu}>SERVICE</StyledAnchor>
+            </Link>
+          </StyledLi>
+          <StyledLi className={Font.Font.CustomGafata.className}>
+            <Link
+              href={"/"}
+              passHref
+            >
+              <StyledAnchor onClick={closeMenu}>NEWS</StyledAnchor>
+            </Link>
+          </StyledLi>
+          <StyledLi className={Font.Font.CustomGafata.className}>
+            <Link
+              href={"/"}
+              passHref
+            >
+              <StyledAnchor onClick={closeMenu}>COMPANY</StyledAnchor>
+            </Link>
+          </StyledLi>
+          <StyledLi className={Font.Font.CustomGafata.className}>
+            <Link
+              href={"/"}
+              passHref
+            >
+              <StyledAnchor onClick={closeMenu}>CONTACT</StyledAnchor>
+            </Link>
+          </StyledLi>
+        </StyledUl>
+      </Menu>
     </Wrapper>
   );
 };
@@ -62,7 +107,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-const StyledUl = styled.ul`
+const StyledUl = styled.ul<{ isOpen: boolean }>`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -72,6 +117,21 @@ const StyledUl = styled.ul`
   padding: 0;
   margin: 0;
   color: #fff;
+
+  @media (max-width: 768px) {
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+    flex-direction: column;
+    position: absolute;
+    top: 71px; // Adjust this value based on your actual header height
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.9
+    ); // Optional: background color for mobile menu
+    width: 100%;
+    align-items: center;
+  }
 `;
 
 const StyledLi = styled.li`
@@ -94,4 +154,59 @@ const StyledImage = styled.img`
     max-width: 59px;
     max-height: 44px;
   }
+`;
+
+const MenuToggle = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    div {
+      width: 35px;
+      height: 5px;
+      background-color: #fff;
+      margin: 3px 0;
+    }
+  }
+`;
+
+const Menu = styled.div<{ isOpen: boolean }>`
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 0;
+    right: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+    z-index: 2;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 20px;
+    }
+
+    padding-top: 71px;
+  }
+`;
+
+const StyledAnchor = styled.span`
+  color: inherit;
+  text-decoration: none;
 `;
