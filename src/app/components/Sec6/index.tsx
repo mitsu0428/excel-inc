@@ -8,19 +8,17 @@ import * as Font from "../../styles/NextFont";
 export const Component = () => {
   const controls = useAnimation();
   const containerRef = useRef<HTMLDivElement>(null);
-  const [isExpanded, setIsExpanded] = useState(false); // MobileViewが拡張されているかどうかの状態
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  // MobileViewの初期表示位置（画面の50%）と完全表示時の位置（画面の上部）
   const initialYPosition = useRef(0);
   const expandedYPosition = useRef(0);
 
   useEffect(() => {
     const containerHeight = containerRef.current?.offsetHeight ?? 0;
     const windowHeight = window.innerHeight;
-    initialYPosition.current = containerHeight / 2; // 画面の50%の位置
-    expandedYPosition.current = windowHeight * 0.2; // 画面の上部から90%の位置に設定
+    initialYPosition.current = containerHeight / 2;
+    expandedYPosition.current = windowHeight * 0.2;
 
-    // 初期位置を設定
     controls.start({
       y: initialYPosition.current,
       transition: { duration: 1, ease: "easeInOut" },
@@ -28,7 +26,6 @@ export const Component = () => {
   }, [controls]);
 
   const handleClick = () => {
-    // MobileBorderがクリックされた時の挙動（アニメーションをさらにゆっくりにし、イージングを設定する）
     if (isExpanded) {
       controls.start({
         y: initialYPosition.current,
@@ -40,30 +37,13 @@ export const Component = () => {
         transition: { duration: 1, ease: "easeInOut" },
       });
     }
-    setIsExpanded(!isExpanded); // 状態をトグル
+    setIsExpanded(!isExpanded);
   };
 
   return (
     <Container ref={containerRef}>
-      <StyledMobileView
-        drag="y"
-        dragConstraints={{ top: 0, bottom: 0 }}
-        dragElastic={0.5}
-        onDragEnd={(event, info) => {
-          // ドラッグ終了時に位置を調整
-          const endpoint = info.point.y;
-          if (endpoint < initialYPosition.current / 2) {
-            controls.start({ y: expandedYPosition.current });
-            setIsExpanded(true);
-          } else {
-            controls.start({ y: initialYPosition.current });
-            setIsExpanded(false);
-          }
-        }}
-        animate={controls}
-      >
-        <MobileBorder onClick={handleClick} />{" "}
-        {/* MobileBorderにクリックイベントを追加 */}
+      <StyledMobileView animate={controls}>
+        <MobileBorder onClick={handleClick} />
         <TitleH2_MobileView className={Font.Font.CustomGafata.className}>
           OUR COMPANY
         </TitleH2_MobileView>
@@ -153,7 +133,7 @@ const MobileBorder = styled.div`
   position: absolute;
   border-radius: 27px;
   background: #d9d9d9;
-  top: 0;
+  top: 26px;
   left: 50%;
   transform: translateX(-50%); // 中央に配置
   cursor: pointer; // クリック可能なことを示す
@@ -162,6 +142,7 @@ const MobileBorder = styled.div`
   height: 10px;
 
   @media (max-width: 768px) {
+    top: 14px;
     width: 130px;
     height: 10px;
   }
