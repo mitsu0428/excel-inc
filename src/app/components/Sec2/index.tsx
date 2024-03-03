@@ -77,6 +77,7 @@ const TitleH2_About = styled.h2`
   opacity: 0.3;
   @media (max-width: 768px) {
     font-size: 34px;
+    line-height: 55px;
   }
 `;
 
@@ -89,6 +90,7 @@ const TitleH2_Company = styled.h2`
   margin: 0;
   @media (max-width: 768px) {
     font-size: 54px;
+    line-height: 55px;
   }
 `;
 
@@ -100,8 +102,10 @@ const TitleH2_Concept = styled.h2`
   font-weight: 200;
   line-height: normal;
   letter-spacing: 0.56px;
+
   @media (max-width: 768px) {
     font-size: 12px;
+    letter-spacing: 0.24px;
   }
 `;
 
@@ -109,7 +113,7 @@ const TextRight = styled.p`
   color: #fff;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 20px;
-  font-style: normal;
+  line-height: normal;
   font-weight: 200;
   letter-spacing: 4px;
 
