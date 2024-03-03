@@ -4,10 +4,11 @@ import React from "react";
 import styled from "styled-components";
 
 export const Component = () => {
+  const issmartsphone = window.matchMedia("(max-width: 768px)").matches;
   return (
     <Container>
       <StyledImage
-        src="/2枚目の画像.png"
+        src={issmartsphone ? "/2枚目の画像SP.png" : "/2枚目の画像.png"}
         alt="2枚目のトップ画像"
       />
 
@@ -44,24 +45,26 @@ const StyledImage = styled.img`
 
 const TextAreaLeft = styled.div`
   position: absolute;
-  top: 0;
+  top: 178px;
   left: 0;
-  max-width: 100%;
-  max-height: 100%;
   padding: 30px;
   text-align: left;
+  @media (max-width: 768px) {
+    top: 200px;
+  }
 `;
 
 const TextAreaRight = styled.div`
   position: absolute;
   bottom: 0;
   right: 0;
-  max-width: 100%;
-  max-height: 100%;
   padding: 30px;
   text-align: left;
   width: 432px;
   word-wrap: break-word;
+  @media (max-width: 768px) {
+    width: 303px;
+  }
 `;
 
 const TitleH2_About = styled.h2`
