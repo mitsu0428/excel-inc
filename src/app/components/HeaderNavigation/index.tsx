@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import styled from "styled-components";
 
 import * as Font from "../../styles/NextFont";
@@ -52,6 +51,10 @@ const Wrapper = styled.div`
   padding: 13px;
   position: fixed;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    height: 71px;
+  }
 `;
 
 const StyledUl = styled.ul<{ isOpen?: boolean }>`

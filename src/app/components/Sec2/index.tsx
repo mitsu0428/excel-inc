@@ -1,14 +1,13 @@
+"use client";
+
 import React from "react";
 import styled from "styled-components";
-import { useMediaQuery } from "react-responsive";
 
 export const Component = () => {
-  const issmartsphone = useMediaQuery({ query: "(max-width: 768px)" });
-
   return (
     <Container>
       <StyledImage
-        src={issmartsphone ? "/2枚目の画像SP.png" : "/2枚目の画像.png"}
+        src="/2枚目の画像.png"
         alt="2枚目のトップ画像"
       />
 
@@ -36,11 +35,14 @@ export const Component = () => {
 const Container = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
 `;
 
 const StyledImage = styled.img`
   width: 100%;
+  @media (min-width: 768px) {
+    height: 100vh;
+    width: 100%;
+  }
 `;
 
 const TextAreaLeft = styled.div`
