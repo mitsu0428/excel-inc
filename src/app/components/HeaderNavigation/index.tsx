@@ -12,31 +12,28 @@ type renderMenuProps = {
 };
 
 export const Component = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
-
   return (
     <Wrapper>
       <StyledImage
         src="/assets/logo.png"
         alt="Excel inc."
       />
-      {renderMenu(isOpen, setIsOpen)}
+      <StyledUl>
+        <StyledLi className={Font.Font.CustomGafata.className}>
+          MISSION
+        </StyledLi>
+        <StyledLi className={Font.Font.CustomGafata.className}>
+          SERVISE
+        </StyledLi>
+        <StyledLi className={Font.Font.CustomGafata.className}>NEWS</StyledLi>
+        <StyledLi className={Font.Font.CustomGafata.className}>
+          COMPANY
+        </StyledLi>
+        <StyledLi className={Font.Font.CustomGafata.className}>
+          CONTACT
+        </StyledLi>
+      </StyledUl>
     </Wrapper>
-  );
-};
-
-const renderMenu = (
-  isOpen: boolean,
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
-) => {
-  return (
-    <StyledUl isOpen={isOpen}>
-      <StyledLi className={Font.Font.CustomGafata.className}>MISSION</StyledLi>
-      <StyledLi className={Font.Font.CustomGafata.className}>SERVISE</StyledLi>
-      <StyledLi className={Font.Font.CustomGafata.className}>NEWS</StyledLi>
-      <StyledLi className={Font.Font.CustomGafata.className}>COMPANY</StyledLi>
-      <StyledLi className={Font.Font.CustomGafata.className}>CONTACT</StyledLi>
-    </StyledUl>
   );
 };
 
@@ -57,8 +54,8 @@ const Wrapper = styled.div`
   }
 `;
 
-const StyledUl = styled.ul<{ isOpen?: boolean }>`
-  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+const StyledUl = styled.ul`
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;

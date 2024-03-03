@@ -40,6 +40,9 @@ const Card = styled.div`
   justify-content: space-between;
   padding: 32px;
   gap: 8px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const CardBody = styled.div``;
