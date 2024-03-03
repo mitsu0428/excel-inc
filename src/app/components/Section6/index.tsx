@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import styled from "styled-components";
 
@@ -90,7 +92,6 @@ const Container = styled.div<{ issmartsphone: boolean }>`
 
 const MobileView = styled.div<{ issmartsphone: boolean }>`
   width: ${({ issmartsphone }) => (issmartsphone ? "324px" : "1181px")};
-  height: ${({ issmartsphone }) => (issmartsphone ? "760px" : "1474px")};
   border-radius: ${({ issmartsphone }) => (issmartsphone ? "52px" : "89px")};
   background: #f9f9f9;
   padding: ${({ issmartsphone }) => (issmartsphone ? "50px" : "20px")};

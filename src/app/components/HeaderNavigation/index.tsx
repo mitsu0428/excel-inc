@@ -26,7 +26,6 @@ export const Component = () => {
         alt="Excel inc."
         width={issmartsphone ? 59 : 78}
         height={issmartsphone ? 44 : 58}
-        layout={"absoluteFillObject"}
       />
       {renderMenu(issmartsphone, isOpen, setIsOpen)}
     </Wrapper>

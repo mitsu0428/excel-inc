@@ -27,4 +27,6 @@ export const Component = () => {
   );
 };
 
-const Main = styled.main``;
+const Main = styled.main`
+  background-color: #383838;
+`;

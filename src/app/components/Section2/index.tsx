@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import styled from "styled-components";
@@ -15,7 +17,6 @@ export const Component = () => {
         alt="2枚目のトップ画像"
         width={issmartsphone ? 390 : 1279}
         height={issmartsphone ? 844 : 832}
-        layout={"responsive"}
       />
 
       <TextAreaLeft issmartsphone={issmartsphone}>
