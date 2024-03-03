@@ -17,8 +17,8 @@ export const Component = () => {
       <NewsCard.Component />
 
       <StyledButton.Component
-        linkTo="/contact"
-        text="CONTACT→"
+        linkTo="https://google.com"
+        text="MORE→"
       />
     </Container>
   );

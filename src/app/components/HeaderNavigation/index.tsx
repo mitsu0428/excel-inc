@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import styled from "styled-components";
 
 import * as Font from "../../styles/NextFont";
@@ -14,10 +15,13 @@ type renderMenuProps = {
 export const Component = () => {
   return (
     <Wrapper>
-      <StyledImage
-        src="/assets/logo.png"
-        alt="Excel inc."
-      />
+      <StyledLink href={"/"}>
+        <StyledImage
+          src="/assets/logo.png"
+          alt="Excel inc."
+        />
+      </StyledLink>
+
       <StyledUl>
         <StyledLi className={Font.Font.CustomGafata.className}>
           MISSION
@@ -52,6 +56,10 @@ const Wrapper = styled.div`
   @media (max-width: 768px) {
     height: 71px;
   }
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
 `;
 
 const StyledUl = styled.ul`

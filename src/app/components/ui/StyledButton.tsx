@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import styled from "styled-components";
 import * as Font from "../../styles/NextFont";
 
@@ -17,6 +18,7 @@ export const Component = (props: Props) => {
         <StyledLink
           className={Font.Font.CustomJosefinSans.className}
           href={linkToPage}
+          target="_blank"
         >
           {props.text}
         </StyledLink>
@@ -51,7 +53,7 @@ const Button = styled.button`
   }
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   text-decoration: none;
   color: #fff;
 `;
