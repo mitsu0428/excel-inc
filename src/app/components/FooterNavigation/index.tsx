@@ -1,20 +1,178 @@
 import React from "react";
+import Link from "next/link";
 import styled from "styled-components";
+
+import * as Font from "../../styles/NextFont";
 
 export const Component = () => {
   return (
     <Footer>
-      <Text>Excel inc. @All Right Reserved</Text>
+      <Wrapper>
+        <LeftContents>
+          <FollowUsText className={Font.Font.CustomNotoSansMyanmar.className}>
+            FOLLOW US
+          </FollowUsText>
+
+          <WrapperColumn>
+            <CompanyInformationText>EXCEL inc.</CompanyInformationText>
+            <CompanyInformationText>
+              〒107-0062 東京都港区南青山5-12-27
+            </CompanyInformationText>
+            <CompanyInformationText>WISE 512ビル 305</CompanyInformationText>
+            <br />
+            <CompanyInformationText>Tel.03-6824-4903</CompanyInformationText>
+          </WrapperColumn>
+        </LeftContents>
+
+        <Center1Contents>
+          <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
+            TOP
+          </NavText>
+          <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
+            ABOUT
+          </NavText>
+          <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
+            NEWS
+          </NavText>
+          <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
+            FAQ
+          </NavText>
+        </Center1Contents>
+
+        <Center2Contents>
+          <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
+            SERVICE
+          </NavText>
+          <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
+            - Movie
+          </NavText>
+          <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
+            - Web SNS
+          </NavText>
+          <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
+            - Liver
+          </NavText>
+        </Center2Contents>
+
+        <RightContents>
+          <StyledLink
+            href={"/"}
+            passHref
+          >
+            <StyledImage
+              src="/assets/logo-big.png"
+              alt="Excel inc."
+            />
+          </StyledLink>
+        </RightContents>
+      </Wrapper>
+
+      <RightReservedText>Excel inc. @All Right Reserved</RightReservedText>
     </Footer>
   );
 };
 
 const Footer = styled.footer`
-  height: 377px;
-  text-align: center;
+  height: auto;
 `;
 
-const Text = styled.p`
-  font-size: 16px;
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const WrapperColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const RightContents = styled.div`
+  width: 259px;
+  height: 184px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+`;
+
+const Center1Contents = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const Center2Contents = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const LeftContents = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px;
+`;
+
+// 一番左側のコンテンツ
+const FollowUsText = styled.p`
+  width: 100%;
   color: #fff;
+  font-size: 31px;
+  font-family: "Myanmar Sangam MN";
+  font-weight: 400;
+  line-height: 125px; /* 403.226% */
+  letter-spacing: 1.55px;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+    line-height: 100px; /* 403.226% */
+  }
+`;
+
+// 一番左側のコンテンツ
+const CompanyInformationText = styled.p`
+  width: 100%;
+  color: #fff;
+  font-size: 25px;
+  font-family: "Myanmar Sangam MN";
+  font-weight: 400;
+  letter-spacing: 1px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+`;
+
+// 真ん中2つのコンテンツ
+const NavText = styled.p`
+  width: 100%;
+  color: #fff;
+  font-family: "Myanmar Sangam MN";
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 70px; /* 280% */
+  letter-spacing: 1.25px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    line-height: 56px; /* 280% */
+  }
+`;
+
+const RightReservedText = styled.p`
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+`;
+
+const StyledImage = styled.img`
+  z-index: 2;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
 `;
