@@ -126,18 +126,19 @@ export const Component = () => {
               />
               <CardContent>
                 <Typography
+                  variant="body2"
+                  color="text.secondary"
+                >
+                  {news.showDate}
+                </Typography>
+                <Typography
                   gutterBottom
                   variant="h5"
                   component="div"
                 >
                   {news.title}
                 </Typography>
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
-                >
-                  {news.showDate}
-                </Typography>
+
                 <Typography
                   variant="body2"
                   color="text.secondary"
