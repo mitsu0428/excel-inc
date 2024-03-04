@@ -9,22 +9,28 @@ export const Component: React.FC = () => {
 
   const images = [
     {
-      src: "/2枚目の画像.png",
+      src: "/slide1.png",
       alt: "事業領域の画像",
-      width: 390,
-      height: 844,
+      width: 427,
+      height: 765,
     },
     {
-      src: "/2枚目の画像.png",
+      src: "/slide2.png",
       alt: "事業領域の画像",
-      width: 390,
-      height: 844,
+      width: 427,
+      height: 765,
     },
     {
-      src: "/2枚目の画像.png",
+      src: "/slide3.png",
       alt: "事業領域の画像",
-      width: 390,
-      height: 844,
+      width: 427,
+      height: 765,
+    },
+    {
+      src: "/slide4.png",
+      alt: "事業領域の画像",
+      width: 427,
+      height: 765,
     },
   ];
 

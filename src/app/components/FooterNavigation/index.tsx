@@ -9,9 +9,23 @@ export const Component = () => {
     <Footer>
       <Wrapper>
         <LeftContents>
-          <FollowUsText className={Font.Font.CustomNotoSansMyanmar.className}>
-            FOLLOW US
-          </FollowUsText>
+          <SnsWrapper>
+            <FollowUsText className={Font.Font.CustomNotoSansMyanmar.className}>
+              FOLLOW US
+            </FollowUsText>
+            <SnsIcon
+              src="/sns-instagram.png"
+              alt="Instagram"
+            />
+            <SnsIcon
+              src="/sns-line.png"
+              alt="Line"
+            />
+            <SnsIcon
+              src="/sns-tiktok.png"
+              alt="TikTok"
+            />
+          </SnsWrapper>
 
           <WrapperColumn>
             <CompanyInformationText>EXCEL inc.</CompanyInformationText>
@@ -175,4 +189,19 @@ const StyledImage = styled.img`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+`;
+
+const SnsWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+`;
+
+const SnsIcon = styled.img`
+  width: 100%;
+  height: 100%;
+  max-width: 68px;
+  max-height: 68px;
+  z-index: 2;
 `;
