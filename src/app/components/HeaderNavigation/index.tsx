@@ -74,7 +74,7 @@ export const Component = () => {
           </StyledLi>
           <StyledLi className={Font.Font.CustomGafata.className}>
             <StyledLink
-              href={"/"}
+              href={"/contact"}
               passHref
             >
               <StyledSpan onClick={closeMenu}>CONTACT</StyledSpan>
