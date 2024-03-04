@@ -1,49 +1,13 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
-import { motion, useAnimation } from "framer-motion";
 import * as Font from "../../styles/NextFont";
 
 export const Component = () => {
-  const controls = useAnimation();
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const initialYPosition = useRef(0);
-  const expandedYPosition = useRef(0);
-
-  useEffect(() => {
-    const containerHeight = containerRef.current?.offsetHeight ?? 0;
-    const windowHeight = window.innerHeight;
-    initialYPosition.current = containerHeight / 2;
-    expandedYPosition.current = windowHeight * 0.2;
-
-    controls.start({
-      y: initialYPosition.current,
-      transition: { duration: 1, ease: "easeInOut" },
-    });
-  }, [controls]);
-
-  const handleClick = () => {
-    if (isExpanded) {
-      controls.start({
-        y: initialYPosition.current,
-        transition: { duration: 1, ease: "easeInOut" },
-      });
-    } else {
-      controls.start({
-        y: expandedYPosition.current,
-        transition: { duration: 1, ease: "easeInOut" },
-      });
-    }
-    setIsExpanded(!isExpanded);
-  };
-
   return (
-    <Container ref={containerRef}>
-      <StyledMobileView animate={controls}>
-        <MobileBorder onClick={handleClick} />
+    <Container>
+      <StyledMobileView>
         <TitleH2_MobileView className={Font.Font.CustomGafata.className}>
           OUR COMPANY
         </TitleH2_MobileView>
@@ -107,32 +71,29 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: auto;
+  overflow: visible;
   margin-top: 138px;
-  height: 150vh;
-  overflow: hidden;
-
-  @media (max-width: 768px) {
-    height: 95vh;
-    height: 1000px;
-  }
 `;
 
-const StyledMobileView = styled(motion.div)`
-  position: absolute;
+const StyledMobileView = styled.div`
+  position: static;
   width: 100%;
   max-width: 1181px;
-  height: 1000px;
+  height: auto;
   border-radius: 89px;
   background: #f9f9f9;
   padding: 0 50px;
   box-sizing: border-box;
+  margin-top: auto;
 
   @media (max-width: 768px) {
     width: 324px;
-    height: 500px;
+    height: auto;
     border-radius: 52px;
     background: #f9f9f9;
     padding: 20px;
+    margin-bottom: 0;
   }
 `;
 
@@ -172,7 +133,7 @@ const ContentsRight = styled.div`
   text-align: center;
   width: 50%;
   height: 797px;
-  background: #d9d9d9;
+
   @media (max-width: 768px) {
     height: 276px;
   }
