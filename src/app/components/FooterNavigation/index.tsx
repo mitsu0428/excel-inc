@@ -92,7 +92,12 @@ const Footer = styled.footer`
 
 const Wrapper = styled.div`
   display: flex;
+  padding: 40px 60px;
   justify-content: space-between;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const WrapperColumn = styled.div`
@@ -178,9 +183,15 @@ const NavText = styled.p`
 `;
 
 const RightReservedText = styled.p`
+  padding: 20px 0;
   font-size: 22px;
   text-align: center;
   color: #fff;
+
+  @media (max-width: 768px) {
+    padding: 16px 0;
+    font-size: 8px;
+  }
 `;
 
 const StyledImage = styled.img`
