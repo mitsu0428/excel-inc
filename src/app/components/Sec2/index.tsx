@@ -109,7 +109,7 @@ const TitleH2_Company = styled.h2`
   text-align: left;
   font-weight: 600;
   color: #fff;
-  letter-spacing: 10px;
+  letter-spacing: 6px;
   margin: 0;
 
   @media (max-width: 768px) {
