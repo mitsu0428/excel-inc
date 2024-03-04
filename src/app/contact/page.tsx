@@ -120,12 +120,12 @@ const TitleH2_Contact = styled.h2`
   font-weight: 600;
   color: #fff;
   letter-spacing: 0.5rem; // 14pxから変更
-  margin-top: 2rem; // 83pxから変更
+  margin-top: 90px;
 
   @media (max-width: 768px) {
     font-size: 1.5rem; // 25pxに設定
     letter-spacing: 0.2rem; // スペーシング調整
-    margin-top: 1rem; // マージン調整
+    margin-top: 80px; // マージン調整
   }
 `;
 
