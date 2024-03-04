@@ -58,6 +58,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>TOP</StyledSpan>
             </StyledLink>
           </StyledLi>
+
           <StyledLi className={Font.Font.CustomGafata.className}>
             <StyledLink
               href={"/"}
@@ -66,6 +67,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>MISSION</StyledSpan>
             </StyledLink>
           </StyledLi>
+
           <StyledLi className={Font.Font.CustomGafata.className}>
             <StyledLink
               href={"/"}
@@ -74,6 +76,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>SERVICE</StyledSpan>
             </StyledLink>
           </StyledLi>
+
           <StyledLi className={Font.Font.CustomGafata.className}>
             <StyledLink
               href={"/"}
@@ -82,6 +85,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>NEWS</StyledSpan>
             </StyledLink>
           </StyledLi>
+
           <StyledLi className={Font.Font.CustomGafata.className}>
             <StyledLink
               href={"/"}
@@ -90,6 +94,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>COMPANY</StyledSpan>
             </StyledLink>
           </StyledLi>
+
           <StyledLi className={Font.Font.CustomGafata.className}>
             <StyledLink
               href={"/contact"}
@@ -98,9 +103,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>CONTACT</StyledSpan>
             </StyledLink>
           </StyledLi>
-        </StyledUl>
 
-        <MobileBottomArea>
           <SnsWrapper isOpen={isOpen}>
             <FollowUsText className={Font.Font.CustomNotoSansMyanmar.className}>
               FOLLOW US
@@ -118,7 +121,7 @@ export const Component = () => {
               alt="TikTok"
             />
           </SnsWrapper>
-        </MobileBottomArea>
+        </StyledUl>
       </Menu>
     </Wrapper>
   );
