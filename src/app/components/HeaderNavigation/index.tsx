@@ -286,7 +286,7 @@ const MobileHeadText = styled.p`
 const MobileBottomArea = styled.div`
   position: absolute;
   margin-left: 44px;
-  bottom: 0;
+  bottom: 149px;
 `;
 
 const FollowUsText = styled.p`
