@@ -100,29 +100,32 @@ const Wrap = styled.main`
   align-items: center;
   flex-direction: column;
   background-color: #383838;
-  width: 100%;
-  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 100vh;
 `;
 
 const SubWrap = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   background-color: #383838;
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
 `;
 
+// タイトルとテキストのフォントサイズを調整
 const TitleH2_Contact = styled.h2`
-  font-size: 70px;
+  font-size: 3.5rem; // 70pxから変更
   text-align: center;
   font-weight: 600;
   color: #fff;
-  letter-spacing: 14px;
-  margin-top: 83px;
+  letter-spacing: 0.5rem; // 14pxから変更
+  margin-top: 2rem; // 83pxから変更
 
   @media (max-width: 768px) {
-    font-size: 25px;
+    font-size: 1.5rem; // 25pxに設定
+    letter-spacing: 0.2rem; // スペーシング調整
+    margin-top: 1rem; // マージン調整
   }
 `;
 
@@ -135,10 +138,6 @@ const TextLarge = styled.label`
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-
-  @media (max-width: 768px) {
-    font-size: 8px;
-  }
 `;
 
 const Text = styled.p`
@@ -148,10 +147,6 @@ const Text = styled.p`
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-
-  @media (max-width: 768px) {
-    font-size: 8px;
-  }
 `;
 
 const Form = styled.form``;
@@ -169,10 +164,6 @@ const Input = styled.input`
   font-weight: 500;
   line-height: normal;
   text-align: left;
-
-  @media (max-width: 768px) {
-    font-size: 8px;
-  }
 `;
 
 const TextArea = styled.textarea`
@@ -188,10 +179,6 @@ const TextArea = styled.textarea`
   font-weight: 500;
   line-height: normal;
   text-align: left;
-
-  @media (max-width: 768px) {
-    font-size: 8px;
-  }
 `;
 
 const Button = styled.button`
