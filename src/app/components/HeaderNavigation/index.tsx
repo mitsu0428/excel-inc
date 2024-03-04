@@ -35,11 +35,29 @@ export const Component = () => {
         <div />
       </MenuToggle>
 
+      <MobileHeadArea isOpen={isOpen}>
+        <MobileHeadText className={Font.Font.CustomJosefinSans.className}>
+          MENU
+        </MobileHeadText>
+
+        <StyledSpanAbsoluteWhite onClick={toggleMenu}>
+          close
+        </StyledSpanAbsoluteWhite>
+      </MobileHeadArea>
+
       <Menu
         isOpen={isOpen}
         onClick={closeMenu}
       >
         <StyledUl isOpen={isOpen}>
+          <StyledLi className={Font.Font.CustomGafata.className}>
+            <StyledLink
+              href={"/"}
+              passHref
+            >
+              <StyledSpan onClick={closeMenu}>TOP</StyledSpan>
+            </StyledLink>
+          </StyledLi>
           <StyledLi className={Font.Font.CustomGafata.className}>
             <StyledLink
               href={"/"}
@@ -81,6 +99,26 @@ export const Component = () => {
             </StyledLink>
           </StyledLi>
         </StyledUl>
+
+        <MobileBottomArea>
+          <SnsWrapper isOpen={isOpen}>
+            <FollowUsText className={Font.Font.CustomNotoSansMyanmar.className}>
+              FOLLOW US
+            </FollowUsText>
+            <SnsIcon
+              src="/sns-instagram.png"
+              alt="Instagram"
+            />
+            <SnsIcon
+              src="/sns-line.png"
+              alt="Line"
+            />
+            <SnsIcon
+              src="/sns-tiktok.png"
+              alt="TikTok"
+            />
+          </SnsWrapper>
+        </MobileBottomArea>
       </Menu>
     </Wrapper>
   );
@@ -122,7 +160,8 @@ const StyledUl = styled.ul<{ isOpen: boolean }>`
     display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
     flex-direction: column;
     position: absolute;
-    top: 71px; // Adjust this value based on your actual header height
+    top: 50px;
+    left: 44px;
     background-color: rgba(
       0,
       0,
@@ -136,7 +175,6 @@ const StyledUl = styled.ul<{ isOpen: boolean }>`
 
 const StyledLi = styled.li`
   color: #fff;
-  text-align: right;
   font-size: 25px;
   line-height: normal;
   letter-spacing: 1px;
@@ -184,7 +222,7 @@ const Menu = styled.div<{ isOpen: boolean }>`
     right: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
     height: 100vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #fff;
     transition: all 0.3s ease-in-out;
     z-index: 2;
 
@@ -192,11 +230,13 @@ const Menu = styled.div<{ isOpen: boolean }>`
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: left;
       height: 100%;
+      background-color: #fff;
       list-style: none;
       padding: 0;
       margin: 0;
+      margin-top: 70px;
     }
 
     li {
@@ -210,4 +250,67 @@ const Menu = styled.div<{ isOpen: boolean }>`
 const StyledSpan = styled.span`
   color: #fff;
   text-decoration: none;
+
+  @media (max-width: 768px) {
+    color: #000;
+  }
+`;
+
+const StyledSpanAbsoluteWhite = styled.span`
+  color: #fff;
+  text-decoration: none;
+`;
+
+const MobileHeadArea = styled.div<{ isOpen: boolean }>`
+  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+  background-color: #383838;
+  padding: 20px 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  justify-content: space-between;
+`;
+
+const MobileHeadText = styled.p`
+  color: #fff;
+  text-align: center;
+  font-family: "Josefin Sans";
+  font-size: 20px;
+  font-weight: 200;
+  line-height: normal;
+  letter-spacing: 0.4px;
+`;
+
+const MobileBottomArea = styled.div`
+  position: absolute;
+  margin-left: 44px;
+  bottom: 0;
+`;
+
+const FollowUsText = styled.p`
+  color: #000;
+  text-align: center;
+  font-family: "Myanmar Sangam MN";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 125px; /* 833.333% */
+  letter-spacing: 0.75px;
+  text-decoration-line: underline;
+`;
+
+const SnsWrapper = styled.div<{ isOpen: boolean }>`
+  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+`;
+
+const SnsIcon = styled.img`
+  width: 100%;
+  height: 100%;
+  max-width: 37px;
+  max-height: 37px;
+  z-index: 100;
 `;
