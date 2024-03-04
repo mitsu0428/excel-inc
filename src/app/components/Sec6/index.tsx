@@ -109,11 +109,11 @@ const Container = styled.div`
   width: 100%;
   margin-top: 138px;
   height: 150vh;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     height: 95vh;
     height: 1000px;
-    overflow: hidden;
   }
 `;
 
