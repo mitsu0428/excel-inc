@@ -165,9 +165,10 @@ const MenuToggle = styled.div`
     cursor: pointer;
 
     div {
-      width: 35px;
-      height: 5px;
+      width: 29px;
+      height: 2px;
       background-color: #fff;
+      border-radius: 23px;
       margin: 3px 0;
     }
   }
