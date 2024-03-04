@@ -107,8 +107,12 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: 95vh;
+  }
 `;
 
 const StyledMobileView = styled(motion.div)`
@@ -123,6 +127,7 @@ const StyledMobileView = styled(motion.div)`
 
   @media (max-width: 768px) {
     width: 324px;
+    height: 500px;
     border-radius: 52px;
     background: #f9f9f9;
     padding: 20px;
@@ -200,7 +205,7 @@ const TitleH2_MobileView = styled.h2`
   color: #000;
   letter-spacing: 14px;
   font-size: 70px;
-  margin-top: 138px;
+  margin-top: 88px;
 
   text-decoration: underline;
   @media (max-width: 768px) {
