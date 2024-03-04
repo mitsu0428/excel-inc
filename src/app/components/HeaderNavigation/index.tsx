@@ -41,44 +41,44 @@ export const Component = () => {
       >
         <StyledUl isOpen={isOpen}>
           <StyledLi className={Font.Font.CustomGafata.className}>
-            <Link
+            <StyledLink
               href={"/"}
               passHref
             >
-              <StyledAnchor onClick={closeMenu}>MISSION</StyledAnchor>
-            </Link>
+              <StyledSpan onClick={closeMenu}>MISSION</StyledSpan>
+            </StyledLink>
           </StyledLi>
           <StyledLi className={Font.Font.CustomGafata.className}>
-            <Link
+            <StyledLink
               href={"/"}
               passHref
             >
-              <StyledAnchor onClick={closeMenu}>SERVICE</StyledAnchor>
-            </Link>
+              <StyledSpan onClick={closeMenu}>SERVICE</StyledSpan>
+            </StyledLink>
           </StyledLi>
           <StyledLi className={Font.Font.CustomGafata.className}>
-            <Link
+            <StyledLink
               href={"/"}
               passHref
             >
-              <StyledAnchor onClick={closeMenu}>NEWS</StyledAnchor>
-            </Link>
+              <StyledSpan onClick={closeMenu}>NEWS</StyledSpan>
+            </StyledLink>
           </StyledLi>
           <StyledLi className={Font.Font.CustomGafata.className}>
-            <Link
+            <StyledLink
               href={"/"}
               passHref
             >
-              <StyledAnchor onClick={closeMenu}>COMPANY</StyledAnchor>
-            </Link>
+              <StyledSpan onClick={closeMenu}>COMPANY</StyledSpan>
+            </StyledLink>
           </StyledLi>
           <StyledLi className={Font.Font.CustomGafata.className}>
-            <Link
+            <StyledLink
               href={"/"}
               passHref
             >
-              <StyledAnchor onClick={closeMenu}>CONTACT</StyledAnchor>
-            </Link>
+              <StyledSpan onClick={closeMenu}>CONTACT</StyledSpan>
+            </StyledLink>
           </StyledLi>
         </StyledUl>
       </Menu>
@@ -206,7 +206,7 @@ const Menu = styled.div<{ isOpen: boolean }>`
   }
 `;
 
-const StyledAnchor = styled.span`
-  color: inherit;
+const StyledSpan = styled.span`
+  color: #fff;
   text-decoration: none;
 `;
