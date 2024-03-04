@@ -17,7 +17,7 @@ export const Component = () => {
       <NewsCard.Component />
 
       <StyledButton.Component
-        linkTo="https://google.com"
+        linkTo="https://note.com/excelinc"
         text="MORE→"
       />
     </Container>
