@@ -74,6 +74,10 @@ const Container = styled.div`
   height: auto;
   overflow: visible;
   margin-top: 138px;
+  padding: 0 50px;
+  @media (max-width: 768px) {
+    padding: 0 30px;
+  }
 `;
 
 const StyledMobileView = styled.div`
@@ -88,7 +92,6 @@ const StyledMobileView = styled.div`
   margin-top: auto;
 
   @media (max-width: 768px) {
-    width: 80%;
     height: auto;
     border-radius: 52px;
     background: #f9f9f9;
