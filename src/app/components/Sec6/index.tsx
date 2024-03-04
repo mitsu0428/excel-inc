@@ -88,7 +88,7 @@ const StyledMobileView = styled.div`
   margin-top: auto;
 
   @media (max-width: 768px) {
-    width: 324px;
+    width: 80%;
     height: auto;
     border-radius: 52px;
     background: #f9f9f9;
