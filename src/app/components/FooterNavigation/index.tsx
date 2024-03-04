@@ -40,7 +40,12 @@ export const Component = () => {
 
         <Center1Contents>
           <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
-            TOP
+            <StyledLink
+              href={"/"}
+              passHref
+            >
+              TOP
+            </StyledLink>
           </NavText>
           <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
             ABOUT
@@ -199,6 +204,7 @@ const StyledImage = styled.img`
 `;
 
 const StyledLink = styled(Link)`
+  color: #fff;
   text-decoration: none;
 `;
 
