@@ -43,51 +43,46 @@ export default function Contact() {
 
       <Form onSubmit={handleSubmit}>
         <SubWrap>
-          <TextLarge>
-            Your Name
-            <Input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-            />
-          </TextLarge>
-          <TextLarge>
-            Company
-            <Input
-              type="text"
-              name="company"
-              value={formData.company}
-              onChange={handleChange}
-            />
-          </TextLarge>
-          <TextLarge>
-            E-mail Address
-            <Input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-            />
-          </TextLarge>
-          <TextLarge>
-            Phone Number
-            <Input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-            />
-          </TextLarge>
-          <TextLarge>
-            Message
-            <TextArea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-            />
-          </TextLarge>
+          <TextLarge>Your Name*</TextLarge>
+          <Input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+
+          <TextLarge>Company</TextLarge>
+          <Input
+            type="text"
+            name="company"
+            value={formData.company}
+            onChange={handleChange}
+          />
+
+          <TextLarge>E-mail Address*</TextLarge>
+          <Input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+
+          <TextLarge>Phone Number</TextLarge>
+          <Input
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+          />
+
+          <TextLarge>Message*</TextLarge>
+          <TextArea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+          />
         </SubWrap>
+
         <Button type="submit">Submit</Button>
       </Form>
     </Wrap>
@@ -129,13 +124,12 @@ const TitleH2_Contact = styled.h2`
   }
 `;
 
-const TextLarge = styled.label`
+const TextLarge = styled.p`
   color: #fff;
   font-family: YuGothic;
   width: 100%;
   text-align: left;
   font-size: 25px;
-  font-style: normal;
   font-weight: 500;
   line-height: normal;
 `;
@@ -144,12 +138,18 @@ const Text = styled.p`
   color: #fff;
   font-family: YuGothic;
   font-size: 20px;
-  font-style: normal;
   font-weight: 500;
   line-height: normal;
 `;
 
-const Form = styled.form``;
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+`;
 
 const Input = styled.input`
   border: none;
@@ -192,6 +192,6 @@ const Button = styled.button`
 const Divider = styled.div`
   background: #fff;
   margin: 55px 0;
-  width: 303px;
+  width: 585px;
   height: 1px;
 `;
