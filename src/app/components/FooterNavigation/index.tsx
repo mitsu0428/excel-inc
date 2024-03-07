@@ -13,18 +13,35 @@ export const Component = () => {
             <FollowUsText className={Font.Font.CustomNotoSansMyanmar.className}>
               FOLLOW US
             </FollowUsText>
-            <SnsIcon
-              src="/sns-instagram.png"
-              alt="Instagram"
-            />
-            <SnsIcon
-              src="/sns-line.png"
-              alt="Line"
-            />
-            <SnsIcon
-              src="/sns-tiktok.png"
-              alt="TikTok"
-            />
+            <StyledLink
+              href={"/"}
+              passHref
+            >
+              <SnsIcon
+                src="/sns-instagram.png"
+                alt="Instagram"
+              />
+            </StyledLink>
+            <StyledLink
+              href={"https://lin.ee/kaU291k"}
+              target="_blank"
+              passHref
+            >
+              <SnsIcon
+                src="/sns-line.png"
+                alt="Line"
+              />
+            </StyledLink>
+            <StyledLink
+              href={"https://www.tiktok.com/@inforzsb7b?_t=8kOyyHCZkNm&_r="}
+              target="_blank"
+              passHref
+            >
+              <SnsIcon
+                src="/sns-tiktok.png"
+                alt="TikTok"
+              />
+            </StyledLink>
           </SnsWrapper>
 
           <WrapperColumn>
