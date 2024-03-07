@@ -20,6 +20,8 @@ export const Component = () => {
               EXCEL Inc.（エクセルインク）
             </ContentsText>
 
+            <br />
+
             <ContentsText>
               [所在地]
               <br />
@@ -30,17 +32,23 @@ export const Component = () => {
               WISE 512ビル 305
             </ContentsText>
 
+            <br />
+
             <ContentsText>
               [電話番号]
               <br />
               03-6824-4903
             </ContentsText>
 
+            <br />
+
             <ContentsText>
               [資本金]
               <br />
               500万円
             </ContentsText>
+
+            <br />
 
             <ContentsText>
               [事業内容]
@@ -158,7 +166,6 @@ const ContentsText = styled.p`
   font-size: 25px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
   text-align: left;
   @media (max-width: 768px) {
     font-size: 8px;
