@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+import styled from "styled-components";
 import {
   Card,
   CardContent,
@@ -107,33 +109,64 @@ export const Component = () => {
             key={index}
           >
             <Card sx={{ height: "500px" }}>
-              <CardMedia
-                component="img"
-                height="140"
-                image={news.thumbnail}
-                alt={news.title}
-              />
-              <CardContent>
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
-                >
-                  {news.showDate}
-                </Typography>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                >
-                  {news.title}
-                </Typography>
+              <StyledLink
+                href={news.link}
+                target="_blank"
+                passHref
+                key={index}
+              >
+                <CardMedia
+                  component="img"
+                  height="140"
+                  image={news.thumbnail}
+                  alt={news.title}
+                />
+              </StyledLink>
 
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
+              <CardContent>
+                <StyledLink
+                  href={news.link}
+                  target="_blank"
+                  passHref
+                  key={index}
                 >
-                  {news.desc}
-                </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                  >
+                    {news.showDate}
+                  </Typography>
+                </StyledLink>
+
+                <StyledLink
+                  href={news.link}
+                  target="_blank"
+                  passHref
+                  key={index}
+                >
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                  >
+                    {news.title}
+                  </Typography>
+                </StyledLink>
+
+                <StyledLink
+                  href={news.link}
+                  target="_blank"
+                  passHref
+                  key={index}
+                >
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                  >
+                    {news.desc}
+                  </Typography>
+                </StyledLink>
+
                 <Button
                   size="small"
                   href={news.link}
@@ -142,12 +175,20 @@ export const Component = () => {
                 >
                   READ MORE
                 </Button>
-                <Typography
-                  variant="body2"
-                  color="text.secondary"
+
+                <StyledLink
+                  href={news.link}
+                  target="_blank"
+                  passHref
+                  key={index}
                 >
-                  {news.hashtags.join(" ")}
-                </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                  >
+                    {news.hashtags.join(" ")}
+                  </Typography>
+                </StyledLink>
               </CardContent>
             </Card>
           </Grid>
@@ -156,3 +197,7 @@ export const Component = () => {
     </Container>
   );
 };
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
