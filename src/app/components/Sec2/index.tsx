@@ -2,7 +2,7 @@
 
 import React from "react";
 import styled from "styled-components";
-
+import * as NewsArea from "../ui/NewsArea";
 import * as Font from "../../styles/NextFont";
 
 export const Component = () => {
@@ -46,6 +46,11 @@ export const Component = () => {
           世の中の期待と想像を超えるサービスを提供していきます。
         </TextRight>
       </TextAreaRight>
+
+      <NewsArea.Component
+        text="NEWS. 2024/02/20 Web site OPEN"
+        linkTo="https://note.com/excelinc/"
+      />
     </Container>
   );
 };
