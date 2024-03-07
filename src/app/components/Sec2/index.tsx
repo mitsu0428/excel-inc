@@ -84,24 +84,25 @@ const StyledImageSmartPhone = styled.img`
 const TextAreaLeft = styled.div`
   position: absolute;
   top: 178px;
-  left: 0;
+  left: 86px;
   padding: 30px;
   text-align: left;
   @media (max-width: 768px) {
     top: 200px;
+    left: 11px;
   }
 `;
 
 const TextAreaRight = styled.div`
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 124px;
+  right: 18px;
   padding: 30px;
   text-align: left;
-  width: 573px;
-  word-wrap: break-word;
+  white-space: nowrap;
   @media (max-width: 768px) {
-    width: 303px;
+    bottom: 313px;
+    right: 20px;
   }
 `;
 
@@ -151,11 +152,10 @@ const TitleH2_Concept = styled.h2`
 
 const TextRight = styled.p`
   color: #fff;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 20px;
-  font-weight: 200;
   font-family: YuGothic;
-  line-height: 25px;
+  font-weight: 500;
+  line-height: 125%;
   letter-spacing: 0.4px;
 
   @media (max-width: 768px) {
