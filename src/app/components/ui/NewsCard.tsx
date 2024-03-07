@@ -96,7 +96,7 @@ export const Component = () => {
     <Container sx={{ padding: "20px" }}>
       <Grid
         container
-        spacing={2}
+        spacing={8}
       >
         {newsJson.map((news, index) => (
           <Grid
