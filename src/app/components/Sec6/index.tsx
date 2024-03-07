@@ -6,7 +6,7 @@ import * as Font from "../../styles/NextFont";
 
 export const Component = () => {
   return (
-    <Container>
+    <Container id="company">
       <StyledMobileView>
         <MobileBorder />
         <TitleH2_MobileView className={Font.Font.CustomGafata.className}>
