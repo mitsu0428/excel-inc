@@ -9,9 +9,13 @@ export const Component = () => {
   return (
     <Container>
       <ImageWrap>
-        <StyledImage
-          src="/2枚目の画像.png"
-          alt="2枚目のトップ画像"
+        <StyledImagePC
+          src="/top-image-prod-sp.png"
+          alt="トップ画像"
+        />
+        <StyledImageSmartPhone
+          src="/top-image-prod.png"
+          alt="トップ画像"
         />
       </ImageWrap>
 
@@ -55,13 +59,25 @@ const ImageWrap = styled.div`
   width: 100%;
 `;
 
-const StyledImage = styled.img`
+const StyledImagePC = styled.img`
+  display: none;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  @media (min-width: 768px) {
-    height: 100vh;
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+const StyledImageSmartPhone = styled.img`
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
