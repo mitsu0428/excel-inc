@@ -93,6 +93,7 @@ export const Component = () => {
 
 const Footer = styled.footer`
   height: auto;
+  background-color: #403e3e;
 `;
 
 const Wrapper = styled.div`

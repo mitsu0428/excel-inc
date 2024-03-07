@@ -8,6 +8,7 @@ export const Component = () => {
   return (
     <Container>
       <StyledMobileView>
+        <MobileBorder />
         <TitleH2_MobileView className={Font.Font.CustomGafata.className}>
           OUR COMPANY
         </TitleH2_MobileView>
@@ -85,7 +86,7 @@ const StyledMobileView = styled.div`
   width: 100%;
   max-width: 1181px;
   height: auto;
-  border-radius: 89px;
+  border-radius: 89px 89px 0 0;
   background: #f9f9f9;
   padding: 0 50px;
   box-sizing: border-box;
@@ -93,7 +94,7 @@ const StyledMobileView = styled.div`
 
   @media (max-width: 768px) {
     height: auto;
-    border-radius: 52px;
+    border-radius: 52px 52px 0 0;
     background: #f9f9f9;
     padding: 20px;
     margin-bottom: 0;
@@ -104,13 +105,12 @@ const MobileBorder = styled.div`
   position: absolute;
   border-radius: 27px;
   background: #d9d9d9;
-  top: 26px;
   left: 50%;
-  transform: translateX(-50%); // 中央に配置
-  cursor: pointer; // クリック可能なことを示す
+  transform: translateX(-50%);
 
-  width: 130px;
-  height: 10px;
+  top: 26px;
+  width: 303px;
+  height: 13px;
 
   @media (max-width: 768px) {
     top: 14px;
