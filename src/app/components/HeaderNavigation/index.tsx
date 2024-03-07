@@ -79,7 +79,8 @@ export const Component = () => {
 
           <StyledLi className={Font.Font.CustomGafata.className}>
             <StyledLink
-              href={"/"}
+              target="_blank"
+              href={"https://note.com/excelinc/"}
               passHref
             >
               <StyledSpan onClick={closeMenu}>NEWS</StyledSpan>
