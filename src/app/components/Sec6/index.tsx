@@ -85,6 +85,7 @@ const Container = styled.div`
   margin-top: 138px;
   padding: 0 50px;
   @media (max-width: 768px) {
+    margin-top: 81px;
     padding: 0 30px;
   }
 `;
@@ -101,7 +102,7 @@ const StyledMobileView = styled.div`
   margin-top: auto;
 
   @media (max-width: 768px) {
-    height: auto;
+    height: 500px;
     border-radius: 52px 52px 0 0;
     background: #f9f9f9;
     padding: 20px;
@@ -132,7 +133,7 @@ const Contents = styled.div`
   justify-content: center;
   align-items: top;
   width: 100%;
-  height: 100%;
+  height: auto;
   gap: 44px;
   @media (max-width: 768px) {
     gap: 17px;
