@@ -1,13 +1,31 @@
 "use client";
 
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import * as Font from "../../styles/NextFont";
 
 export const Component = () => {
+  const [isVisible, setIsVisible] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const top = window.scrollY;
+      const height = window.innerHeight;
+      const offset = 100;
+      if (top > height - offset) {
+        setIsVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <Container>
+    <Container isVisible={isVisible}>
       <TitleH2_BusinessDomain className={Font.Font.CustomGafata.className}>
         BUSINESS DOMAIN
       </TitleH2_BusinessDomain>
@@ -42,7 +60,18 @@ export const Component = () => {
   );
 };
 
-const Container = styled.div`
+const slidein = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const Container = styled.div<{ isVisible: boolean }>`
   position: relative;
   display: flex;
   justify-content: center;
@@ -50,6 +79,9 @@ const Container = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
+  opacity: ${(props) => (props.isVisible ? "1" : "0")};
+  transform: translateY(${(props) => (props.isVisible ? "0" : "100px")});
+  transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
 `;
 
 const Wrap = styled.div``;
@@ -84,7 +116,7 @@ const TitleH3_Description = styled.h3`
 `;
 
 const Description = styled.p`
-  font-size: 20px
+  font-size: 20px;
   text-align: left;
   font-weight: 600;
   text-align: center;
