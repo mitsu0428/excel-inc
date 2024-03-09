@@ -1,11 +1,12 @@
 "use client";
-
-import React from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import styled, { keyframes } from "styled-components";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export const Component: React.FC = () => {
-  const [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const [slidesToShow, setSlidesToShow] = useState(3); // 初期値はPCの場合のスライド数
+
   const images = [
     { src: "/slide1.png", alt: "事業領域の画像" },
     { src: "/slide2.png", alt: "事業領域の画像" },
@@ -15,49 +16,58 @@ export const Component: React.FC = () => {
 
   const totalSlides = images.length;
 
-  const goToNextSlide = React.useCallback(() => {
+  const updateSlidesToShow = useCallback(() => {
+    if (window.innerWidth <= 768) {
+      setSlidesToShow(2); // スマホの場合のスライド数
+    } else {
+      setSlidesToShow(3); // PCの場合のスライド数
+    }
+  }, []);
+
+  useEffect(() => {
+    updateSlidesToShow();
+    window.addEventListener("resize", updateSlidesToShow);
+    return () => window.removeEventListener("resize", updateSlidesToShow);
+  }, [updateSlidesToShow]);
+
+  const goToNextSlide = useCallback(() => {
     setCurrentSlideIndex(
       (prevSlideIndex) => (prevSlideIndex + 1) % totalSlides
     );
   }, [totalSlides]);
 
-  const goToPrevSlide = () => {
+  const goToPrevSlide = useCallback(() => {
     setCurrentSlideIndex((prevSlideIndex) =>
       prevSlideIndex === 0 ? totalSlides - 1 : prevSlideIndex - 1
     );
-  };
+  }, [totalSlides]);
 
   const getNextSlidesIndexes = () => {
-    const slideWidth =
-      window.innerWidth > 768 ? "calc(100% / 3)" : "calc(100% / 2)";
     let indexes = [];
-    for (let i = 0; i < (window.innerWidth > 768 ? 3 : 2); i++) {
+    for (let i = 0; i < slidesToShow; i++) {
       let index = (currentSlideIndex + i) % totalSlides;
-      indexes.push(
-        <Slide
-          key={index}
-          src={images[index].src}
-          alt={images[index].alt}
-          width={slideWidth}
-        />
-      );
+      indexes.push(index);
     }
     return indexes;
   };
 
   const nextSlidesIndexes = getNextSlidesIndexes();
 
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      goToNextSlide();
-    }, 5000);
-
+  useEffect(() => {
+    const timer = setInterval(goToNextSlide, 5000);
     return () => clearInterval(timer);
   }, [currentSlideIndex, goToNextSlide]);
 
   return (
     <SlideshowContainer>
-      {nextSlidesIndexes}
+      {nextSlidesIndexes.map((index) => (
+        <Slide
+          key={index}
+          src={images[index].src}
+          alt={images[index].alt}
+          slidesToShow={slidesToShow}
+        />
+      ))}
       <LeftArrow onClick={goToPrevSlide}>
         <FaChevronLeft />
       </LeftArrow>
@@ -85,9 +95,13 @@ const SlideshowContainer = styled.div`
   display: flex;
 `;
 
-const Slide = styled.img`
-  width: ${(props) => props.width};
+const Slide = styled.img<{ slidesToShow: number }>`
+  width: ${(props) => `calc(100% / ${props.slidesToShow})`};
   animation: ${fadeIn} 1s ease-in-out;
+
+  @media (max-width: 768px) {
+    width: calc(100% / 2);
+  }
 `;
 
 const ArrowButton = styled.button`
