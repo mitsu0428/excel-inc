@@ -40,6 +40,8 @@ const StyledLink = styled(Link)`
   line-height: 125px;
   letter-spacing: 1.1px;
   text-decoration-line: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 1px;
 
   @media (max-width: 768px) {
     font-size: 16px;
