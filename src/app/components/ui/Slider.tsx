@@ -93,6 +93,7 @@ const SlideshowContainer = styled.div`
   overflow: hidden;
   margin: 0 auto;
   display: flex;
+  margin-top: 48px;
 `;
 
 const Slide = styled.img<{ slidesToShow: number }>`
