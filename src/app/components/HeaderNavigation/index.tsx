@@ -24,7 +24,7 @@ export const Component = () => {
         passHref
       >
         <StyledImage
-          src="/assets/logo.png"
+          src="/assets/logo.svg"
           alt="Excel inc."
         />
       </StyledLink>
@@ -95,14 +95,13 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>COMPANY</StyledSpan>
             </StyledLink>
           </StyledLi>
-          <VerticalBorder />
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
-            <StyledLink
+            <StyledSpecialLink
               href={"/contact"}
               passHref
             >
-              <StyledSpan onClick={closeMenu}>CONTACT</StyledSpan>
-            </StyledLink>
+              <StyledSpecialSpan onClick={closeMenu}>CONTACT</StyledSpecialSpan>
+            </StyledSpecialLink>
           </StyledLi>
           <SnsWrapper isOpen={isOpen}>
             <FollowUsText className={Font.Font.CustomNotoSansMyanmar.className}>
@@ -149,6 +148,13 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
+const StyledSpecialLink = styled(Link)`
+  text-decoration: none;
+  border: 1px solid #fff;
+  background-color: #fff;
+  padding: 4px 18px;
+`;
+
 const StyledUl = styled.ul<{ isOpen: boolean }>`
   display: flex;
   flex-direction: row;
@@ -189,12 +195,10 @@ const StyledImage = styled.img`
   width: 100%;
   height: 100%;
   max-width: 78px;
-  max-height: 58px;
   z-index: 2;
 
   @media (max-width: 768px) {
     max-width: 59px;
-    max-height: 44px;
   }
 `;
 
@@ -259,6 +263,16 @@ const VerticalBorder = styled.span`
 
 const StyledSpan = styled.span`
   color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+
+  @media (max-width: 768px) {
+    color: #000;
+  }
+`;
+
+const StyledSpecialSpan = styled.span`
+  color: #000;
   text-decoration: none;
   font-size: 16px;
 
