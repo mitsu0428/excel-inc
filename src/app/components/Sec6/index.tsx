@@ -67,7 +67,14 @@ export const Component = () => {
             </ContentsText>
           </ContentsLeft>
 
-          <ContentsRight></ContentsRight>
+          <ContentsRight>
+            <StyledIframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6291416158138!2d139.71004377578265!3d35.66150773105737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b6093b6911b%3A0x8221cc0251336e2f!2z44CSMTA3LTAwNjIg5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGx77yV5LiB55uu77yR77yS4oiS77yS77yXIOODr-OCpOOCuu-8le-8ke-8kuODk-ODqw!5e0!3m2!1sja!2sjp!4v1709983095576!5m2!1sja!2sjp"
+              width="600"
+              height="450"
+              loading="lazy"
+            ></StyledIframe>
+          </ContentsRight>
         </Contents>
       </StyledMobileView>
     </Container>
@@ -185,5 +192,15 @@ const TitleH2_MobileView = styled.h2`
   @media (max-width: 768px) {
     font-size: 25px;
     margin-top: 51px;
+  }
+`;
+
+const StyledIframe = styled.iframe`
+  width: 100%;
+  height: 100%;
+  border: none;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
   }
 `;
