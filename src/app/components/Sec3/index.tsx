@@ -77,7 +77,7 @@ const Wrap = styled.div``;
 
 const TextArea = styled.div`
   margin-top: 36px;
-  line-height: 60px;
+  line-height: 45px;
 `;
 
 const TitleH2_BusinessDomain = styled.h2`
@@ -105,7 +105,7 @@ const TitleH3_Description = styled.h3`
 `;
 
 const Description = styled.p`
-  font-size: 20px;
+  font-size: 18px;
   text-align: left;
   font-weight: 400;
   text-align: center;
