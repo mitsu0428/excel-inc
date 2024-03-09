@@ -58,7 +58,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>TOP</StyledSpan>
             </StyledLink>
           </StyledLi>
-
+          |
           <StyledLi className={Font.Font.CustomGafata.className}>
             <StyledLink
               href={"/"}
@@ -67,7 +67,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>MISSION</StyledSpan>
             </StyledLink>
           </StyledLi>
-
+          |
           <StyledLi className={Font.Font.CustomGafata.className}>
             <StyledLink
               href={"/"}
@@ -76,7 +76,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>SERVICE</StyledSpan>
             </StyledLink>
           </StyledLi>
-
+          |
           <StyledLi className={Font.Font.CustomGafata.className}>
             <StyledLink
               target="_blank"
@@ -86,7 +86,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>NEWS</StyledSpan>
             </StyledLink>
           </StyledLi>
-
+          |
           <StyledLi className={Font.Font.CustomGafata.className}>
             <StyledLink
               href={"#company"}
@@ -95,7 +95,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>COMPANY</StyledSpan>
             </StyledLink>
           </StyledLi>
-
+          |
           <StyledLi className={Font.Font.CustomGafata.className}>
             <StyledLink
               href={"/contact"}
@@ -104,7 +104,6 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>CONTACT</StyledSpan>
             </StyledLink>
           </StyledLi>
-
           <SnsWrapper isOpen={isOpen}>
             <FollowUsText className={Font.Font.CustomNotoSansMyanmar.className}>
               FOLLOW US
@@ -136,12 +135,13 @@ const Wrapper = styled.div`
   width: 100%;
   height: 84px;
   background-color: rgba(0, 0, 0, 1);
-  padding: 13px;
+  padding: 50px 60px;
   position: fixed;
   z-index: 1;
 
   @media (max-width: 768px) {
     height: 71px;
+    padding: 20px 60px;
   }
 `;
 
