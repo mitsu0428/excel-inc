@@ -68,6 +68,7 @@ const Container = styled.div`
 
 const ImageWrap = styled.div`
   width: 100%;
+  height: 100vh;
 `;
 
 const StyledImagePC = styled.img`
@@ -97,7 +98,7 @@ const StyledImageSmartPhone = styled.img`
 const TextAreaLeft = styled.div`
   position: absolute;
   top: 178px;
-  left: 86px;
+  left: 40px;
   padding: 30px;
   text-align: left;
 
@@ -185,7 +186,7 @@ const TitleH2_Concept = styled.h2`
 const TextRight = styled.p`
   color: #fff;
   font-size: 20px;
-  line-height: 175%;
+  line-height: 150%;
   letter-spacing: 0.4px;
 
   @media (max-width: 1024px) {

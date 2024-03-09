@@ -134,7 +134,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 84px;
-  padding: 50px 60px;
+  padding: 60px;
   position: fixed;
   z-index: 1;
 
