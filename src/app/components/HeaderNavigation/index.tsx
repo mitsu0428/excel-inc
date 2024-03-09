@@ -253,6 +253,7 @@ const Menu = styled.div<{ isOpen: boolean }>`
 const StyledSpan = styled.span`
   color: #fff;
   text-decoration: none;
+  font-size: 18px;
 
   @media (max-width: 768px) {
     color: #000;
@@ -296,7 +297,7 @@ const FollowUsText = styled.p`
   color: #000;
   text-align: center;
   font-family: "Myanmar Sangam MN";
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 125px; /* 833.333% */
   letter-spacing: 0.75px;

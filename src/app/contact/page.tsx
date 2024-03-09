@@ -129,7 +129,7 @@ const TextLarge = styled.p`
   font-family: YuGothic;
   width: 100%;
   text-align: left;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
   line-height: normal;
 `;

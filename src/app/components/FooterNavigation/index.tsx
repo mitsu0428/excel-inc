@@ -162,7 +162,7 @@ const LeftContents = styled.div`
 const FollowUsText = styled.p`
   width: 100%;
   color: #fff;
-  font-size: 31px;
+  font-size: 20px;
   font-family: "Myanmar Sangam MN";
   font-weight: 400;
   line-height: 125px; /* 403.226% */
@@ -179,7 +179,7 @@ const FollowUsText = styled.p`
 const CompanyInformationText = styled.p`
   width: 100%;
   color: #fff;
-  font-size: 25px;
+  font-size: 20px;
   font-family: "Myanmar Sangam MN";
   font-weight: 400;
   letter-spacing: 1px;
@@ -194,7 +194,7 @@ const NavText = styled.p`
   width: 100%;
   color: #fff;
   font-family: "Myanmar Sangam MN";
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 70px; /* 280% */
   letter-spacing: 1.25px;
@@ -207,7 +207,7 @@ const NavText = styled.p`
 
 const RightReservedText = styled.p`
   padding: 20px 0;
-  font-size: 22px;
+  font-size: 20px;
   text-align: center;
   color: #fff;
 

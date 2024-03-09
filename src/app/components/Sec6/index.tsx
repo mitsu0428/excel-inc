@@ -171,7 +171,7 @@ const ContentsLeft = styled.div`
 const ContentsText = styled.p`
   color: #000;
   font-family: YuGothic;
-  font-size: 25px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   text-align: left;
