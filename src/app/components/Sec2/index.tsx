@@ -110,13 +110,13 @@ const TextAreaRight = styled.div`
   position: absolute;
   bottom: 124px;
   right: 18px;
-  padding: 30px;
   text-align: left;
   white-space: nowrap;
 
   @media (max-width: 768px) {
     bottom: 313px;
     right: 20px;
+    padding: 0px;
   }
 `;
 
