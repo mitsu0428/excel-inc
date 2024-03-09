@@ -133,7 +133,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 84px;
-  padding: 60px;
+  padding: 80px 60px;
   position: fixed;
   z-index: 1;
 
@@ -194,7 +194,7 @@ const StyledLi = styled.li`
 const StyledImage = styled.img`
   width: 100%;
   height: 100%;
-  max-width: 78px;
+  max-width: 88px;
   z-index: 2;
 
   @media (max-width: 768px) {
@@ -264,7 +264,8 @@ const VerticalBorder = styled.span`
 const StyledSpan = styled.span`
   color: #fff;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
+  letter-spacing: 1.6px;
 
   @media (max-width: 768px) {
     color: #000;

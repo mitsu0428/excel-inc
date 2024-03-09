@@ -97,7 +97,7 @@ const StyledImageSmartPhone = styled.img`
 
 const TextAreaLeft = styled.div`
   position: absolute;
-  top: 178px;
+  top: 145px;
   left: 40px;
   padding: 30px;
   text-align: left;
@@ -115,7 +115,7 @@ const TextAreaLeft = styled.div`
 
 const TextAreaRight = styled.div`
   position: absolute;
-  bottom: 124px;
+  bottom: 155px;
   right: 60px;
   text-align: left;
   white-space: nowrap;
@@ -185,7 +185,7 @@ const TitleH2_Concept = styled.h2`
 
 const TextRight = styled.p`
   color: #fff;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.4px;
 

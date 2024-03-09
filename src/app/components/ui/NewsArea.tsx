@@ -37,7 +37,7 @@ const StyledLink = styled(Link)`
   font-family: "Myanmar Sangam MN";
   font-size: 22px;
   font-weight: 400;
-  line-height: 125px;
+  line-height: 80px;
   letter-spacing: 1.1px;
   text-decoration-line: underline;
   text-underline-offset: 10px;
