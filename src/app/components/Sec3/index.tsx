@@ -60,17 +60,6 @@ export const Component = () => {
   );
 };
 
-const slidein = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
-
 const Container = styled.div<{ isVisible: boolean }>`
   position: relative;
   display: flex;
@@ -80,8 +69,8 @@ const Container = styled.div<{ isVisible: boolean }>`
   width: 100%;
   height: 100%;
   opacity: ${(props) => (props.isVisible ? "1" : "0")};
-  transform: translateY(${(props) => (props.isVisible ? "0" : "100px")});
-  transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
+  transform: translateY(${(props) => (props.isVisible ? "0" : "-100px")});
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 `;
 
 const Wrap = styled.div``;
