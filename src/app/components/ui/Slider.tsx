@@ -29,8 +29,7 @@ export const Component: React.FC = () => {
 
   const getNextSlidesIndexes = () => {
     let indexes = [];
-    for (let i = 0; i < 3; i++) {
-      // 常に3枚のスライドを表示
+    for (let i = 0; i < (window.innerWidth > 768 ? 3 : 2); i++) {
       let index = (currentSlideIndex + i) % totalSlides;
       indexes.push(index);
     }
@@ -81,12 +80,16 @@ const SlideshowContainer = styled.div`
   overflow: hidden;
   margin: 0 auto;
   display: flex;
-  animation: ${fadeIn} 1s ease-in-out;
 `;
 
 const Slide = styled.img`
-  width: calc(100% / 3);
+  width: ${(props) =>
+    window.innerWidth > 768 ? "calc(100% / 3)" : "calc(100% / 2)"};
   animation: ${fadeIn} 1s ease-in-out;
+
+  @media (max-width: 768px) {
+    width: calc(100% / 2);
+  }
 `;
 
 const ArrowButton = styled.button`
