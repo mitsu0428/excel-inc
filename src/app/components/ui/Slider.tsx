@@ -1,64 +1,59 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import React from "react";
+import styled, { keyframes } from "styled-components";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export const Component: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
+  const [currentSlideIndex, setCurrentSlideIndex] = React.useState(0);
   const images = [
-    {
-      src: "/slide1.png",
-      alt: "事業領域の画像",
-      width: 427,
-      height: 765,
-    },
-    {
-      src: "/slide2.png",
-      alt: "事業領域の画像",
-      width: 427,
-      height: 765,
-    },
-    {
-      src: "/slide3.png",
-      alt: "事業領域の画像",
-      width: 427,
-      height: 765,
-    },
-    {
-      src: "/slide4.png",
-      alt: "事業領域の画像",
-      width: 427,
-      height: 765,
-    },
+    { src: "/slide1.png", alt: "事業領域の画像" },
+    { src: "/slide2.png", alt: "事業領域の画像" },
+    { src: "/slide3.png", alt: "事業領域の画像" },
+    { src: "/slide4.png", alt: "事業領域の画像" },
   ];
 
+  const totalSlides = images.length;
+
   const goToNextSlide = React.useCallback(() => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === images.length - 1 ? 0 : prevSlide + 1
+    setCurrentSlideIndex(
+      (prevSlideIndex) => (prevSlideIndex + 1) % totalSlides
     );
-  }, [images.length]);
+  }, [totalSlides]);
 
   const goToPrevSlide = () => {
-    setCurrentSlide((prevSlide) =>
-      prevSlide === 0 ? images.length - 1 : prevSlide - 1
+    setCurrentSlideIndex((prevSlideIndex) =>
+      prevSlideIndex === 0 ? totalSlides - 1 : prevSlideIndex - 1
     );
   };
 
-  useEffect(() => {
-    const interval = setInterval(goToNextSlide, 5000);
-    return () => clearInterval(interval);
-  }, [currentSlide, goToNextSlide]);
+  const getNextSlidesIndexes = () => {
+    let indexes = [];
+    for (let i = 0; i < 3; i++) {
+      // 常に3枚のスライドを表示
+      let index = (currentSlideIndex + i) % totalSlides;
+      indexes.push(index);
+    }
+    return indexes;
+  };
+
+  const nextSlidesIndexes = getNextSlidesIndexes();
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      goToNextSlide();
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [currentSlideIndex, goToNextSlide]);
 
   return (
     <SlideshowContainer>
-      {images.map((image, index) => (
+      {nextSlidesIndexes.map((index) => (
         <Slide
           key={index}
-          src={image.src}
-          alt={image.alt}
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          src={images[index].src}
+          alt={images[index].alt}
         />
       ))}
       <LeftArrow onClick={goToPrevSlide}>
@@ -71,22 +66,27 @@ export const Component: React.FC = () => {
   );
 };
 
-// 画像はそれぞれ3分の1の幅で横並びになる
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 const SlideshowContainer = styled.div`
   position: relative;
   width: 100%;
   overflow: hidden;
   margin: 0 auto;
   display: flex;
+  animation: ${fadeIn} 1s ease-in-out;
 `;
 
 const Slide = styled.img`
   width: calc(100% / 3);
-  transition: 0.5s;
-
-  @media (max-width: 768px) {
-    width: calc(100% / 2);
-  }
+  animation: ${fadeIn} 1s ease-in-out;
 `;
 
 const ArrowButton = styled.button`
