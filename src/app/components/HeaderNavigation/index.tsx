@@ -50,7 +50,7 @@ export const Component = () => {
         onClick={closeMenu}
       >
         <StyledUl isOpen={isOpen}>
-          <StyledLi className={Font.Font.CustomGafata.className}>
+          <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"/"}
               passHref
@@ -58,8 +58,8 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>TOP</StyledSpan>
             </StyledLink>
           </StyledLi>
-          |
-          <StyledLi className={Font.Font.CustomGafata.className}>
+          <VerticalBorder />
+          <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"/"}
               passHref
@@ -67,8 +67,8 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>MISSION</StyledSpan>
             </StyledLink>
           </StyledLi>
-          |
-          <StyledLi className={Font.Font.CustomGafata.className}>
+          <VerticalBorder />
+          <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"/"}
               passHref
@@ -76,8 +76,8 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>SERVICE</StyledSpan>
             </StyledLink>
           </StyledLi>
-          |
-          <StyledLi className={Font.Font.CustomGafata.className}>
+          <VerticalBorder />
+          <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               target="_blank"
               href={"https://note.com/excelinc/"}
@@ -86,8 +86,8 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>NEWS</StyledSpan>
             </StyledLink>
           </StyledLi>
-          |
-          <StyledLi className={Font.Font.CustomGafata.className}>
+          <VerticalBorder />
+          <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"#company"}
               passHref
@@ -95,8 +95,8 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>COMPANY</StyledSpan>
             </StyledLink>
           </StyledLi>
-          |
-          <StyledLi className={Font.Font.CustomGafata.className}>
+          <VerticalBorder />
+          <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"/contact"}
               passHref
@@ -251,10 +251,16 @@ const Menu = styled.div<{ isOpen: boolean }>`
   }
 `;
 
+const VerticalBorder = styled.span`
+  width: 1px;
+  height: 18px;
+  background-color: #fff;
+`;
+
 const StyledSpan = styled.span`
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
 
   @media (max-width: 768px) {
     color: #000;

@@ -32,17 +32,23 @@ export const Component = () => {
       </TextAreaLeft>
 
       <TextAreaRight>
-        <TextRight>
+        <TextRight className={Font.Font.CustomGotchicA1.className}>
           革新的でワクワクする要素を探究しながら、常にクールに。
         </TextRight>
-        <TextRight>
+        <TextRight className={Font.Font.CustomGotchicA1.className}>
           未来に翔ける先駆者として、私たちが道を切り開いていこう。
         </TextRight>
         <br />
-        <TextRight>明日さえも予測不可能な現代社会で、</TextRight>
-        <TextRight>「誰よりも深く思考し」</TextRight>
-        <TextRight>「誰よりも熱く行動し続け」</TextRight>
-        <TextRight>
+        <TextRight className={Font.Font.CustomGotchicA1.className}>
+          明日さえも予測不可能な現代社会で、
+        </TextRight>
+        <TextRight className={Font.Font.CustomGotchicA1.className}>
+          「誰よりも深く思考し」
+        </TextRight>
+        <TextRight className={Font.Font.CustomGotchicA1.className}>
+          「誰よりも熱く行動し続け」
+        </TextRight>
+        <TextRight className={Font.Font.CustomGotchicA1.className}>
           世の中の期待と想像を超えるサービスを提供していきます。
         </TextRight>
       </TextAreaRight>
@@ -179,8 +185,6 @@ const TitleH2_Concept = styled.h2`
 const TextRight = styled.p`
   color: #fff;
   font-size: 20px;
-  font-family: YuGothic;
-  font-weight: 500;
   line-height: 175%;
   letter-spacing: 0.4px;
 

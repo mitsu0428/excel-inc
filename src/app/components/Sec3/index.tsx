@@ -39,20 +39,20 @@ export const Component = () => {
       </Wrap>
 
       <TextArea>
-        <Description className={Font.Font.CustomGafata.className}>
+        <Description className={Font.Font.CustomGotchicA1.className}>
           課題を整理し、正しく理解する。
         </Description>
-        <Description className={Font.Font.CustomGafata.className}>
+        <Description className={Font.Font.CustomGotchicA1.className}>
           解決方法を見つける。
         </Description>
-        <Description className={Font.Font.CustomGafata.className}>
+        <Description className={Font.Font.CustomGotchicA1.className}>
           具体的な形、仕組みとしてアウトプットを構築する。
         </Description>
-        <Description className={Font.Font.CustomGafata.className}>
+        <Description className={Font.Font.CustomGotchicA1.className}>
           時流の変化にあわせて変化を続ける。
         </Description>
         <br />
-        <Description className={Font.Font.CustomGafata.className}>
+        <Description className={Font.Font.CustomGotchicA1.className}>
           ビジネスを推進するすべての流れを私たちがプロデュースします。
         </Description>
       </TextArea>
