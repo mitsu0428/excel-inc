@@ -109,7 +109,7 @@ const TextAreaLeft = styled.div`
 const TextAreaRight = styled.div`
   position: absolute;
   bottom: 124px;
-  right: 18px;
+  right: 60px;
   text-align: left;
   white-space: nowrap;
 

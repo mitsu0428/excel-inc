@@ -28,7 +28,7 @@ export const Component = (props: Props) => {
 const Wrap = styled.div`
   position: absolute;
   bottom: 0;
-  right: 18px;
+  right: 60px;
 `;
 
 const StyledLink = styled(Link)`
