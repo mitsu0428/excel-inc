@@ -47,7 +47,7 @@ export const Component: React.FC = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(goToNextSlide, 5000); // 5秒ごとに次のスライドに切り替える
+    const interval = setInterval(goToNextSlide, 5000);
     return () => clearInterval(interval);
   }, [currentSlide, goToNextSlide]);
 
@@ -71,16 +71,22 @@ export const Component: React.FC = () => {
   );
 };
 
+// 画像はそれぞれ3分の1の幅で横並びになる
 const SlideshowContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
   position: relative;
+  width: 100%;
   overflow: hidden;
+  margin: 0 auto;
+  display: flex;
 `;
 
 const Slide = styled.img`
-  width: 100%;
-  transition: transform 0.5s ease;
+  width: calc(100% / 3);
+  transition: 0.5s;
+
+  @media (max-width: 768px) {
+    width: calc(100% / 2);
+  }
 `;
 
 const ArrowButton = styled.button`
