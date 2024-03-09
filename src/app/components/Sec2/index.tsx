@@ -181,7 +181,7 @@ const TextRight = styled.p`
   font-size: 20px;
   font-family: YuGothic;
   font-weight: 500;
-  line-height: 125%;
+  line-height: 175%;
   letter-spacing: 0.4px;
 
   @media (max-width: 1024px) {

@@ -26,7 +26,7 @@ export const Component = () => {
 
   return (
     <Container isVisible={isVisible}>
-      <TitleH2_BusinessDomain className={Font.Font.CustomGafata.className}>
+      <TitleH2_BusinessDomain className={Font.Font.CustomJosefinSans.className}>
         BUSINESS DOMAIN
       </TitleH2_BusinessDomain>
 
@@ -77,7 +77,7 @@ const Wrap = styled.div``;
 
 const TextArea = styled.div`
   margin-top: 36px;
-  line-height: 40px;
+  line-height: 60px;
 `;
 
 const TitleH2_BusinessDomain = styled.h2`
@@ -107,10 +107,11 @@ const TitleH3_Description = styled.h3`
 const Description = styled.p`
   font-size: 20px;
   text-align: left;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
   margin: 0;
   color: #fff;
+
   @media (max-width: 768px) {
     font-size: 10px;
   }

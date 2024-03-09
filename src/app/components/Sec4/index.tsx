@@ -10,7 +10,7 @@ import * as Font from "../../styles/NextFont";
 export const Component = () => {
   return (
     <Container>
-      <TitleH2_Service className={Font.Font.CustomGafata.className}>
+      <TitleH2_Service className={Font.Font.CustomJosefinSans.className}>
         SERVICE & PRODUCT
       </TitleH2_Service>
 
