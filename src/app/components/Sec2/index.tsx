@@ -70,6 +70,7 @@ const StyledImagePC = styled.img`
   height: 100%;
   object-fit: cover;
   object-position: center;
+
   @media (max-width: 768px) {
     display: block;
   }
@@ -81,6 +82,7 @@ const StyledImageSmartPhone = styled.img`
   height: 100%;
   object-fit: cover;
   object-position: center;
+
   @media (max-width: 768px) {
     display: none;
   }
@@ -92,6 +94,12 @@ const TextAreaLeft = styled.div`
   left: 86px;
   padding: 30px;
   text-align: left;
+
+  @media (max-width: 1024px) {
+    top: 178px;
+    left: 20px;
+  }
+
   @media (max-width: 768px) {
     top: 200px;
     left: 11px;
@@ -105,6 +113,11 @@ const TextAreaRight = styled.div`
   padding: 30px;
   text-align: left;
   white-space: nowrap;
+
+  @media (max-width: 1024px) {
+    bottom: 313px;
+    right: 20px;
+  }
   @media (max-width: 768px) {
     bottom: 313px;
     right: 20px;
@@ -120,6 +133,10 @@ const TitleH2_About = styled.h2`
   margin: 0;
   opacity: 0.3;
 
+  @media (max-width: 1024px) {
+    font-size: 34px;
+    line-height: 55px;
+  }
   @media (max-width: 768px) {
     font-size: 34px;
     line-height: 55px;
@@ -134,6 +151,10 @@ const TitleH2_Company = styled.h2`
   letter-spacing: 6px;
   margin: 0;
 
+  @media (max-width: 1024px) {
+    font-size: 54px;
+    line-height: 55px;
+  }
   @media (max-width: 768px) {
     font-size: 54px;
     line-height: 55px;
@@ -149,6 +170,10 @@ const TitleH2_Concept = styled.h2`
   line-height: normal;
   letter-spacing: 0.56px;
 
+  @media (max-width: 1024px) {
+    font-size: 20px;
+    letter-spacing: 0.4px;
+  }
   @media (max-width: 768px) {
     font-size: 12px;
     letter-spacing: 0.24px;
@@ -163,6 +188,10 @@ const TextRight = styled.p`
   line-height: 125%;
   letter-spacing: 0.4px;
 
+  @media (max-width: 1024px) {
+    font-size: 14px;
+    letter-spacing: 0.28px;
+  }
   @media (max-width: 768px) {
     font-size: 14px;
     letter-spacing: 0.28px;
