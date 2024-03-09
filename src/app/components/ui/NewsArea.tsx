@@ -40,4 +40,9 @@ const StyledLink = styled(Link)`
   line-height: 125px;
   letter-spacing: 1.1px;
   text-decoration-line: underline;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 125px;
+  }
 `;
