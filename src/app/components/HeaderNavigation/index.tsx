@@ -134,10 +134,11 @@ const Wrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 84px;
-  background-color: rgba(0, 0, 0, 1);
   padding: 50px 60px;
   position: fixed;
   z-index: 1;
+
+  mix-blend-mode: difference;
 
   @media (max-width: 768px) {
     height: 71px;
