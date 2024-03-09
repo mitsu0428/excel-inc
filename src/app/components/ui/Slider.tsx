@@ -28,10 +28,19 @@ export const Component: React.FC = () => {
   };
 
   const getNextSlidesIndexes = () => {
+    const slideWidth =
+      window.innerWidth > 768 ? "calc(100% / 3)" : "calc(100% / 2)";
     let indexes = [];
     for (let i = 0; i < (window.innerWidth > 768 ? 3 : 2); i++) {
       let index = (currentSlideIndex + i) % totalSlides;
-      indexes.push(index);
+      indexes.push(
+        <Slide
+          key={index}
+          src={images[index].src}
+          alt={images[index].alt}
+          width={slideWidth}
+        />
+      );
     }
     return indexes;
   };
@@ -48,13 +57,7 @@ export const Component: React.FC = () => {
 
   return (
     <SlideshowContainer>
-      {nextSlidesIndexes.map((index) => (
-        <Slide
-          key={index}
-          src={images[index].src}
-          alt={images[index].alt}
-        />
-      ))}
+      {nextSlidesIndexes}
       <LeftArrow onClick={goToPrevSlide}>
         <FaChevronLeft />
       </LeftArrow>
@@ -83,13 +86,8 @@ const SlideshowContainer = styled.div`
 `;
 
 const Slide = styled.img`
-  width: ${(props) =>
-    window.innerWidth > 768 ? "calc(100% / 3)" : "calc(100% / 2)"};
+  width: ${(props) => props.width};
   animation: ${fadeIn} 1s ease-in-out;
-
-  @media (max-width: 768px) {
-    width: calc(100% / 2);
-  }
 `;
 
 const ArrowButton = styled.button`
