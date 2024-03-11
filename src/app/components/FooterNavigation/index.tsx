@@ -8,11 +8,8 @@ export const Component = () => {
   return (
     <Footer>
       <Wrapper>
-        <LeftContents>
-          <SnsWrapper>
-            <FollowUsText className={Font.Font.CustomNotoSansMyanmar.className}>
-              FOLLOW US
-            </FollowUsText>
+        <Contents>
+          <Sns>
             <StyledLink
               href={"/"}
               passHref
@@ -22,6 +19,7 @@ export const Component = () => {
                 alt="Instagram"
               />
             </StyledLink>
+
             <StyledLink
               href={"https://lin.ee/kaU291k"}
               target="_blank"
@@ -32,6 +30,7 @@ export const Component = () => {
                 alt="Line"
               />
             </StyledLink>
+
             <StyledLink
               href={"https://www.tiktok.com/@inforzsb7b?_t=8kOyyHCZkNm&_r="}
               target="_blank"
@@ -42,21 +41,21 @@ export const Component = () => {
                 alt="TikTok"
               />
             </StyledLink>
-          </SnsWrapper>
+          </Sns>
 
-          <WrapperColumn>
-            <CompanyInformationText>EXCEL inc.</CompanyInformationText>
-            <CompanyInformationText>
-              〒107-0062 東京都港区南青山5-12-27
-            </CompanyInformationText>
-            <CompanyInformationText>WISE 512ビル 305</CompanyInformationText>
-            <br />
-            <CompanyInformationText>Tel.03-6824-4903</CompanyInformationText>
-          </WrapperColumn>
-        </LeftContents>
+          <StyledLink
+            href={"/"}
+            passHref
+          >
+            <StyledImage
+              src="/assets/logo.svg"
+              alt="Excel inc."
+            />
+          </StyledLink>
+        </Contents>
 
-        <Center1Contents>
-          <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
+        <Contents>
+          <NavText className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"/"}
               passHref
@@ -64,46 +63,101 @@ export const Component = () => {
               TOP
             </StyledLink>
           </NavText>
-          <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
-            ABOUT
-          </NavText>
-          <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
-            NEWS
-          </NavText>
-          <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
-            FAQ
-          </NavText>
-        </Center1Contents>
 
-        <Center2Contents>
-          <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            <StyledLink
+              href={"/"}
+              passHref
+            >
+              MISSION
+            </StyledLink>
+          </NavText>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            <StyledLink
+              href={"/"}
+              passHref
+            >
+              NEWS
+            </StyledLink>
+          </NavText>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            <StyledLink
+              href={"#company"}
+              passHref
+            >
+              COMPANY
+            </StyledLink>
+          </NavText>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            <StyledLink
+              href={"#company"}
+              passHref
+            >
+              CONTACT
+            </StyledLink>
+          </NavText>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            <StyledLink
+              href={"#company"}
+              passHref
+            >
+              PRIVACY POLICY
+            </StyledLink>
+          </NavText>
+        </Contents>
+
+        <Contents>
+          <NavText className={Font.Font.CustomJosefinSans.className}>
             SERVICE
           </NavText>
-          <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
-            - Movie
-          </NavText>
-          <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
-            - Web SNS
-          </NavText>
-          <NavText className={Font.Font.CustomNotoSansMyanmar.className}>
-            - Liver
-          </NavText>
-        </Center2Contents>
 
-        <RightContents>
-          <StyledLink
-            href={"/"}
-            passHref
-          >
-            <StyledImage
-              src="/assets/logo-big.png"
-              alt="Excel inc."
-            />
-          </StyledLink>
-        </RightContents>
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            - Marketing Solution
+          </NavText>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            - Movie Production
+          </NavText>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            - Owned Media
+          </NavText>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            - Web Design
+          </NavText>
+        </Contents>
+
+        <Contents>
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            SERVICE
+          </NavText>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            - Marketing Solution
+          </NavText>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            - Movie Production
+          </NavText>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            - Owned Media
+          </NavText>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            - Web Design
+          </NavText>
+        </Contents>
       </Wrapper>
 
-      <RightReservedText>Excel inc. @All Right Reserved</RightReservedText>
+      <RightReservedText className={Font.Font.CustomJosefinSans.className}>
+        ©2024 EXCEL Inc. All Rights Reserved.
+      </RightReservedText>
     </Footer>
   );
 };
@@ -123,102 +177,52 @@ const Wrapper = styled.div`
   }
 `;
 
-const WrapperColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const RightContents = styled.div`
-  width: 259px;
-  height: 184px;
+const Contents = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  height: 100%;
   padding: 0 20px;
 `;
 
-const Center1Contents = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
-
-const Center2Contents = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
-
-const LeftContents = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 0 20px;
-`;
-
-// 一番左側のコンテンツ
-const FollowUsText = styled.p`
-  width: 100%;
-  color: #fff;
-  font-size: 20px;
-  font-family: "Myanmar Sangam MN";
-  font-weight: 400;
-  line-height: 125px; /* 403.226% */
-  letter-spacing: 1.55px;
-  text-align: left;
-
-  @media (max-width: 768px) {
-    font-size: 25px;
-    line-height: 100px; /* 403.226% */
-  }
-`;
-
-// 一番左側のコンテンツ
-const CompanyInformationText = styled.p`
-  width: 100%;
-  color: #fff;
-  font-size: 20px;
-  font-family: "Myanmar Sangam MN";
-  font-weight: 400;
-  letter-spacing: 1px;
-
-  @media (max-width: 768px) {
-    font-size: 20px;
-  }
-`;
-
-// 真ん中2つのコンテンツ
 const NavText = styled.p`
   width: 100%;
   color: #fff;
-  font-family: "Myanmar Sangam MN";
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 70px; /* 280% */
+  line-height: 50px;
   letter-spacing: 1.25px;
 
   @media (max-width: 768px) {
-    font-size: 20px;
-    line-height: 56px; /* 280% */
+    font-size: 18px;
+    line-height: 50px;
   }
 `;
 
 const RightReservedText = styled.p`
   padding: 20px 0;
-  font-size: 20px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
   text-align: center;
   color: #fff;
 
   @media (max-width: 768px) {
     padding: 16px 0;
-    font-size: 8px;
+    font-size: 18px;
   }
 `;
 
 const StyledImage = styled.img`
+  width: 100%;
+  height: 100%;
+  max-width: 150px;
   z-index: 2;
+  margin-top: 20px;
+
+  @media (max-width: 768px) {
+    max-width: 59px;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -226,17 +230,17 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-const SnsWrapper = styled.div`
+const Sns = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 60px;
 `;
 
 const SnsIcon = styled.img`
   width: 100%;
   height: 100%;
-  max-width: 68px;
-  max-height: 68px;
+  max-width: 50px;
+  max-height: 50px;
   z-index: 2;
 `;
