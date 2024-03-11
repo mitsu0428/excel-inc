@@ -16,7 +16,7 @@ export const Component = (props: Props) => {
     <Wrap>
       <Button>
         <StyledLink
-          className={Font.Font.CustomJosefinSans.className}
+          className={Font.Font.CustomJosefinSansThin.className}
           href={linkToPage}
           target="_blank"
         >
@@ -44,7 +44,7 @@ const Button = styled.button`
   text-align: center;
   font-size: 30px;
   line-height: normal;
-  letter-spacing: 1.5px;
+  letter-spacing: 3px;
 
   @media (max-width: 768px) {
     width: 236px;

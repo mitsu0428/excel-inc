@@ -1,7 +1,8 @@
 "use client";
 import React, { useState, useEffect, useCallback } from "react";
 import styled, { keyframes } from "styled-components";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
+import * as Font from "../../styles/NextFont";
 
 export const Component: React.FC = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
@@ -68,11 +69,17 @@ export const Component: React.FC = () => {
           slidesToShow={slidesToShow}
         />
       ))}
-      <LeftArrow onClick={goToPrevSlide}>
-        <FaChevronLeft />
+      <LeftArrow
+        className={Font.Font.CustomDarkerGrotesque.className}
+        onClick={goToPrevSlide}
+      >
+        {/* <FaChevronLeft /> */}← PREV
       </LeftArrow>
-      <RightArrow onClick={goToNextSlide}>
-        <FaChevronRight />
+      <RightArrow
+        className={Font.Font.CustomDarkerGrotesque.className}
+        onClick={goToNextSlide}
+      >
+        NEXT →
       </RightArrow>
     </SlideshowContainer>
   );
@@ -112,7 +119,8 @@ const ArrowButton = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 20px;
+  letter-spacing: 2px;
   z-index: 2;
 `;
 

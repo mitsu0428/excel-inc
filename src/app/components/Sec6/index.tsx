@@ -9,62 +9,66 @@ export const Component = () => {
     <Container id="company">
       <StyledMobileView>
         <MobileBorder />
-        <TitleH2_MobileView className={Font.Font.CustomGafata.className}>
+        <TitleH2_MobileView className={Font.Font.CustomJosefinSans.className}>
           OUR COMPANY
         </TitleH2_MobileView>
         <Contents>
           <ContentsLeft>
-            <ContentsText>
-              [会社名]
-              <br />
-              EXCEL Inc.（エクセルインク）
-            </ContentsText>
+            <ContentsTable className={Font.Font.CustomGotchicA1.className}>
+              <tbody>
+                <tr>
+                  <StyledTdWithBorder>会社名</StyledTdWithBorder>
+                  <StyledTd>EXCEL Inc.（エクセルインク）</StyledTd>
+                </tr>
 
-            <br />
+                <tr>
+                  <StyledTdWithBorder>設立</StyledTdWithBorder>
+                  <StyledTd>2023年1月</StyledTd>
+                </tr>
 
-            <ContentsText>
-              [所在地]
-              <br />
-              〒107-0062
-              <br />
-              東京都港区南青山5-12-27
-              <br />
-              WISE 512ビル 305
-            </ContentsText>
+                <tr>
+                  <StyledTdWithBorder>資本金</StyledTdWithBorder>
+                  <StyledTd>500万円</StyledTd>
+                </tr>
 
-            <br />
+                <tr>
+                  <StyledTdWithBorder>所在地</StyledTdWithBorder>
+                  <StyledTd>
+                    〒107-0062
+                    <br />
+                    東京都港区南青山5-12-27 WISE 512ビル 305
+                  </StyledTd>
+                </tr>
 
-            <ContentsText>
-              [電話番号]
-              <br />
-              03-6824-4903
-            </ContentsText>
+                <tr>
+                  <StyledTdWithBorder>電話番号</StyledTdWithBorder>
+                  <StyledTd>03-6824-4903</StyledTd>
+                </tr>
 
-            <br />
+                <tr>
+                  <StyledTdWithBorder>代表者</StyledTdWithBorder>
+                  <StyledTd>代表取締役　樋口 絢太</StyledTd>
+                </tr>
 
-            <ContentsText>
-              [資本金]
-              <br />
-              500万円
-            </ContentsText>
+                <tr>
+                  <StyledTdWithBorder>従業員数</StyledTdWithBorder>
+                  <StyledTd>２０名（業務委託・アルバイト含む）</StyledTd>
+                </tr>
 
-            <br />
-
-            <ContentsText>
-              [事業内容]
-              <br />
-              ・ムービー制作事業
-              <br />
-              ・Web/SNSマーケティング支援事業
-              <br />
-              ・ライバー配信事業
-              <br />
-              ・広告代理事業
-              <br />
-              ・メディア事業
-              <br />
-              ・サイト制作事業
-            </ContentsText>
+                <tr>
+                  <StyledTdWithBorder>事業内容</StyledTdWithBorder>
+                  <StyledTd>
+                    ・マーケティングソリューション事業
+                    <br />
+                    ・映像制作事業
+                    <br />
+                    ・メディア運営事業
+                    <br />
+                    ・サイト制作事業
+                  </StyledTd>
+                </tr>
+              </tbody>
+            </ContentsTable>
           </ContentsLeft>
 
           <ContentsRight>
@@ -148,10 +152,11 @@ const Contents = styled.div`
 `;
 
 const ContentsRight = styled.div`
+  margin-top: 32px;
   padding: 16px;
   text-align: center;
   width: 50%;
-  height: 797px;
+  height: 660px;
 
   @media (max-width: 768px) {
     height: 276px;
@@ -159,6 +164,7 @@ const ContentsRight = styled.div`
 `;
 
 const ContentsLeft = styled.div`
+  margin-top: 64px;
   padding: 16px;
   text-align: center;
   width: 50%;
@@ -168,16 +174,29 @@ const ContentsLeft = styled.div`
   }
 `;
 
-const ContentsText = styled.p`
-  color: #000;
-  font-family: YuGothic;
+const ContentsTable = styled.table`
+  width: 100%;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
   text-align: left;
+  white-space: nowrap;
   @media (max-width: 768px) {
     font-size: 8px;
   }
+`;
+
+const StyledTdWithBorder = styled.td`
+  font-size: 16px;
+  padding: 16px 16px;
+  border-bottom: 1px solid #232322;
+  text-align: justify;
+  text-align-last: justify;
+`;
+
+const StyledTd = styled.td`
+  font-size: 16px;
+  padding: 16px 16px;
+  border-bottom: 1px solid #ddd;
+  letter-spacing: 0.5px;
 `;
 
 const TitleH2_MobileView = styled.h2`
@@ -187,6 +206,8 @@ const TitleH2_MobileView = styled.h2`
   letter-spacing: 14px;
   font-size: 70px;
   margin-top: 88px;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 4px;
 
   text-decoration: underline;
   @media (max-width: 768px) {

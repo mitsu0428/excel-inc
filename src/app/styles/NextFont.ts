@@ -2,6 +2,7 @@ import { Gafata } from "next/font/google";
 import { Josefin_Sans } from "next/font/google";
 import { Noto_Sans_Myanmar } from "next/font/google";
 import { Gothic_A1 } from "next/font/google";
+import { Darker_Grotesque } from "next/font/google";
 
 const CustomGafata = Gafata({
   weight: "400",
@@ -44,6 +45,13 @@ const CustomGotchicA1 = Gothic_A1({
   preload: false,
 });
 
+const CustomDarkerGrotesque = Darker_Grotesque({
+  weight: "700",
+  style: "normal",
+  display: "swap",
+  preload: false,
+});
+
 export const Font = {
   CustomGafata,
   CustomJosefinSansThin,
@@ -51,4 +59,5 @@ export const Font = {
   CustomJosefinSansThick,
   CustomNotoSansMyanmar,
   CustomGotchicA1,
+  CustomDarkerGrotesque,
 };
