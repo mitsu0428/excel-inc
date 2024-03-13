@@ -25,5 +25,5 @@ export const Component = () => {
 };
 
 const Main = styled.main`
-  background-color: #000;
+  background-color: #171717;
 `;

@@ -83,11 +83,23 @@ export const Component = () => {
           </NavText>
 
           <NavText className={Font.Font.CustomJosefinSans.className}>
-            - Space Sleep 日本最高の頭の癒し専門店
+            <StyledLink
+              href={"https://www.space-sleep.com/"}
+              target="_blank"
+              passHref
+            >
+              - Space Sleep 日本最高の頭の癒し専門店{" "}
+            </StyledLink>
           </NavText>
 
           <NavText className={Font.Font.CustomJosefinSans.className}>
-            - SHOT Village 会員制Golf Lounge
+            <StyledLink
+              href={"https://shot-village.com/"}
+              target="_blank"
+              passHref
+            >
+              - SHOT Village 会員制Golf Lounge
+            </StyledLink>
           </NavText>
         </Contents>
 
@@ -223,6 +235,7 @@ const StyledImage = styled.img`
 `;
 
 const StyledLink = styled(Link)`
+  position: relative;
   color: #fff;
   text-decoration: none;
 `;
