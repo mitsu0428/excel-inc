@@ -193,7 +193,7 @@ const NavText = styled.p`
   letter-spacing: 1.25px;
 
   @media (max-width: 768px) {
-    font-size: 18px;
+    font-size: 11px;
     line-height: 50px;
   }
 `;
@@ -207,7 +207,7 @@ const RightReservedText = styled.p`
 
   @media (max-width: 768px) {
     padding: 16px 0;
-    font-size: 18px;
+    font-size: 11px;
   }
 `;
 

@@ -307,6 +307,10 @@ const MobileHeadText = styled.p`
   font-weight: 200;
   line-height: normal;
   letter-spacing: 0.4px;
+
+  @media (max-width: 768px) {
+    font-size: 11px;
+  }
 `;
 
 const MobileBottomArea = styled.div`
@@ -324,6 +328,10 @@ const FollowUsText = styled.p`
   line-height: 125px; /* 833.333% */
   letter-spacing: 0.75px;
   text-decoration-line: underline;
+
+  @media (max-width: 768px) {
+    font-size: 11px;
+  }
 `;
 
 const SnsWrapper = styled.div<{ isOpen: boolean }>`

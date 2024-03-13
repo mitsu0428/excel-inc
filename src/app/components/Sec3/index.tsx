@@ -113,6 +113,6 @@ const Description = styled.p`
   color: #fff;
 
   @media (max-width: 768px) {
-    font-size: 10px;
+    font-size: 11px;
   }
 `;

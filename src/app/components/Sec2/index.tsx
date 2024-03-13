@@ -189,12 +189,8 @@ const TextRight = styled.p`
   line-height: 170%;
   letter-spacing: 0.4px;
 
-  @media (max-width: 1024px) {
-    font-size: 14px;
-    letter-spacing: 0.28px;
-  }
   @media (max-width: 768px) {
-    font-size: 14px;
+    font-size: 11px;
     letter-spacing: 0.28px;
   }
 `;

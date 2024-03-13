@@ -17,4 +17,8 @@ export const Psmall = styled.p`
   text-align: center;
   margin: 0;
   color: #fff;
+
+  @media (max-width: 768px) {
+    font-size: 11px;
+  }
 `;

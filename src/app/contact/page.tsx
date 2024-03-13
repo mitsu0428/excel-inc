@@ -132,6 +132,10 @@ const TextLarge = styled.p`
   font-size: 20px;
   font-weight: 500;
   line-height: normal;
+
+  @media (max-width: 768px) {
+    font-size: 11px;
+  }
 `;
 
 const Text = styled.p`
@@ -140,6 +144,10 @@ const Text = styled.p`
   font-size: 20px;
   font-weight: 500;
   line-height: normal;
+
+  @media (max-width: 768px) {
+    font-size: 11px;
+  }
 `;
 
 const Form = styled.form`
