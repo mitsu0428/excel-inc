@@ -115,8 +115,9 @@ const TextAreaLeft = styled.div`
 
 const TextAreaRight = styled.div`
   position: absolute;
-  bottom: 155px;
-  right: 60px;
+  bottom: 60px;
+  left: 40px;
+  padding: 30px;
   text-align: left;
   white-space: nowrap;
 
@@ -185,7 +186,7 @@ const TitleH2_Concept = styled.h2`
 
 const TextRight = styled.p`
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 170%;
   letter-spacing: 0.4px;
 
