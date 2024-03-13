@@ -9,52 +9,6 @@ export const Component = () => {
     <Footer>
       <Wrapper>
         <Contents>
-          <Sns>
-            <StyledLink
-              href={"/"}
-              passHref
-            >
-              <SnsIcon
-                src="/sns-instagram.png"
-                alt="Instagram"
-              />
-            </StyledLink>
-
-            <StyledLink
-              href={"https://lin.ee/kaU291k"}
-              target="_blank"
-              passHref
-            >
-              <SnsIcon
-                src="/sns-line.png"
-                alt="Line"
-              />
-            </StyledLink>
-
-            <StyledLink
-              href={"https://www.tiktok.com/@inforzsb7b?_t=8kOyyHCZkNm&_r="}
-              target="_blank"
-              passHref
-            >
-              <SnsIcon
-                src="/sns-tiktok.png"
-                alt="TikTok"
-              />
-            </StyledLink>
-          </Sns>
-
-          <StyledLink
-            href={"/"}
-            passHref
-          >
-            <StyledImage
-              src="/assets/logo.svg"
-              alt="Excel inc."
-            />
-          </StyledLink>
-        </Contents>
-
-        <Contents>
           <NavText className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"/"}
@@ -99,58 +53,96 @@ export const Component = () => {
               CONTACT
             </StyledLink>
           </NavText>
+        </Contents>
+
+        <Contents>
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            SERVICE
+          </NavText>
 
           <NavText className={Font.Font.CustomJosefinSans.className}>
+            - Marketing Solution
+          </NavText>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            - Movie Production
+          </NavText>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            - Owned Media
+          </NavText>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            - Web Design
+          </NavText>
+        </Contents>
+
+        <Contents>
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            STORE INFORMATION
+          </NavText>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            - Space Sleep 日本最高の頭の癒し専門店
+          </NavText>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            - SHOT Village 会員制Golf Lounge
+          </NavText>
+        </Contents>
+
+        <Contents>
+          <StyledLink
+            href={"/"}
+            passHref
+          >
+            <StyledImage
+              src="/assets/logo-for-footer.svg"
+              alt="Excel inc."
+            />
+          </StyledLink>
+
+          <Sns>
             <StyledLink
+              href={"/"}
+              passHref
+            >
+              <SnsIcon
+                src="/sns-instagram.png"
+                alt="Instagram"
+              />
+            </StyledLink>
+
+            <StyledLink
+              href={"https://lin.ee/kaU291k"}
+              target="_blank"
+              passHref
+            >
+              <SnsIcon
+                src="/sns-line.png"
+                alt="Line"
+              />
+            </StyledLink>
+
+            <StyledLink
+              href={"https://www.tiktok.com/@inforzsb7b?_t=8kOyyHCZkNm&_r="}
+              target="_blank"
+              passHref
+            >
+              <SnsIcon
+                src="/sns-tiktok.png"
+                alt="TikTok"
+              />
+            </StyledLink>
+          </Sns>
+
+          <NavText className={Font.Font.CustomJosefinSans.className}>
+            <StyledLinkWithCenter
               href={"#company"}
               passHref
             >
               PRIVACY POLICY
-            </StyledLink>
-          </NavText>
-        </Contents>
-
-        <Contents>
-          <NavText className={Font.Font.CustomJosefinSans.className}>
-            SERVICE
-          </NavText>
-
-          <NavText className={Font.Font.CustomJosefinSans.className}>
-            - Marketing Solution
-          </NavText>
-
-          <NavText className={Font.Font.CustomJosefinSans.className}>
-            - Movie Production
-          </NavText>
-
-          <NavText className={Font.Font.CustomJosefinSans.className}>
-            - Owned Media
-          </NavText>
-
-          <NavText className={Font.Font.CustomJosefinSans.className}>
-            - Web Design
-          </NavText>
-        </Contents>
-
-        <Contents>
-          <NavText className={Font.Font.CustomJosefinSans.className}>
-            SERVICE
-          </NavText>
-
-          <NavText className={Font.Font.CustomJosefinSans.className}>
-            - Marketing Solution
-          </NavText>
-
-          <NavText className={Font.Font.CustomJosefinSans.className}>
-            - Movie Production
-          </NavText>
-
-          <NavText className={Font.Font.CustomJosefinSans.className}>
-            - Owned Media
-          </NavText>
-
-          <NavText className={Font.Font.CustomJosefinSans.className}>
-            - Web Design
+            </StyledLinkWithCenter>
           </NavText>
         </Contents>
       </Wrapper>
@@ -163,14 +155,20 @@ export const Component = () => {
 };
 
 const Footer = styled.footer`
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #403e3e;
+  height: auto;
 `;
 
 const Wrapper = styled.div`
   display: flex;
-  padding: 40px 60px;
+  padding: 40px 0;
   justify-content: space-between;
+  width: 100%;
+  max-width: 1181px;
 
   @media (max-width: 768px) {
     display: none;
@@ -183,15 +181,15 @@ const Contents = styled.div`
   align-items: center;
   flex-direction: column;
   height: 100%;
-  padding: 0 20px;
+  padding: 0 3px;
 `;
 
 const NavText = styled.p`
   width: 100%;
   color: #fff;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 50px;
+  line-height: 40px;
   letter-spacing: 1.25px;
 
   @media (max-width: 768px) {
@@ -216,9 +214,8 @@ const RightReservedText = styled.p`
 const StyledImage = styled.img`
   width: 100%;
   height: 100%;
-  max-width: 150px;
+  max-width: 130px;
   z-index: 2;
-  margin-top: 20px;
 
   @media (max-width: 768px) {
     max-width: 59px;
@@ -230,17 +227,31 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
+const StyledLinkWithCenter = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: #fff;
+  text-decoration: none;
+  margin-top: 10px;
+`;
+
 const Sns = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 60px;
+  width: 100%;
+  margin-top: 24px;
+  padding: 0 20px;
+  gap: 20px;
 `;
 
 const SnsIcon = styled.img`
   width: 100%;
   height: 100%;
-  max-width: 50px;
-  max-height: 50px;
+  max-width: 30px;
+  max-height: 30px;
   z-index: 2;
 `;

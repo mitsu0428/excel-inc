@@ -21,27 +21,6 @@ export const Component = () => {
       showDate: "2024.3.4 16:56",
       desc: "LINE公式アカウントのメリットやデメリット、注意点などをご説明します!!",
       link: "https://note.com/excelinc/n/n6869aa4cf971",
-      hashtags: [
-        "#ビジネス",
-        "#SNS",
-        "#ビジネススキル",
-        "#Instagram",
-        "#LINE",
-        "#SNSマーケティング",
-        "#tiktok",
-        "#LINEスタンプ",
-        "#PR",
-        "#SNS活用",
-        "#Design",
-        "#SNS集客",
-        "#アカウント",
-        "#LINE公式アカウント",
-        "#公式",
-        "#ユーザー",
-        "#Instagram運用",
-        "#LINELIVE",
-        "#promotion",
-      ],
     },
     {
       title: "【ビジネス】知らないと損！Instagramのフォロワーの増やし方",
@@ -50,17 +29,6 @@ export const Component = () => {
       showDate: "2024.3.4 16:56",
       desc: "【ビジネス】知らないと損！Instagramのフォロワーの増やし方",
       link: "https://note.com/excelinc/n/n6c79b6c242f7",
-      hashtags: [
-        "#ビジネス",
-        "#マーケティング",
-        "#Instagram",
-        "#SNSマーケティング",
-        "#インスタ",
-        "#Webマーケティング",
-        "#インスタグラム",
-        "#Instagram運用",
-        "#Instagramマーケティング",
-      ],
     },
     {
       title:
@@ -70,27 +38,6 @@ export const Component = () => {
       showDate: "2024.3.4 16:56",
       desc: "LINE公式アカウントのメリットやデメリット、注意点などをご説明します!!",
       link: "https://note.com/excelinc/n/n6869aa4cf971",
-      hashtags: [
-        "#ビジネス",
-        "#SNS",
-        "#ビジネススキル",
-        "#Instagram",
-        "#LINE",
-        "#SNSマーケティング",
-        "#tiktok",
-        "#LINEスタンプ",
-        "#PR",
-        "#SNS活用",
-        "#Design",
-        "#SNS集客",
-        "#アカウント",
-        "#LINE公式アカウント",
-        "#公式",
-        "#ユーザー",
-        "#Instagram運用",
-        "#LINELIVE",
-        "#promotion",
-      ],
     },
   ];
 
@@ -164,29 +111,6 @@ export const Component = () => {
                     color="text.secondary"
                   >
                     {news.desc}
-                  </Typography>
-                </StyledLink>
-
-                <Button
-                  size="small"
-                  href={news.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  READ MORE
-                </Button>
-
-                <StyledLink
-                  href={news.link}
-                  target="_blank"
-                  passHref
-                  key={index}
-                >
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                  >
-                    {news.hashtags.join(" ")}
                   </Typography>
                 </StyledLink>
               </CardContent>

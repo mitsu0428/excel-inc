@@ -186,7 +186,7 @@ const TitleH2_Concept = styled.h2`
 const TextRight = styled.p`
   color: #fff;
   font-size: 18px;
-  line-height: 150%;
+  line-height: 170%;
   letter-spacing: 0.4px;
 
   @media (max-width: 1024px) {

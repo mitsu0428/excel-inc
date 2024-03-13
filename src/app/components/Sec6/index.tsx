@@ -57,7 +57,7 @@ export const Component = () => {
 
                 <tr>
                   <StyledTdWithBorder>事業内容</StyledTdWithBorder>
-                  <StyledTd>
+                  <SpecialStyledTd>
                     ・マーケティングソリューション事業
                     <br />
                     ・映像制作事業
@@ -65,7 +65,7 @@ export const Component = () => {
                     ・メディア運営事業
                     <br />
                     ・サイト制作事業
-                  </StyledTd>
+                  </SpecialStyledTd>
                 </tr>
               </tbody>
             </ContentsTable>
@@ -105,7 +105,7 @@ const StyledMobileView = styled.div`
   position: static;
   width: 100%;
   max-width: 1181px;
-  height: auto;
+  height: 950px;
   border-radius: 89px 89px 0 0;
   background: #f9f9f9;
   padding: 0 50px;
@@ -190,6 +190,15 @@ const StyledTdWithBorder = styled.td`
   border-bottom: 1px solid #232322;
   text-align: justify;
   text-align-last: justify;
+`;
+
+const SpecialStyledTd = styled.td`
+  font-size: 16px;
+  padding: 16px 16px;
+  height: 100%;
+  border-bottom: 1px solid #ddd;
+  letter-spacing: 0.5px;
+  line-height: 28px;
 `;
 
 const StyledTd = styled.td`
