@@ -140,6 +140,7 @@ const Wrapper = styled.div`
   mix-blend-mode: difference;
 
   @media (max-width: 768px) {
+    mix-blend-mode: normal;
     height: 71px;
   }
 `;
@@ -311,12 +312,6 @@ const MobileHeadText = styled.p`
   @media (max-width: 768px) {
     font-size: 11px;
   }
-`;
-
-const MobileBottomArea = styled.div`
-  position: absolute;
-  margin-left: 44px;
-  bottom: 149px;
 `;
 
 const FollowUsText = styled.p`
