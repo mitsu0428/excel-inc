@@ -57,7 +57,7 @@ export const Component = () => {
             className={Font.Font.CustomJosefinSans.className}
           >
             <StyledLink
-              href={"#company"}
+              href={"/contact"}
               passHref
             >
               CONTACT
