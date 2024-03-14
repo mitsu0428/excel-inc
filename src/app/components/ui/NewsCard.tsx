@@ -37,7 +37,7 @@ export const Component = () => {
   ];
 
   return (
-    <Container>
+    <StyledContainer>
       <Grid
         container
         spacing={12}
@@ -82,9 +82,13 @@ export const Component = () => {
           </Grid>
         ))}
       </Grid>
-    </Container>
+    </StyledContainer>
   );
 };
+
+const StyledContainer = styled(Container)`
+  margin-top: 64px;
+`;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
