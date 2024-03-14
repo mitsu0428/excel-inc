@@ -102,11 +102,6 @@ const TextAreaLeft = styled.div`
   padding: 30px;
   text-align: left;
 
-  @media (max-width: 1024px) {
-    top: 178px;
-    left: 20px;
-  }
-
   @media (max-width: 768px) {
     top: 200px;
     left: 11px;
@@ -122,8 +117,8 @@ const TextAreaRight = styled.div`
   white-space: nowrap;
 
   @media (max-width: 768px) {
-    bottom: 313px;
-    right: 20px;
+    bottom: 100px;
+    left: 44px;
     padding: 0px;
   }
 `;
