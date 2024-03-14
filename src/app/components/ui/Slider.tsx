@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import * as Font from "../../styles/NextFont";
@@ -61,7 +62,7 @@ export const Component: React.FC = () => {
   };
 
   return (
-    <div>
+    <StyledWrapper>
       <Slide
         slidesToScroll={1}
         slidesToShow={3}
@@ -84,6 +85,10 @@ export const Component: React.FC = () => {
           </div>
         ))}
       </Slide>
-    </div>
+    </StyledWrapper>
   );
 };
+
+const StyledWrapper = styled.div`
+  margin-top: 64px;
+`;
