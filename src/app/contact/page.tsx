@@ -24,10 +24,30 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // todo: フォームデータを送信するためのロジック
-    console.log(formData);
+
+    try {
+      const response = await fetch("/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        const responseBody = await response.json();
+        console.log("Success:", responseBody);
+        // 成功時の処理 (例: 送信成功メッセージの表示)
+      } else {
+        console.error("Failed to send message");
+        // 失敗時の処理 (例: エラーメッセージの表示)
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      // 例外発生時の処理
+    }
   };
 
   return (
