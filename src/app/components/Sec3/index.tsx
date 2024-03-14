@@ -7,6 +7,7 @@ import * as Font from "../../styles/NextFont";
 
 export const Component = () => {
   const [isVisible, setIsVisible] = React.useState(false);
+  const [isTextVisible, setIsTextVisible] = React.useState(false);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -24,21 +25,36 @@ export const Component = () => {
     };
   }, []);
 
+  React.useEffect(() => {
+    if (isVisible) {
+      const timer = setTimeout(() => {
+        setIsTextVisible(true);
+      }, 500); // Adjust the delay time as needed
+      return () => clearTimeout(timer);
+    }
+  }, [isVisible]);
+
   return (
     <Container isVisible={isVisible}>
-      <TitleH2_BusinessDomain className={Font.Font.CustomJosefinSans.className}>
+      <TitleH2_BusinessDomain
+        className={Font.Font.CustomJosefinSans.className}
+        isVisible={isVisible}
+      >
         BUSINESS DOMAIN
       </TitleH2_BusinessDomain>
 
       <Wrap>
-        <TitleH3_Description className={Font.Font.CustomGafata.className}>
+        <TitleH3_Description
+          className={Font.Font.CustomGafata.className}
+          isVisible={isTextVisible}
+        >
           クリエイティブのチカラで、
           <br />
           この社会に熱狂と感動を。
         </TitleH3_Description>
       </Wrap>
 
-      <TextArea>
+      <TextArea isVisible={isTextVisible}>
         <Description className={Font.Font.CustomGotchicA1.className}>
           課題を整理し、正しく理解する。
         </Description>
@@ -75,30 +91,37 @@ const Container = styled.div<{ isVisible: boolean }>`
 
 const Wrap = styled.div``;
 
-const TextArea = styled.div`
+const TextArea = styled.div<{ isVisible: boolean }>`
   margin-top: 36px;
   line-height: 45px;
+  opacity: ${(props) => (props.isVisible ? "1" : "0")};
+  transform: translateX(${(props) => (props.isVisible ? "0" : "-100px")});
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 `;
 
-const TitleH2_BusinessDomain = styled.h2`
+const TitleH2_BusinessDomain = styled.h2<{ isVisible: boolean }>`
   font-size: 70px;
   text-align: center;
   font-weight: 600;
   color: #fff;
   letter-spacing: 14px;
   margin-top: 138px;
+  opacity: ${(props) => (props.isVisible ? "1" : "0")};
+  transition: opacity 1s ease-in-out;
   @media (max-width: 768px) {
     font-size: 25px;
   }
 `;
 
-const TitleH3_Description = styled.h3`
+const TitleH3_Description = styled.h3<{ isVisible: boolean }>`
   font-size: 40px;
   text-align: center;
   font-weight: 600;
   margin: 0;
   color: #fff;
   margin-top: 64px;
+  opacity: ${(props) => (props.isVisible ? "1" : "0")};
+  transition: opacity 1s ease-in-out;
   @media (max-width: 768px) {
     font-size: 18px;
   }
