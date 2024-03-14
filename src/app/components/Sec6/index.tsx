@@ -235,10 +235,7 @@ const TitleH2_MobileView = styled.h2`
   letter-spacing: 14px;
   font-size: 70px;
   margin-top: 88px;
-  text-underline-offset: 10px;
-  text-decoration-thickness: 4px;
 
-  text-decoration: underline;
   @media (max-width: 768px) {
     font-size: 25px;
     margin-top: 51px;
