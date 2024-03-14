@@ -94,4 +94,6 @@ const CustomCard = styled(Card)`
   display: flex;
   flex-direction: column;
   height: 100%;
+  background-color: #171717;
+  color: #fff;
 `;
