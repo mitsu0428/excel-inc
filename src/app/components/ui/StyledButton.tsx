@@ -14,15 +14,13 @@ export const Component = (props: Props) => {
   const linkToPage = props.linkTo;
   return (
     <Wrap>
-      <Button>
-        <StyledLink
-          className={Font.Font.CustomJosefinSansThin.className}
-          href={linkToPage}
-          target="_blank"
-        >
-          {props.text}
-        </StyledLink>
-      </Button>
+      <StyledLink
+        className={Font.Font.CustomJosefinSansThin.className}
+        href={linkToPage}
+        target="_blank"
+      >
+        {props.text}
+      </StyledLink>
     </Wrap>
   );
 };
@@ -35,25 +33,31 @@ const Wrap = styled.div`
   margin-top: 64px;
 `;
 
-const Button = styled.button`
+const StyledLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
   width: 331px;
   height: 55px;
-  border: 2px solid #fff;
-  color: #fff;
-  background: none;
-  text-align: center;
   font-size: 30px;
   line-height: normal;
   letter-spacing: 3px;
+  border: 2px solid #fff;
+  text-decoration: none;
+
+  color: #fff;
+  background: none;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    color: #000;
+    background: #fff;
+  }
 
   @media (max-width: 768px) {
     width: 236px;
     height: 34px;
     font-size: 18px;
   }
-`;
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: #fff;
 `;
