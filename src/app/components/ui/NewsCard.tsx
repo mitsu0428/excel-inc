@@ -96,4 +96,5 @@ const CustomCard = styled(Card)`
   height: 100%;
   background-color: #171717;
   color: #fff;
+  box-shadow: none;
 `;
