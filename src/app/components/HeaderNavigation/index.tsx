@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import * as Font from "../../styles/NextFont";
 
@@ -262,11 +262,40 @@ const VerticalBorder = styled.span`
   background-color: #fff;
 `;
 
+const underlineAnimation = keyframes`
+  from {
+    width: 0;
+    left: 0;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+`;
+
 const StyledSpan = styled.span`
   color: #fff;
   text-decoration: none;
   font-size: 15px;
   letter-spacing: 1.6px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: width 0.3s ease, left 0.3s ease;
+    z-index: -1; /* テキストの下に配置 */
+  }
+
+  &:hover::before {
+    animation: ${underlineAnimation} 0.3s ease forwards;
+  }
 
   @media (max-width: 768px) {
     color: #000;
