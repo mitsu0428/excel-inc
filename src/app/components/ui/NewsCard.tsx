@@ -40,7 +40,7 @@ export const Component = () => {
     <Container>
       <Grid
         container
-        spacing={3}
+        spacing={8}
       >
         {newsJson.map((news, index) => (
           <Grid
