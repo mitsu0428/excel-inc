@@ -1,6 +1,7 @@
 import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import * as Font from "../../styles/NextFont";
 
 export const Component: React.FC = () => {
   const images = [
@@ -17,20 +18,47 @@ export const Component: React.FC = () => {
 
   const responsiveSettings = [
     {
-      breakpoint: 800,
+      breakpoint: 768,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1,
       },
     },
     {
-      breakpoint: 500,
+      breakpoint: 480,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
       },
     },
   ];
+
+  const arrowStyle = {
+    fontSize: "20px",
+    background: "none",
+    border: "0px",
+    color: "#fff",
+    margin: "0 10px",
+  };
+
+  const properties = {
+    prevArrow: (
+      <button
+        className={Font.Font.CustomDarkerGrotesque.className}
+        style={{ ...arrowStyle }}
+      >
+        ←PREV
+      </button>
+    ),
+    nextArrow: (
+      <button
+        className={Font.Font.CustomDarkerGrotesque.className}
+        style={{ ...arrowStyle }}
+      >
+        NEXT→
+      </button>
+    ),
+  };
 
   return (
     <div>
@@ -40,6 +68,7 @@ export const Component: React.FC = () => {
         responsive={responsiveSettings}
         autoplay={true}
         duration={1000}
+        {...properties}
       >
         {images.map((image, index) => (
           <div
