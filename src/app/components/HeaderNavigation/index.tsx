@@ -35,7 +35,7 @@ export const Component = () => {
         <div />
       </MenuToggle>
 
-      <MobileHeadArea isOpen={isOpen}>
+      <MobileHeadArea $isOpen={isOpen}>
         <MobileHeadText className={Font.Font.CustomJosefinSans.className}>
           MENU
         </MobileHeadText>
@@ -46,10 +46,10 @@ export const Component = () => {
       </MobileHeadArea>
 
       <Menu
-        isOpen={isOpen}
+        $isOpen={isOpen}
         onClick={closeMenu}
       >
-        <StyledUl isOpen={isOpen}>
+        <StyledUl $isOpen={isOpen}>
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"/"}
@@ -103,7 +103,7 @@ export const Component = () => {
               <StyledSpecialSpan onClick={closeMenu}>CONTACT</StyledSpecialSpan>
             </StyledSpecialLink>
           </StyledLi>
-          <SnsWrapper isOpen={isOpen}>
+          <SnsWrapper $isOpen={isOpen}>
             <FollowUsText className={Font.Font.CustomNotoSansMyanmar.className}>
               FOLLOW US
             </FollowUsText>
@@ -156,7 +156,7 @@ const StyledSpecialLink = styled(Link)`
   padding: 4px 18px;
 `;
 
-const StyledUl = styled.ul<{ isOpen: boolean }>`
+const StyledUl = styled.ul<{ $isOpen: boolean }>`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -168,7 +168,7 @@ const StyledUl = styled.ul<{ isOpen: boolean }>`
   color: #fff;
 
   @media (max-width: 768px) {
-    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+    display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
     flex-direction: column;
     position: absolute;
     top: 50px;
@@ -221,14 +221,14 @@ const MenuToggle = styled.div`
   }
 `;
 
-const Menu = styled.div<{ isOpen: boolean }>`
+const Menu = styled.div<{ $isOpen: boolean }>`
   display: flex;
   align-items: center;
 
   @media (max-width: 768px) {
     position: fixed;
     top: 0;
-    right: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+    right: ${({ $isOpen }) => ($isOpen ? "0" : "-100%")};
     height: 100vh;
     width: 100%;
     background-color: #fff;
@@ -317,8 +317,8 @@ const StyledSpanAbsoluteWhite = styled.span`
   text-decoration: none;
 `;
 
-const MobileHeadArea = styled.div<{ isOpen: boolean }>`
-  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+const MobileHeadArea = styled.div<{ $isOpen: boolean }>`
+  display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
   background-color: #383838;
   padding: 20px 100px;
   position: absolute;
@@ -358,8 +358,8 @@ const FollowUsText = styled.p`
   }
 `;
 
-const SnsWrapper = styled.div<{ isOpen: boolean }>`
-  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+const SnsWrapper = styled.div<{ $isOpen: boolean }>`
+  display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
   justify-content: space-between;
   align-items: center;
   gap: 30px;
