@@ -106,6 +106,7 @@ const StyledMobileView = styled.div`
   width: 100%;
   max-width: 1181px;
   height: 950px;
+
   border-radius: 89px 89px 0 0;
   background: #f9f9f9;
   padding: 0 50px;
@@ -159,6 +160,7 @@ const ContentsRight = styled.div`
   height: 660px;
 
   @media (max-width: 768px) {
+    margin-top: 16px;
     height: 276px;
   }
 `;
@@ -170,6 +172,7 @@ const ContentsLeft = styled.div`
   width: 50%;
   height: 797px;
   @media (max-width: 768px) {
+    margin-top: 32px;
     height: 276px;
   }
 `;
@@ -179,6 +182,7 @@ const ContentsTable = styled.table`
   font-size: 20px;
   text-align: left;
   white-space: nowrap;
+
   @media (max-width: 768px) {
     font-size: 8px;
   }
@@ -190,6 +194,11 @@ const StyledTdWithBorder = styled.td`
   border-bottom: 1px solid #232322;
   text-align: justify;
   text-align-last: justify;
+
+  @media (max-width: 768px) {
+    font-size: 8px;
+    padding: 8px 8px;
+  }
 `;
 
 const SpecialStyledTd = styled.td`
@@ -199,6 +208,12 @@ const SpecialStyledTd = styled.td`
   border-bottom: 1px solid #ddd;
   letter-spacing: 0.5px;
   line-height: 28px;
+
+  @media (max-width: 768px) {
+    font-size: 8px;
+    padding: 8px 8px;
+    line-height: 14px;
+  }
 `;
 
 const StyledTd = styled.td`
@@ -206,6 +221,11 @@ const StyledTd = styled.td`
   padding: 16px 16px;
   border-bottom: 1px solid #ddd;
   letter-spacing: 0.5px;
+
+  @media (max-width: 768px) {
+    font-size: 8px;
+    padding: 8px 8px;
+  }
 `;
 
 const TitleH2_MobileView = styled.h2`
