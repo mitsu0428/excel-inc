@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import * as Font from "../../styles/NextFont";
 
@@ -9,50 +9,60 @@ export const Component = () => {
     <Footer>
       <Wrapper>
         <Contents>
-          <NavText className={Font.Font.CustomJosefinSans.className}>
+          <NavTextWithUnderLine
+            className={Font.Font.CustomJosefinSans.className}
+          >
             <StyledLink
               href={"/"}
               passHref
             >
               TOP
             </StyledLink>
-          </NavText>
+          </NavTextWithUnderLine>
 
-          <NavText className={Font.Font.CustomJosefinSans.className}>
+          <NavTextWithUnderLine
+            className={Font.Font.CustomJosefinSans.className}
+          >
             <StyledLink
               href={"/"}
               passHref
             >
               MISSION
             </StyledLink>
-          </NavText>
+          </NavTextWithUnderLine>
 
-          <NavText className={Font.Font.CustomJosefinSans.className}>
+          <NavTextWithUnderLine
+            className={Font.Font.CustomJosefinSans.className}
+          >
             <StyledLink
               href={"/"}
               passHref
             >
               NEWS
             </StyledLink>
-          </NavText>
+          </NavTextWithUnderLine>
 
-          <NavText className={Font.Font.CustomJosefinSans.className}>
+          <NavTextWithUnderLine
+            className={Font.Font.CustomJosefinSans.className}
+          >
             <StyledLink
               href={"#company"}
               passHref
             >
               COMPANY
             </StyledLink>
-          </NavText>
+          </NavTextWithUnderLine>
 
-          <NavText className={Font.Font.CustomJosefinSans.className}>
+          <NavTextWithUnderLine
+            className={Font.Font.CustomJosefinSans.className}
+          >
             <StyledLink
               href={"#company"}
               passHref
             >
               CONTACT
             </StyledLink>
-          </NavText>
+          </NavTextWithUnderLine>
         </Contents>
 
         <Contents>
@@ -82,7 +92,9 @@ export const Component = () => {
             STORE INFORMATION
           </NavText>
 
-          <NavText className={Font.Font.CustomJosefinSans.className}>
+          <NavTextWithUnderLine
+            className={Font.Font.CustomJosefinSans.className}
+          >
             <StyledLink
               href={"https://www.space-sleep.com/"}
               target="_blank"
@@ -90,9 +102,11 @@ export const Component = () => {
             >
               - Space Sleep 日本最高の頭の癒し専門店{" "}
             </StyledLink>
-          </NavText>
+          </NavTextWithUnderLine>
 
-          <NavText className={Font.Font.CustomJosefinSans.className}>
+          <NavTextWithUnderLine
+            className={Font.Font.CustomJosefinSans.className}
+          >
             <StyledLink
               href={"https://shot-village.com/"}
               target="_blank"
@@ -100,7 +114,7 @@ export const Component = () => {
             >
               - SHOT Village 会員制Golf Lounge
             </StyledLink>
-          </NavText>
+          </NavTextWithUnderLine>
         </Contents>
 
         <Contents>
@@ -148,14 +162,16 @@ export const Component = () => {
             </StyledLink>
           </Sns>
 
-          <NavText className={Font.Font.CustomJosefinSans.className}>
+          <NavTextWithUnderLine
+            className={Font.Font.CustomJosefinSans.className}
+          >
             <StyledLinkWithCenter
               href={"#company"}
               passHref
             >
               PRIVACY POLICY
             </StyledLinkWithCenter>
-          </NavText>
+          </NavTextWithUnderLine>
         </Contents>
       </Wrapper>
 
@@ -196,6 +212,17 @@ const Contents = styled.div`
   padding: 0 3px;
 `;
 
+const underlineAnimation = keyframes`
+  from {
+    width: 0;
+    left: 0;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+`;
+
 const NavText = styled.p`
   width: 100%;
   color: #fff;
@@ -203,6 +230,39 @@ const NavText = styled.p`
   font-weight: 400;
   line-height: 40px;
   letter-spacing: 1.25px;
+
+  @media (max-width: 768px) {
+    font-size: 11px;
+    line-height: 50px;
+  }
+`;
+
+const NavTextWithUnderLine = styled.p`
+  width: 100%;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 1.25px;
+
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: width 0.3s ease, left 0.3s ease;
+    z-index: 1;
+  }
+
+  &:hover::before {
+    animation: ${underlineAnimation} 0.3s ease forwards;
+  }
 
   @media (max-width: 768px) {
     font-size: 11px;
