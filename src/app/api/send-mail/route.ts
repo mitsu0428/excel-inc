@@ -1,9 +1,15 @@
 import nodemailer from "nodemailer";
 
-export default async function handler(req: any, res: any) {
-  if (req.method === "POST") {
-    const { name, email, message } = req.body;
+type ContactFormBody = {
+  name: string;
+  email: string;
+  message: string;
+};
 
+export async function POST(req: any, res: any) {
+  const { name, email, message }: ContactFormBody = req.body;
+
+  if (req.method === "POST") {
     // memo: 587: SMTPポート
     // memo: trueで465ポート, falseでそれ以外のポートを使用
     const transporter = nodemailer.createTransport({
@@ -30,9 +36,5 @@ export default async function handler(req: any, res: any) {
       console.error("メール送信エラー:", error);
       res.status(500).send("メール送信に失敗しました。");
     }
-  } else {
-    res
-      .status(405)
-      .send({ message: "POSTメソッドのみがサポートされています。" });
   }
 }
