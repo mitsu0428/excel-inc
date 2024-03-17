@@ -136,6 +136,6 @@ const Description = styled.p`
   color: #fff;
 
   @media (max-width: 768px) {
-    font-size: 11px;
+    font-size: 14px;
   }
 `;

@@ -339,7 +339,7 @@ const MobileHeadText = styled.p`
   letter-spacing: 0.4px;
 
   @media (max-width: 768px) {
-    font-size: 11px;
+    font-size: 14px;
   }
 `;
 
@@ -354,7 +354,7 @@ const FollowUsText = styled.p`
   text-decoration-line: underline;
 
   @media (max-width: 768px) {
-    font-size: 11px;
+    font-size: 14px;
   }
 `;
 

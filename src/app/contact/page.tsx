@@ -154,7 +154,7 @@ const TextLarge = styled.p`
   line-height: normal;
 
   @media (max-width: 768px) {
-    font-size: 11px;
+    font-size: 14px;
   }
 `;
 
@@ -166,7 +166,7 @@ const Text = styled.p`
   line-height: normal;
 
   @media (max-width: 768px) {
-    font-size: 11px;
+    font-size: 14px;
   }
 `;
 
