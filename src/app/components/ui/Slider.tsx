@@ -36,7 +36,6 @@ export const Component: React.FC = () => {
   ];
 
   const arrowStyle = {
-    fontSize: "20px",
     background: "none",
     border: "0px",
     color: "#fff",
@@ -92,4 +91,13 @@ export const Component: React.FC = () => {
 
 const StyledWrapper = styled.div`
   margin-top: 64px;
+
+  .${Font.Font.CustomDarkerGrotesque.className} {
+    font-size: 20px;
+  }
+  @media (max-width: 480px) {
+    .${Font.Font.CustomDarkerGrotesque.className} {
+      font-size: 10px;
+    }
+  }
 `;
