@@ -42,11 +42,9 @@ const StyledLink = styled(Link)`
   width: 331px;
   height: 55px;
   font-size: 30px;
-  line-height: normal;
   letter-spacing: 3px;
   border: 2px solid #fff;
   text-decoration: none;
-
   color: #fff;
   background: none;
   transition: 0.3s ease-in-out;
@@ -56,8 +54,7 @@ const StyledLink = styled(Link)`
   }
 
   @media (max-width: 768px) {
-    width: 236px;
-    height: 34px;
+    width: 90%;
     font-size: 18px;
   }
 `;
