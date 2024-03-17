@@ -260,6 +260,10 @@ const VerticalBorder = styled.span`
   width: 1px;
   height: 18px;
   background-color: #fff;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const underlineAnimation = keyframes`
