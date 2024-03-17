@@ -174,7 +174,7 @@ const StyledUl = styled.ul<{ $isOpen: boolean }>`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  gap: 8px;
+  gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
