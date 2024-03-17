@@ -142,6 +142,7 @@ const Wrapper = styled.div`
   @media (max-width: 768px) {
     mix-blend-mode: normal;
     height: 71px;
+    padding: 20px 20px;
   }
 `;
 
@@ -199,7 +200,7 @@ const StyledImage = styled.img`
   z-index: 2;
 
   @media (max-width: 768px) {
-    max-width: 59px;
+    max-width: 65px;
   }
 `;
 
