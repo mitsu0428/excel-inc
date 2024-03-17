@@ -104,7 +104,7 @@ const TextAreaLeft = styled.div`
   text-align: left;
 
   @media (max-width: 768px) {
-    top: 200px;
+    top: 100px;
     left: 11px;
   }
 `;
@@ -150,13 +150,10 @@ const TitleH2_Company = styled.h2`
   color: #fff;
   letter-spacing: 6px;
   margin: 0;
+  white-space: nowrap;
 
-  @media (max-width: 1024px) {
-    font-size: 54px;
-    line-height: 55px;
-  }
   @media (max-width: 768px) {
-    font-size: 54px;
+    font-size: 40px;
     line-height: 55px;
   }
 `;
@@ -170,10 +167,6 @@ const TitleH2_Concept = styled.h2`
   line-height: normal;
   letter-spacing: 0.56px;
 
-  @media (max-width: 1024px) {
-    font-size: 20px;
-    letter-spacing: 0.4px;
-  }
   @media (max-width: 768px) {
     font-size: 12px;
     letter-spacing: 0.24px;
