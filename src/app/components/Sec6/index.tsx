@@ -71,14 +71,14 @@ export const Component = () => {
             </ContentsTable>
           </ContentsLeft>
 
-          <ContentsRight>
+          <ContentsMap>
             <StyledIframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6291416158138!2d139.71004377578265!3d35.66150773105737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b6093b6911b%3A0x8221cc0251336e2f!2z44CSMTA3LTAwNjIg5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGx77yV5LiB55uu77yR77yS4oiS77yS77yXIOODr-OCpOOCuu-8le-8ke-8kuODk-ODqw!5e0!3m2!1sja!2sjp!4v1709983095576!5m2!1sja!2sjp"
               width="600"
               height="450"
               loading="lazy"
             ></StyledIframe>
-          </ContentsRight>
+          </ContentsMap>
         </Contents>
       </StyledMobileView>
     </Container>
@@ -105,7 +105,7 @@ const StyledMobileView = styled.div`
   position: static;
   width: 100%;
   max-width: 1181px;
-  height: 950px;
+  height: 100%;
 
   border-radius: 89px 89px 0 0;
   background: #f9f9f9;
@@ -114,7 +114,6 @@ const StyledMobileView = styled.div`
   margin-top: auto;
 
   @media (max-width: 768px) {
-    height: 500px;
     border-radius: 52px 52px 0 0;
     background: #f9f9f9;
     padding: 20px;
@@ -143,20 +142,21 @@ const MobileBorder = styled.div`
 const Contents = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: row;
   align-items: top;
   width: 100%;
   height: auto;
   gap: 44px;
   @media (max-width: 768px) {
     gap: 17px;
+    flex-direction: column;
   }
 `;
 
-const ContentsRight = styled.div`
+const ContentsMap = styled.div`
   margin-top: 32px;
   padding: 16px;
   text-align: center;
-  width: 50%;
   height: 660px;
 
   @media (max-width: 768px) {
