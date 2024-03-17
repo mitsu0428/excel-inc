@@ -30,9 +30,9 @@ export const Component = () => {
       </StyledLink>
 
       <MenuToggle onClick={toggleMenu}>
-        <div />
-        <div />
-        <div />
+        <Line />
+        <Line />
+        <Line />
       </MenuToggle>
 
       <MobileHeadArea $isOpen={isOpen}>
@@ -46,7 +46,7 @@ export const Component = () => {
         </CloseButton>
       </MobileHeadArea>
 
-      <Menu
+      <PopMenu
         $isOpen={isOpen}
         onClick={closeMenu}
       >
@@ -113,6 +113,7 @@ export const Component = () => {
               <StyledSpecialSpan onClick={closeMenu}>CONTACT</StyledSpecialSpan>
             </StyledSpecialLink>
           </StyledLi>
+
           <SnsWrapper $isOpen={isOpen}>
             <FollowUsText className={Font.Font.CustomNotoSansMyanmar.className}>
               FOLLOW US
@@ -131,7 +132,7 @@ export const Component = () => {
             />
           </SnsWrapper>
         </StyledUl>
-      </Menu>
+      </PopMenu>
     </Wrapper>
   );
 };
@@ -173,7 +174,7 @@ const StyledUl = styled.ul<{ $isOpen: boolean }>`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  gap: 20px;
+  gap: 8px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -190,7 +191,9 @@ const StyledUl = styled.ul<{ $isOpen: boolean }>`
 
 const StyledLi = styled.li`
   width: 100%;
-  text-align: left;
+  display: flex;
+  justify-content: left;
+
   font-size: 25px;
   color: #fff;
   letter-spacing: 1px;
@@ -215,18 +218,10 @@ const MenuToggle = styled.div`
     display: flex;
     flex-direction: column;
     cursor: pointer;
-
-    div {
-      width: 29px;
-      height: 2px;
-      background-color: #fff;
-      border-radius: 23px;
-      margin: 3px 0;
-    }
   }
 `;
 
-const Menu = styled.div<{ $isOpen: boolean }>`
+const PopMenu = styled.div<{ $isOpen: boolean }>`
   display: flex;
   align-items: center;
   background-color: #000;
@@ -322,6 +317,14 @@ const CloseButton = styled.span`
   cursor: pointer;
 `;
 
+const Line = styled.div`
+  width: 29px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 23px;
+  margin: 3px 0;
+`;
+
 const CrossLine = styled.div`
   position: absolute;
   width: 100%;
@@ -356,7 +359,7 @@ const MobileHeadText = styled.p`
 
 const FollowUsText = styled.p`
   position: relative;
-  color: #000;
+  color: #fff;
   text-align: center;
   font-size: 20px;
   font-weight: 400;
@@ -370,15 +373,13 @@ const FollowUsText = styled.p`
 
 const SnsWrapper = styled.div<{ $isOpen: boolean }>`
   display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 30px;
+  width: 100%;
 `;
 
 const SnsIcon = styled.img`
-  width: 100%;
-  height: 100%;
   max-width: 37px;
   max-height: 37px;
-  z-index: 100;
 `;
