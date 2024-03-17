@@ -11,7 +11,11 @@ export const Component = () => {
   return (
     <Container>
       <TitleH2_Service className={Font.Font.CustomJosefinSans.className}>
-        SERVICE & PRODUCT
+        SERVICE
+        <br />
+        &
+        <br />
+        PRODUCT
       </TitleH2_Service>
 
       <Slider.Component />
@@ -36,6 +40,7 @@ const TitleH2_Service = styled.h2`
   font-weight: 600;
   color: #fff;
   letter-spacing: 14px;
+  line-height: 150%;
   margin-top: 138px;
   @media (max-width: 768px) {
     font-size: 25px;
