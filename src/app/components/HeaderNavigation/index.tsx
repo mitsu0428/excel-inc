@@ -40,7 +40,10 @@ export const Component = () => {
           MENU
         </MobileHeadText>
 
-        <StyledSpanAbsolute onClick={toggleMenu} />
+        <CloseButton onClick={toggleMenu}>
+          <CrossLine style={{ top: "50%", transform: "rotate(45deg)" }} />
+          <CrossLine style={{ top: "50%", transform: "rotate(-45deg)" }} />
+        </CloseButton>
       </MobileHeadArea>
 
       <Menu
@@ -310,8 +313,21 @@ const StyledSpecialSpan = styled.span`
   }
 `;
 
-const StyledSpanAbsolute = styled.span`
-  // todo: ここにボタンのスタイルを記述
+const CloseButton = styled.span`
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+`;
+
+const CrossLine = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: rotate(45deg);
 `;
 
 const MobileHeadArea = styled.div<{ $isOpen: boolean }>`
