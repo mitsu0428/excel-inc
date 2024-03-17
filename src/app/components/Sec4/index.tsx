@@ -32,6 +32,11 @@ const Container = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
+  margin-top: 138px;
+
+  @media (max-width: 768px) {
+    margin-top: 64px;
+  }
 `;
 
 const TitleH2_Service = styled.h2`
@@ -41,7 +46,6 @@ const TitleH2_Service = styled.h2`
   color: #fff;
   letter-spacing: 14px;
   line-height: 150%;
-  margin-top: 138px;
   @media (max-width: 768px) {
     font-size: 25px;
   }
