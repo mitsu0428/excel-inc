@@ -46,7 +46,7 @@ export const Component = () => {
         </CloseButton>
       </MobileHeadArea>
 
-      <PopMenu
+      <Menu
         $isOpen={isOpen}
         onClick={closeMenu}
       >
@@ -59,9 +59,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>TOP</StyledSpan>
             </StyledLink>
           </StyledLi>
-
           <VerticalBorder />
-
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"/"}
@@ -70,9 +68,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>MISSION</StyledSpan>
             </StyledLink>
           </StyledLi>
-
           <VerticalBorder />
-
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"/"}
@@ -81,9 +77,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>SERVICE</StyledSpan>
             </StyledLink>
           </StyledLi>
-
           <VerticalBorder />
-
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               target="_blank"
@@ -93,9 +87,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>NEWS</StyledSpan>
             </StyledLink>
           </StyledLi>
-
           <VerticalBorder />
-
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"#company"}
@@ -104,7 +96,6 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>COMPANY</StyledSpan>
             </StyledLink>
           </StyledLi>
-
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledSpecialLink
               href={"/contact"}
@@ -113,7 +104,6 @@ export const Component = () => {
               <StyledSpecialSpan onClick={closeMenu}>CONTACT</StyledSpecialSpan>
             </StyledSpecialLink>
           </StyledLi>
-
           <SnsWrapper $isOpen={isOpen}>
             <FollowUsText className={Font.Font.CustomNotoSansMyanmar.className}>
               FOLLOW US
@@ -132,7 +122,7 @@ export const Component = () => {
             />
           </SnsWrapper>
         </StyledUl>
-      </PopMenu>
+      </Menu>
     </Wrapper>
   );
 };
@@ -221,13 +211,12 @@ const MenuToggle = styled.div`
   }
 `;
 
-const PopMenu = styled.div<{ $isOpen: boolean }>`
+const Menu = styled.div<{ $isOpen: boolean }>`
   display: flex;
   align-items: center;
-  background-color: #000;
-  color: #fff;
 
   @media (max-width: 768px) {
+    background-color: #000;
     position: fixed;
     top: 0;
     right: ${({ $isOpen }) => ($isOpen ? "0" : "-100%")};
@@ -354,6 +343,7 @@ const MobileHeadText = styled.p`
   text-align: center;
   font-size: 20px;
   font-weight: 200;
+  line-height: normal; //memo: これ入れないと下線がずれる
   letter-spacing: 0.4px;
 
   @media (max-width: 768px) {
