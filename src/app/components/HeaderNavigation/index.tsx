@@ -40,9 +40,7 @@ export const Component = () => {
           MENU
         </MobileHeadText>
 
-        <StyledSpanAbsoluteWhite onClick={toggleMenu}>
-          close
-        </StyledSpanAbsoluteWhite>
+        <StyledSpanAbsolute onClick={toggleMenu} />
       </MobileHeadArea>
 
       <Menu
@@ -58,7 +56,9 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>TOP</StyledSpan>
             </StyledLink>
           </StyledLi>
+
           <VerticalBorder />
+
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"/"}
@@ -67,7 +67,9 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>MISSION</StyledSpan>
             </StyledLink>
           </StyledLi>
+
           <VerticalBorder />
+
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"/"}
@@ -76,7 +78,9 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>SERVICE</StyledSpan>
             </StyledLink>
           </StyledLi>
+
           <VerticalBorder />
+
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               target="_blank"
@@ -86,7 +90,9 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>NEWS</StyledSpan>
             </StyledLink>
           </StyledLi>
+
           <VerticalBorder />
+
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"#company"}
@@ -95,6 +101,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>COMPANY</StyledSpan>
             </StyledLink>
           </StyledLi>
+
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledSpecialLink
               href={"/contact"}
@@ -162,6 +169,7 @@ const StyledUl = styled.ul<{ $isOpen: boolean }>`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   gap: 20px;
   list-style: none;
   padding: 0;
@@ -174,21 +182,14 @@ const StyledUl = styled.ul<{ $isOpen: boolean }>`
     position: absolute;
     top: 50px;
     left: 44px;
-    background-color: rgba(
-      0,
-      0,
-      0,
-      0.9
-    ); // Optional: background color for mobile menu
-    width: 100%;
-    align-items: center;
   }
 `;
 
 const StyledLi = styled.li`
-  color: #fff;
+  width: 100%;
+  text-align: left;
   font-size: 25px;
-  line-height: normal;
+  color: #fff;
   letter-spacing: 1px;
   cursor: pointer;
 `;
@@ -225,6 +226,8 @@ const MenuToggle = styled.div`
 const Menu = styled.div<{ $isOpen: boolean }>`
   display: flex;
   align-items: center;
+  background-color: #000;
+  color: #fff;
 
   @media (max-width: 768px) {
     position: fixed;
@@ -232,7 +235,6 @@ const Menu = styled.div<{ $isOpen: boolean }>`
     right: ${({ $isOpen }) => ($isOpen ? "0" : "-100%")};
     height: 100vh;
     width: 100%;
-    background-color: #fff;
     transition: all 0.3s ease-in-out;
     z-index: 2;
 
@@ -242,7 +244,6 @@ const Menu = styled.div<{ $isOpen: boolean }>`
       align-items: center;
       justify-content: left;
       height: 100%;
-      background-color: #fff;
       list-style: none;
       padding: 0;
       margin: 0;
@@ -251,9 +252,9 @@ const Menu = styled.div<{ $isOpen: boolean }>`
 
     li {
       margin-bottom: 20px;
+      color: #fff;
+      text-align: left;
     }
-
-    padding-top: 71px;
   }
 `;
 
@@ -291,15 +292,11 @@ const StyledSpan = styled.span`
     height: 1px;
     background-color: #fff;
     transition: width 0.3s ease, left 0.3s ease;
-    z-index: -1; /* テキストの下に配置 */
+    z-index: -1;
   }
 
   &:hover::before {
     animation: ${underlineAnimation} 0.3s ease forwards;
-  }
-
-  @media (max-width: 768px) {
-    color: #000;
   }
 `;
 
@@ -313,30 +310,27 @@ const StyledSpecialSpan = styled.span`
   }
 `;
 
-const StyledSpanAbsoluteWhite = styled.span`
-  color: #fff;
-  text-decoration: none;
+const StyledSpanAbsolute = styled.span`
+  // todo: ここにボタンのスタイルを記述
 `;
 
 const MobileHeadArea = styled.div<{ $isOpen: boolean }>`
   display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
+  justify-content: space-between;
   background-color: #383838;
-  padding: 20px 100px;
+  padding: 20px 20px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 100;
   width: 100%;
-  justify-content: space-between;
 `;
 
 const MobileHeadText = styled.p`
   color: #fff;
   text-align: center;
-  font-family: "Josefin Sans";
   font-size: 20px;
   font-weight: 200;
-  line-height: normal;
   letter-spacing: 0.4px;
 
   @media (max-width: 768px) {
@@ -345,12 +339,11 @@ const MobileHeadText = styled.p`
 `;
 
 const FollowUsText = styled.p`
+  position: relative;
   color: #000;
   text-align: center;
-  font-family: "Myanmar Sangam MN";
   font-size: 20px;
   font-weight: 400;
-  line-height: 125px; /* 833.333% */
   letter-spacing: 0.75px;
   text-decoration-line: underline;
 
