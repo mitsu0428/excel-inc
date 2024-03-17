@@ -87,9 +87,19 @@ const Container = styled.div<{ $isVisible: boolean }>`
   opacity: ${(props) => (props.$isVisible ? "1" : "0")};
   transform: translateY(${(props) => (props.$isVisible ? "0" : "-100px")});
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  margin-top: 138px;
+
+  @media (max-width: 768px) {
+    margin-top: 64px;
+  }
 `;
 
-const Wrap = styled.div``;
+const Wrap = styled.div`
+  margin-top: 64px;
+  @media (max-width: 768px) {
+    margin-top: 36px;
+  }
+`;
 
 const TextArea = styled.div<{ $isVisible: boolean }>`
   margin-top: 36px;
@@ -97,6 +107,10 @@ const TextArea = styled.div<{ $isVisible: boolean }>`
   opacity: ${(props) => (props.$isVisible ? "1" : "0")};
   transform: translateX(${(props) => (props.$isVisible ? "0" : "-100px")});
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+
+  @media (max-width: 768px) {
+    line-height: 30px;
+  }
 `;
 
 const TitleH2_BusinessDomain = styled.h2<{ $isVisible: boolean }>`
@@ -105,7 +119,6 @@ const TitleH2_BusinessDomain = styled.h2<{ $isVisible: boolean }>`
   font-weight: 600;
   color: #fff;
   letter-spacing: 14px;
-  margin-top: 138px;
   opacity: ${(props) => (props.$isVisible ? "1" : "0")};
   transition: opacity 1s ease-in-out;
   @media (max-width: 768px) {
@@ -119,7 +132,6 @@ const TitleH3_Description = styled.h3<{ $isVisible: boolean }>`
   font-weight: 600;
   margin: 0;
   color: #fff;
-  margin-top: 64px;
   opacity: ${(props) => (props.$isVisible ? "1" : "0")};
   transition: opacity 1s ease-in-out;
   @media (max-width: 768px) {
