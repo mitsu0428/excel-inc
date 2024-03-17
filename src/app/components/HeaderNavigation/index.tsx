@@ -180,10 +180,7 @@ const StyledUl = styled.ul<{ $isOpen: boolean }>`
 `;
 
 const StyledLi = styled.li`
-  width: 100%;
-  display: flex;
-  justify-content: left;
-
+  line-height: normal;
   font-size: 25px;
   color: #fff;
   letter-spacing: 1px;
