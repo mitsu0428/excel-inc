@@ -36,9 +36,15 @@ export const Component = () => {
       </MenuToggle>
 
       <MobileHeadArea $isOpen={isOpen}>
-        <MobileHeadText className={Font.Font.CustomJosefinSans.className}>
-          MENU
-        </MobileHeadText>
+        <StyledLink
+          href={"/"}
+          passHref
+        >
+          <StyledImage
+            src="/assets/logo.svg"
+            alt="Excel inc."
+          />
+        </StyledLink>
 
         <CloseButton onClick={toggleMenu}>
           <CrossLine style={{ top: "50%", transform: "rotate(45deg)" }} />
@@ -238,6 +244,10 @@ const Menu = styled.div<{ $isOpen: boolean }>`
       margin-bottom: 20px;
       color: #fff;
       text-align: left;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
   }
 `;
@@ -302,8 +312,8 @@ const CloseButton = styled.span`
   width: 25px;
   height: 25px;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 40px;
+  right: 40px;
   cursor: pointer;
 `;
 
@@ -333,19 +343,6 @@ const MobileHeadArea = styled.div<{ $isOpen: boolean }>`
   left: 0;
   z-index: 100;
   width: 100%;
-`;
-
-const MobileHeadText = styled.p`
-  color: #fff;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 200;
-  line-height: normal; //memo: これ入れないと下線がずれる
-  letter-spacing: 0.4px;
-
-  @media (max-width: 768px) {
-    font-size: 14px;
-  }
 `;
 
 const FollowUsText = styled.p`
