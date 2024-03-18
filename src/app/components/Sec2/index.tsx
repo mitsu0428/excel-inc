@@ -109,15 +109,15 @@ const TextAreaSecond = styled.div`
 `;
 
 const TextAreaThird = styled.div`
+  width: 90%;
   position: absolute;
   bottom: 60px;
   left: 70px;
   text-align: left;
-  white-space: nowrap;
 
   @media (max-width: 768px) {
     bottom: 100px;
-    left: 36px;
+    left: 24px;
     padding: 0px;
   }
 `;
