@@ -199,6 +199,7 @@ const StyledTdWithBorder = styled.td`
   @media (max-width: 768px) {
     font-size: 14px;
     padding: 8px 8px;
+    white-space: nowrap;
   }
 `;
 
