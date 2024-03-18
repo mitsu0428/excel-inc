@@ -9,9 +9,11 @@ export const Component = () => {
     <Container id="company">
       <StyledMobileView>
         <MobileBorder />
+
         <TitleH2_MobileView className={Font.Font.CustomJosefinSans.className}>
           OUR COMPANY
         </TitleH2_MobileView>
+
         <Contents>
           <ContentsLeft>
             <ContentsTable className={Font.Font.CustomGotchicA1.className}>
@@ -95,6 +97,7 @@ const Container = styled.div`
   overflow: visible;
   margin-top: 138px;
   padding: 0 50px;
+
   @media (max-width: 768px) {
     margin-top: 81px;
     padding: 0 16px;
@@ -147,6 +150,7 @@ const Contents = styled.div`
   width: 100%;
   height: auto;
   gap: 44px;
+
   @media (max-width: 768px) {
     gap: 17px;
     flex-direction: column;
@@ -157,6 +161,7 @@ const ContentsMap = styled.div`
   margin-top: 32px;
   padding: 16px;
   text-align: center;
+
   @media (max-width: 768px) {
     margin-top: 16px;
   }
@@ -167,7 +172,9 @@ const ContentsLeft = styled.div`
   padding: 16px;
   text-align: center;
   width: 50%;
+
   @media (max-width: 768px) {
+    width: 100%;
     margin-top: 32px;
   }
 `;
@@ -176,7 +183,6 @@ const ContentsTable = styled.table`
   width: 100%;
   font-size: 20px;
   text-align: left;
-  white-space: nowrap;
 
   @media (max-width: 768px) {
     font-size: 14px;
