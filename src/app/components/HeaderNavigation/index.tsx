@@ -29,23 +29,16 @@ export const Component = () => {
         />
       </StyledLink>
 
-      <MenuToggle onClick={toggleMenu}>
+      <MenuToggle
+        $isOpen={isOpen}
+        onClick={toggleMenu}
+      >
         <Line />
         <Line />
         <Line />
       </MenuToggle>
 
       <MobileHeadArea $isOpen={isOpen}>
-        <StyledLink
-          href={"/"}
-          passHref
-        >
-          <StyledImage
-            src="/assets/logo.svg"
-            alt="Excel inc."
-          />
-        </StyledLink>
-
         <CloseButton onClick={toggleMenu}>
           <CrossLine style={{ top: "50%", transform: "rotate(45deg)" }} />
           <CrossLine style={{ top: "50%", transform: "rotate(-45deg)" }} />
@@ -65,7 +58,9 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>TOP</StyledSpan>
             </StyledLink>
           </StyledLi>
+
           <VerticalBorder />
+
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"/"}
@@ -74,7 +69,9 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>MISSION</StyledSpan>
             </StyledLink>
           </StyledLi>
+
           <VerticalBorder />
+
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"/"}
@@ -83,7 +80,9 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>SERVICE</StyledSpan>
             </StyledLink>
           </StyledLi>
+
           <VerticalBorder />
+
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               target="_blank"
@@ -93,7 +92,9 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>NEWS</StyledSpan>
             </StyledLink>
           </StyledLi>
+
           <VerticalBorder />
+
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledLink
               href={"#company"}
@@ -102,6 +103,7 @@ export const Component = () => {
               <StyledSpan onClick={closeMenu}>COMPANY</StyledSpan>
             </StyledLink>
           </StyledLi>
+
           <StyledLi className={Font.Font.CustomJosefinSans.className}>
             <StyledSpecialLink
               href={"/contact"}
@@ -110,10 +112,12 @@ export const Component = () => {
               <StyledSpecialSpan onClick={closeMenu}>CONTACT</StyledSpecialSpan>
             </StyledSpecialLink>
           </StyledLi>
+
           <SnsWrapper $isOpen={isOpen}>
             <FollowUsText className={Font.Font.CustomNotoSansMyanmar.className}>
               FOLLOW US
             </FollowUsText>
+
             <SnsIcon
               src="/sns-instagram.png"
               alt="Instagram"
@@ -204,11 +208,11 @@ const StyledImage = styled.img`
   }
 `;
 
-const MenuToggle = styled.div`
+const MenuToggle = styled.div<{ $isOpen: boolean }>`
   display: none;
 
   @media (max-width: 768px) {
-    display: flex;
+    display: ${({ $isOpen }) => ($isOpen ? "none" : "flex")};
     flex-direction: column;
     cursor: pointer;
   }
@@ -312,8 +316,9 @@ const CloseButton = styled.span`
   width: 25px;
   height: 25px;
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
   cursor: pointer;
 `;
 
@@ -335,14 +340,8 @@ const CrossLine = styled.div`
 
 const MobileHeadArea = styled.div<{ $isOpen: boolean }>`
   display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
-  justify-content: space-between;
-  background-color: #383838;
-  padding: 20px 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
   width: 100%;
+  justify-content: space-between;
 `;
 
 const FollowUsText = styled.p`
