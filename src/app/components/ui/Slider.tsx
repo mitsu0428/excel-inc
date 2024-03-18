@@ -26,13 +26,6 @@ export const Component: React.FC = () => {
         slidesToScroll: 1,
       },
     },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-      },
-    },
   ];
 
   const arrowStyle = {
@@ -64,8 +57,8 @@ export const Component: React.FC = () => {
   return (
     <StyledWrapper>
       <Slide
+        slidesToShow={2}
         slidesToScroll={1}
-        slidesToShow={3}
         responsive={responsiveSettings}
         autoplay={true}
         duration={1000}
