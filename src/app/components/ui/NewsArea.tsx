@@ -29,6 +29,10 @@ const Wrap = styled.div`
   position: absolute;
   bottom: 0;
   right: 60px;
+
+  @media (max-width: 768px) {
+    right: 20px;
+  }
 `;
 
 const StyledLink = styled(Link)`

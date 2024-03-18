@@ -19,7 +19,7 @@ export const Component = () => {
         />
       </ImageWrap>
 
-      <TextAreaLeft>
+      <TextAreaSecond>
         <TitleH2_About className={Font.Font.CustomJosefinSans.className}>
           ABOUT
         </TitleH2_About>
@@ -29,9 +29,9 @@ export const Component = () => {
         <TitleH2_Concept className={Font.Font.CustomJosefinSansThin.className}>
           BEYOND EXPECTATIONS AND IMAGINATIONS.
         </TitleH2_Concept>
-      </TextAreaLeft>
+      </TextAreaSecond>
 
-      <TextAreaRight>
+      <TextAreaThird>
         <TextRight className={Font.Font.CustomGotchicA1.className}>
           革新的でワクワクする要素を探究しながら、常にクールに。
         </TextRight>
@@ -51,7 +51,7 @@ export const Component = () => {
         <TextRight className={Font.Font.CustomGotchicA1.className}>
           世の中の期待と想像を超えるサービスを提供していきます。
         </TextRight>
-      </TextAreaRight>
+      </TextAreaThird>
 
       <NewsArea.Component
         text="NEWS. 2024/02/20 Web site OPEN"
@@ -96,30 +96,28 @@ const StyledImageSmartPhone = styled.img`
   }
 `;
 
-const TextAreaLeft = styled.div`
+const TextAreaSecond = styled.div`
   position: absolute;
   top: 145px;
-  left: 40px;
-  padding: 30px;
+  left: 70px;
   text-align: left;
 
   @media (max-width: 768px) {
-    top: 100px;
+    top: 120px;
     left: 11px;
   }
 `;
 
-const TextAreaRight = styled.div`
+const TextAreaThird = styled.div`
   position: absolute;
   bottom: 60px;
-  left: 40px;
-  padding: 30px;
+  left: 70px;
   text-align: left;
   white-space: nowrap;
 
   @media (max-width: 768px) {
     bottom: 100px;
-    left: 44px;
+    left: 36px;
     padding: 0px;
   }
 `;
@@ -133,10 +131,6 @@ const TitleH2_About = styled.h2`
   margin: 0;
   opacity: 0.3;
 
-  @media (max-width: 1024px) {
-    font-size: 34px;
-    line-height: 55px;
-  }
   @media (max-width: 768px) {
     font-size: 34px;
     line-height: 55px;
@@ -178,6 +172,7 @@ const TextRight = styled.p`
   font-size: 16px;
   line-height: 170%;
   letter-spacing: 0.4px;
+  white-space: nowrap;
 
   @media (max-width: 768px) {
     font-size: 14px;
