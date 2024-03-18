@@ -97,7 +97,7 @@ const Container = styled.div`
   padding: 0 50px;
   @media (max-width: 768px) {
     margin-top: 81px;
-    padding: 0 30px;
+    padding: 0 16px;
   }
 `;
 
@@ -116,7 +116,7 @@ const StyledMobileView = styled.div`
   @media (max-width: 768px) {
     border-radius: 52px 52px 0 0;
     background: #f9f9f9;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 0;
   }
 `;
@@ -157,11 +157,8 @@ const ContentsMap = styled.div`
   margin-top: 32px;
   padding: 16px;
   text-align: center;
-  height: 660px;
-
   @media (max-width: 768px) {
     margin-top: 16px;
-    height: 276px;
   }
 `;
 
@@ -170,10 +167,8 @@ const ContentsLeft = styled.div`
   padding: 16px;
   text-align: center;
   width: 50%;
-  height: 797px;
   @media (max-width: 768px) {
     margin-top: 32px;
-    height: 276px;
   }
 `;
 
@@ -184,7 +179,7 @@ const ContentsTable = styled.table`
   white-space: nowrap;
 
   @media (max-width: 768px) {
-    font-size: 8px;
+    font-size: 14px;
   }
 `;
 
@@ -196,7 +191,7 @@ const StyledTdWithBorder = styled.td`
   text-align-last: justify;
 
   @media (max-width: 768px) {
-    font-size: 8px;
+    font-size: 14px;
     padding: 8px 8px;
   }
 `;
@@ -210,7 +205,7 @@ const SpecialStyledTd = styled.td`
   line-height: 28px;
 
   @media (max-width: 768px) {
-    font-size: 8px;
+    font-size: 14px;
     padding: 8px 8px;
     line-height: 14px;
   }
@@ -223,7 +218,7 @@ const StyledTd = styled.td`
   letter-spacing: 0.5px;
 
   @media (max-width: 768px) {
-    font-size: 8px;
+    font-size: 14px;
     padding: 8px 8px;
   }
 `;
