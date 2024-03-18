@@ -91,6 +91,7 @@ const Container = styled.div<{ $isVisible: boolean }>`
 
   @media (max-width: 768px) {
     margin-top: 64px;
+    padding: 0 20px;
   }
 `;
 
