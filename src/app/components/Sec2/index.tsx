@@ -172,7 +172,7 @@ const TextRight = styled.p`
   font-size: 16px;
   line-height: 170%;
   letter-spacing: 0.4px;
-  white-space: nowrap;
+  white-space: pre-wrap;
 
   @media (max-width: 768px) {
     font-size: 14px;
