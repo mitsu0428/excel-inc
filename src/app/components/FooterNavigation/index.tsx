@@ -279,7 +279,7 @@ const RightReservedText = styled.p`
 
   @media (max-width: 768px) {
     padding: 16px 0;
-    font-size: 14px;
+    font-size: 11px;
   }
 `;
 
