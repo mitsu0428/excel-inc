@@ -15,27 +15,27 @@ export const Component = () => {
 
   const menu = [
     {
-      text: "TOP",
+      text: "トップ TOP",
       link: "/",
     },
     {
-      text: "MISSION",
+      text: "ミッション MISSION",
       link: "/",
     },
     {
-      text: "SERVICE",
+      text: "事業紹介 SERVICE",
       link: "/",
     },
     {
-      text: "NEWS",
+      text: "ニュース NEWS",
       link: "https://note.com/excelinc/",
     },
     {
-      text: "COMPANY",
+      text: "会社概要 COMPANY",
       link: "#company",
     },
     {
-      text: "CONTACT",
+      text: "お問い合わせ CONTACT",
       link: "/contact",
     },
   ];
@@ -143,7 +143,7 @@ export const Component = () => {
 
           <SP_SCREEN_CONTENTS className={Font.Font.CustomJosefinSans.className}>
             {menu.map((item, index) => (
-              <RowWrapper
+              <RowWrapperWithUpderLine
                 key={index}
                 onClick={() => toggleMenu(isOpen)}
               >
@@ -153,12 +153,14 @@ export const Component = () => {
                 >
                   <StyledSpan>{item.text}</StyledSpan>
                 </StyledLink>
-              </RowWrapper>
+              </RowWrapperWithUpderLine>
             ))}
           </SP_SCREEN_CONTENTS>
 
           <SP_SCREEN_FOOTER>
-            <StyledSpan>{FOLLOW_US}</StyledSpan>
+            <StyledSpan className={Font.Font.CustomNotoSansMyanmar.className}>
+              {FOLLOW_US}
+            </StyledSpan>
             {snsLink.map((item, index) => (
               <StyledLink
                 href={item.link}
@@ -180,6 +182,18 @@ export const Component = () => {
     </Wrapper>
   );
 };
+
+// memo: 下線を引くアニメーション
+const underlineAnimation = keyframes`
+  from {
+    width: 0;
+    left: 0;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+`;
 
 const Wrapper = styled.div``;
 
@@ -239,7 +253,18 @@ const RowWrapper = styled.div`
   flex-direction: row;
   color: #fff;
   align-items: center;
-  gap: 20px;
+  gap: 36px;
+`;
+
+const RowWrapperWithUpderLine = styled.div`
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  align-items: center;
+  gap: 36px;
+  width: 100%;
+  padding: 16px 0;
+  border-bottom: rgba(255, 255, 255, 0.3) 1px solid;
 `;
 
 // memo: 横並びにする(間隔を空ける)
@@ -359,18 +384,6 @@ const CloseButton = styled.span<{ $isOpen: boolean }>`
     background: inherit;
     border-radius: inherit;
     transform: rotate(90deg);
-  }
-`;
-
-// memo: 下線を引くアニメーション
-const underlineAnimation = keyframes`
-  from {
-    width: 0;
-    left: 0;
-  }
-  to {
-    width: 100%;
-    left: 0;
   }
 `;
 
