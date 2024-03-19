@@ -15,32 +15,32 @@ export const Component = () => {
 
   const menu = [
     {
-      text: "トップ TOP",
+      SPText: "トップ TOP",
       PCText: "TOP",
       link: "/",
     },
     {
-      text: "ミッション MISSION",
+      SPText: "ミッション MISSION",
       PCText: "MISSION",
       link: "/",
     },
     {
-      text: "事業紹介 SERVICE",
+      SPText: "事業紹介 SERVICE",
       PCText: "SERVICE",
       link: "/",
     },
     {
-      text: "ニュース NEWS",
+      SPText: "ニュース NEWS",
       PCText: "NEWS",
       link: "https://note.com/excelinc/",
     },
     {
-      text: "会社概要 COMPANY",
+      SPText: "会社概要 COMPANY",
       PCText: "COMPANY",
       link: "#company",
     },
     {
-      text: "お問い合わせ CONTACT",
+      SPText: "お問い合わせ CONTACT",
       PCText: "CONTACT",
       link: "/contact",
     },
@@ -157,7 +157,7 @@ export const Component = () => {
                   href={item.link}
                   passHref
                 >
-                  <StyledSpan>{item.text}</StyledSpan>
+                  <StyledSpan>{item.SPText}</StyledSpan>
                 </StyledLink>
               </RowWrapperWithUpderLine>
             ))}
