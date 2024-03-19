@@ -167,21 +167,24 @@ export const Component = () => {
             <StyledSpan className={Font.Font.CustomNotoSansMyanmar.className}>
               {FOLLOW_US}
             </StyledSpan>
-            {snsLink.map((item, index) => (
-              <StyledLink
-                href={item.link}
-                passHref
-                key={index}
-                target="_blank"
-              >
-                <Image
-                  src={item.icon}
-                  alt={item.text}
-                  width={30}
-                  height={30}
-                />
-              </StyledLink>
-            ))}
+
+            <SNSWrapper>
+              {snsLink.map((item, index) => (
+                <StyledLink
+                  href={item.link}
+                  passHref
+                  key={index}
+                  target="_blank"
+                >
+                  <Image
+                    src={item.icon}
+                    alt={item.text}
+                    width={30}
+                    height={30}
+                  />
+                </StyledLink>
+              ))}
+            </SNSWrapper>
           </SP_SCREEN_FOOTER>
         </SP_SCREEN_MENU>
       </SP_SCREEN>
@@ -273,6 +276,14 @@ const RowWrapperWithUpderLine = styled.div`
   border-bottom: rgba(255, 255, 255, 0.3) 1px solid;
 `;
 
+// memo: SNSのアイコン
+const SNSWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+`;
+
 // memo: 横並びにする(間隔を空ける)
 const SP_SCREEN_HEADER = styled.div`
   display: flex;
@@ -298,9 +309,8 @@ const SP_SCREEN_FOOTER = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   color: #fff;
-  gap: 20px;
   margin-top: 36px;
 `;
 
@@ -316,6 +326,7 @@ const Logo = styled.img`
   }
 `;
 
+// memo: ハンバーガーメニュー
 const OpenWrapper = styled.div<{ $isOpen: boolean }>`
   display: inline-block;
   cursor: pointer;
@@ -351,17 +362,16 @@ const OpenWrapper = styled.div<{ $isOpen: boolean }>`
   }
 `;
 
+// memo: ハンバーガーメニューの線
 const OpenOneSpan = styled.span<{ $isOpen: boolean }>`
   top: ${(props) => (props.$isOpen ? "50%" : "0")};
   transform: ${(props) => (props.$isOpen ? "rotate(45deg)" : "none")};
 `;
-
 const OpenTwoSpan = styled.span<{ $isOpen: boolean }>`
   top: 50%;
   transform: translateY(-50%);
   opacity: ${(props) => (props.$isOpen ? "0" : "1")};
 `;
-
 const OpenThreeSpan = styled.span<{ $isOpen: boolean }>`
   bottom: ${(props) => (props.$isOpen ? "50%" : "0")};
   transform: ${(props) => (props.$isOpen ? "rotate(-45deg)" : "none")};
