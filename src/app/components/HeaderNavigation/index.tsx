@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styled, { keyframes } from "styled-components";
 
 import * as Font from "../../styles/NextFont";
@@ -19,27 +20,46 @@ export const Component = () => {
 
   return (
     <Wrapper>
-      <StyledLink
-        href={"/"}
-        passHref
-      >
-        <StyledLogo
-          $isOpen={isOpen}
-          src="/assets/logo.svg"
-          alt="Excel inc."
-        />
-      </StyledLink>
+      <RowWrapperWithProps $isOpen={isOpen}>
+        <StyledLink
+          href={"/"}
+          passHref
+        >
+          <StyledImage
+            $isOpen={isOpen}
+            src="/assets/logo.svg"
+            alt="Excel inc."
+            width={88}
+            height={88}
+          />
+        </StyledLink>
 
-      <MenuToggle
-        $isOpen={isOpen}
-        onClick={toggleMenu}
-      >
-        <Line />
-        <Line />
-        <Line />
-      </MenuToggle>
+        <MenuToggle
+          $isOpen={isOpen}
+          onClick={toggleMenu}
+        >
+          <Line />
+          <Line />
+          <Line />
+        </MenuToggle>
+      </RowWrapperWithProps>
 
       <MobileHeadArea $isOpen={isOpen}>
+        <MenuButton onClick={toggleMenu}>
+          <StyledLink
+            href={"/"}
+            passHref
+          >
+            <StyledMobileImage
+              $isOpen={isOpen}
+              src="/assets/logo.svg"
+              alt="Excel inc."
+              width={88}
+              height={88}
+            />
+          </StyledLink>
+        </MenuButton>
+
         <CloseButton onClick={toggleMenu}>
           <CrossLine style={{ top: "50%", transform: "rotate(45deg)" }} />
           <CrossLine style={{ top: "50%", transform: "rotate(-45deg)" }} />
@@ -147,7 +167,14 @@ const RowWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  width: 100%;
+  flex-direction: row;
+`;
+
+const RowWrapperWithProps = styled.div<{ $isOpen: boolean }>`
+  display: ${({ $isOpen }) => ($isOpen ? "none" : "flex")};
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   flex-direction: row;
 `;
@@ -212,15 +239,15 @@ const StyledLi = styled.li`
   cursor: pointer;
 `;
 
-const StyledLogo = styled.img<{ $isOpen: boolean }>`
-  width: 100%;
-  height: 100%;
-  max-width: 88px;
-  z-index: 2;
+const StyledMobileImage = styled(Image)<{ $isOpen: boolean }>`
+  @media (max-width: 768px) {
+    display: ${({ $isOpen }) => ($isOpen ? "" : "none")};
+  }
+`;
 
+const StyledImage = styled.img<{ $isOpen: boolean }>`
   @media (max-width: 768px) {
     display: ${({ $isOpen }) => ($isOpen ? "none" : "")};
-    max-width: 65px;
   }
 `;
 
@@ -328,14 +355,37 @@ const StyledSpecialSpan = styled.span`
   }
 `;
 
-const CloseButton = styled.span`
-  width: 25px;
-  height: 25px;
+const MenuButton = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    z-index: 100;
+  }
+`;
+
+const CloseButton = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 100;
+  }
+`;
+
+const CrossLine = styled.div`
+  content: "";
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 30px;
+  background: #fff;
   z-index: 100;
-  cursor: pointer;
 `;
 
 const Line = styled.div`
@@ -346,20 +396,13 @@ const Line = styled.div`
   margin: 3px 0;
 `;
 
-const CrossLine = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #fff;
-  transform: rotate(45deg);
-`;
-
 const MobileHeadArea = styled.div<{ $isOpen: boolean }>`
   display: none;
   @media (max-width: 768px) {
     display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
-    width: 100%;
+    align-items: center;
     justify-content: space-between;
+    width: 100%;
   }
 `;
 
