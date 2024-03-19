@@ -16,26 +16,32 @@ export const Component = () => {
   const menu = [
     {
       text: "トップ TOP",
+      PCText: "TOP",
       link: "/",
     },
     {
       text: "ミッション MISSION",
+      PCText: "MISSION",
       link: "/",
     },
     {
       text: "事業紹介 SERVICE",
+      PCText: "SERVICE",
       link: "/",
     },
     {
       text: "ニュース NEWS",
+      PCText: "NEWS",
       link: "https://note.com/excelinc/",
     },
     {
       text: "会社概要 COMPANY",
+      PCText: "COMPANY",
       link: "#company",
     },
     {
       text: "お問い合わせ CONTACT",
+      PCText: "CONTACT",
       link: "/contact",
     },
   ];
@@ -79,13 +85,13 @@ export const Component = () => {
 
         <RowWrapper className={Font.Font.CustomJosefinSans.className}>
           {menu.map((item, index) =>
-            item.text === "CONTACT" ? (
+            item.PCText === "CONTACT" ? (
               <StyledLinkContact
                 href={item.link}
                 passHref
                 key={index}
               >
-                <StyledSpanContact>{item.text}</StyledSpanContact>
+                <StyledSpanContact>{item.PCText}</StyledSpanContact>
               </StyledLinkContact>
             ) : (
               <StyledLink
@@ -93,7 +99,7 @@ export const Component = () => {
                 passHref
                 key={index}
               >
-                <StyledSpan>{item.text}</StyledSpan>
+                <StyledSpan>{item.PCText}</StyledSpan>
               </StyledLink>
             )
           )}
