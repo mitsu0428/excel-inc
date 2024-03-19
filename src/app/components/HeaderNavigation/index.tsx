@@ -23,7 +23,8 @@ export const Component = () => {
         href={"/"}
         passHref
       >
-        <StyledImage
+        <StyledLogo
+          $isOpen={isOpen}
           src="/assets/logo.svg"
           alt="Excel inc."
         />
@@ -113,29 +114,43 @@ export const Component = () => {
             </StyledSpecialLink>
           </StyledLi>
 
-          <SnsWrapper $isOpen={isOpen}>
-            <FollowUsText className={Font.Font.CustomNotoSansMyanmar.className}>
+          <RowWrapper>
+            <FollowUsText
+              $isOpen={isOpen}
+              className={Font.Font.CustomNotoSansMyanmar.className}
+            >
               FOLLOW US
             </FollowUsText>
 
-            <SnsIcon
-              src="/sns-instagram.png"
-              alt="Instagram"
-            />
-            <SnsIcon
-              src="/sns-line.png"
-              alt="Line"
-            />
-            <SnsIcon
-              src="/sns-tiktok.png"
-              alt="TikTok"
-            />
-          </SnsWrapper>
+            <SnsWrapper $isOpen={isOpen}>
+              <SnsIcon
+                src="/sns-instagram.png"
+                alt="Instagram"
+              />
+              <SnsIcon
+                src="/sns-line.png"
+                alt="Line"
+              />
+              <SnsIcon
+                src="/sns-tiktok.png"
+                alt="TikTok"
+              />
+            </SnsWrapper>
+          </RowWrapper>
         </StyledUl>
       </Menu>
     </Wrapper>
   );
 };
+
+const RowWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  flex-direction: row;
+`;
 
 const Wrapper = styled.div`
   display: flex;
@@ -197,13 +212,14 @@ const StyledLi = styled.li`
   cursor: pointer;
 `;
 
-const StyledImage = styled.img`
+const StyledLogo = styled.img<{ $isOpen: boolean }>`
   width: 100%;
   height: 100%;
   max-width: 88px;
   z-index: 2;
 
   @media (max-width: 768px) {
+    display: ${({ $isOpen }) => ($isOpen ? "none" : "")};
     max-width: 65px;
   }
 `;
@@ -339,34 +355,44 @@ const CrossLine = styled.div`
 `;
 
 const MobileHeadArea = styled.div<{ $isOpen: boolean }>`
-  display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
-  width: 100%;
-  justify-content: space-between;
-`;
-
-const FollowUsText = styled.p`
-  position: relative;
-  color: #fff;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0.75px;
-  text-decoration-line: underline;
-
+  display: none;
   @media (max-width: 768px) {
-    font-size: 14px;
+    display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
+    width: 100%;
+    justify-content: space-between;
   }
 `;
 
 const SnsWrapper = styled.div<{ $isOpen: boolean }>`
-  display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   gap: 30px;
   width: 100%;
+
+  display: none;
+  @media (max-width: 768px) {
+    display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
+  }
 `;
 
 const SnsIcon = styled.img`
+  width: 100%;
   max-width: 37px;
   max-height: 37px;
+`;
+
+const FollowUsText = styled.p<{ $isOpen: boolean }>`
+  display: none;
+  @media (max-width: 768px) {
+    display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.75px;
+    text-decoration-line: underline;
+    font-size: 14px;
+    white-space: nowrap;
+  }
 `;
