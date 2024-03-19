@@ -74,15 +74,25 @@ export const Component = () => {
         </RowWrapper>
 
         <RowWrapper className={Font.Font.CustomJosefinSans.className}>
-          {menu.map((item, index) => (
-            <StyledLink
-              href={item.link}
-              passHref
-              key={index}
-            >
-              <StyledSpan>{item.text}</StyledSpan>
-            </StyledLink>
-          ))}
+          {menu.map((item, index) =>
+            item.text === "CONTACT" ? (
+              <StyledLinkContact
+                href={item.link}
+                passHref
+                key={index}
+              >
+                <StyledSpanContact>{item.text}</StyledSpanContact>
+              </StyledLinkContact>
+            ) : (
+              <StyledLink
+                href={item.link}
+                passHref
+                key={index}
+              >
+                <StyledSpan>{item.text}</StyledSpan>
+              </StyledLink>
+            )
+          )}
         </RowWrapper>
       </PC_SCREEN>
 
@@ -348,6 +358,13 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
+const StyledLinkContact = styled(Link)`
+  text-decoration: none;
+  border: 1px solid #fff;
+  background-color: #fff;
+  padding: 4px 18px;
+`;
+
 // memo: メニューのテキスト
 const StyledSpan = styled.span`
   color: #fff;
@@ -372,4 +389,10 @@ const StyledSpan = styled.span`
   &:hover::before {
     animation: ${underlineAnimation} 0.3s ease forwards;
   }
+`;
+
+const StyledSpanContact = styled.span`
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
 `;
