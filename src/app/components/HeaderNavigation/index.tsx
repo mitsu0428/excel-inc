@@ -66,11 +66,15 @@ export const Component = () => {
     <Wrapper>
       <PC_SCREEN>
         <RowWrapper>
-          <Logo
-            src={logoLink}
-            alt="Excel inc."
-            onClick={() => toggleMenu(isOpen)}
-          />
+          <StyledLink
+            href={"/"}
+            passHref
+          >
+            <Logo
+              src={logoLink}
+              alt="Excel inc."
+            />
+          </StyledLink>
         </RowWrapper>
 
         <RowWrapper className={Font.Font.CustomJosefinSans.className}>
@@ -97,11 +101,16 @@ export const Component = () => {
       </PC_SCREEN>
 
       <SP_SCREEN>
-        <RowSpaceBetweenWrapper>
-          <Logo
-            src={logoLink}
-            alt="Excel inc."
-          />
+        <SP_SCREEN_HEADER>
+          <StyledLink
+            href={"/"}
+            passHref
+          >
+            <Logo
+              src={logoLink}
+              alt="Excel inc."
+            />
+          </StyledLink>
 
           <OpenWrapper
             $isOpen={isOpen}
@@ -111,23 +120,33 @@ export const Component = () => {
             <OpenTwoSpan $isOpen={isOpen} />
             <OpenThreeSpan $isOpen={isOpen} />
           </OpenWrapper>
-        </RowSpaceBetweenWrapper>
+        </SP_SCREEN_HEADER>
 
         <SP_SCREEN_MENU $isOpen={isOpen}>
-          <RowSpaceBetweenWrapper>
-            <Logo
-              src={logoLink}
-              alt="Excel inc."
-            />
+          <SP_SCREEN_HEADER>
+            <StyledLink
+              href={"/"}
+              passHref
+              onClick={() => toggleMenu(isOpen)}
+            >
+              <Logo
+                src={logoLink}
+                alt="Excel inc."
+              />
+            </StyledLink>
+
             <CloseButton
               $isOpen={isOpen}
               onClick={() => toggleMenu(isOpen)}
             />
-          </RowSpaceBetweenWrapper>
+          </SP_SCREEN_HEADER>
 
-          <ColumnWrapper className={Font.Font.CustomJosefinSans.className}>
+          <SP_SCREEN_CONTENTS className={Font.Font.CustomJosefinSans.className}>
             {menu.map((item, index) => (
-              <RowWrapper key={index}>
+              <RowWrapper
+                key={index}
+                onClick={() => toggleMenu(isOpen)}
+              >
                 <StyledLink
                   href={item.link}
                   passHref
@@ -136,15 +155,16 @@ export const Component = () => {
                 </StyledLink>
               </RowWrapper>
             ))}
-          </ColumnWrapper>
+          </SP_SCREEN_CONTENTS>
 
-          <SNSWrapper>
+          <SP_SCREEN_FOOTER>
             <StyledSpan>{FOLLOW_US}</StyledSpan>
             {snsLink.map((item, index) => (
               <StyledLink
                 href={item.link}
                 passHref
                 key={index}
+                target="_blank"
               >
                 <Image
                   src={item.icon}
@@ -154,7 +174,7 @@ export const Component = () => {
                 />
               </StyledLink>
             ))}
-          </SNSWrapper>
+          </SP_SCREEN_FOOTER>
         </SP_SCREEN_MENU>
       </SP_SCREEN>
     </Wrapper>
@@ -223,7 +243,7 @@ const RowWrapper = styled.div`
 `;
 
 // memo: 横並びにする(間隔を空ける)
-const RowSpaceBetweenWrapper = styled.div`
+const SP_SCREEN_HEADER = styled.div`
   display: flex;
   flex-direction: row;
   color: #fff;
@@ -233,23 +253,24 @@ const RowSpaceBetweenWrapper = styled.div`
 `;
 
 // memo: 縦並びにする
-const ColumnWrapper = styled.div`
+const SP_SCREEN_CONTENTS = styled.div`
   display: flex;
   flex-direction: column;
   color: #fff;
-  align-items: center;
   gap: 20px;
+  margin-top: 36px;
+  text-align: left;
 `;
 
 // memo: SNSのアイコン
-const SNSWrapper = styled.div`
+const SP_SCREEN_FOOTER = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   color: #fff;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 36px;
 `;
 
 // memo: ロゴ
@@ -268,7 +289,7 @@ const OpenWrapper = styled.div<{ $isOpen: boolean }>`
   display: inline-block;
   cursor: pointer;
   position: relative;
-  width: 25px;
+  width: 30px;
   height: 20px;
   vertical-align: middle;
 
