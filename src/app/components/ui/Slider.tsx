@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Image from "next/image";
 import styled from "styled-components";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
@@ -17,6 +18,11 @@ export const Component: React.FC = () => {
     { src: "/slide3.png", alt: "事業領域の画像" },
     { src: "/slide4.png", alt: "事業領域の画像" },
   ];
+
+  const arrowPath = {
+    prev: "/left-arrow.svg",
+    next: "/right-arrow.svg",
+  };
 
   const responsiveSettings = [
     {
@@ -41,7 +47,13 @@ export const Component: React.FC = () => {
         className={Font.Font.CustomDarkerGrotesque.className}
         style={{ ...arrowStyle }}
       >
-        ←PREV
+        <Image
+          src={arrowPath.prev}
+          alt="prev"
+          width={40}
+          height={40}
+        />
+        <Text>PREV</Text>
       </StyledButton>
     ),
     nextArrow: (
@@ -49,7 +61,13 @@ export const Component: React.FC = () => {
         className={Font.Font.CustomDarkerGrotesque.className}
         style={{ ...arrowStyle }}
       >
-        NEXT→
+        <Text>NEXT</Text>
+        <Image
+          src={arrowPath.next}
+          alt="prev"
+          width={40}
+          height={40}
+        />
       </StyledButton>
     ),
   };
@@ -61,7 +79,7 @@ export const Component: React.FC = () => {
         slidesToScroll={1}
         responsive={responsiveSettings}
         autoplay={true}
-        duration={1000}
+        duration={3000}
         {...properties}
       >
         {images.map((image, index) => (
@@ -85,14 +103,24 @@ export const Component: React.FC = () => {
 const StyledWrapper = styled.div`
   margin-top: 64px;
 
-  .${Font.Font.CustomDarkerGrotesque.className} {
-    font-size: 20px;
-  }
   @media (max-width: 480px) {
+    margin-top: 36px;
     .${Font.Font.CustomDarkerGrotesque.className} {
-      font-size: 10px;
+      font-size: 16px;
     }
   }
 `;
 
-const StyledButton = styled.button``;
+const Text = styled.p`
+  font-size: 16px;
+  color: #fff;
+  line-height: 40px;
+  letter-spacing: 0.1em;
+  margin-bottom: 3px; // memo: 画像との間隔を調整
+`;
+
+const StyledButton = styled.button`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+`;
