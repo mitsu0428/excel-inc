@@ -123,4 +123,9 @@ const StyledButton = styled.button`
   display: flex;
   align-items: center;
   flex-direction: row;
+
+  @media (max-width: 480px) {
+    position: absolute;
+    bottom: 3%;
+  }
 `;
