@@ -119,9 +119,10 @@ const TitleH2_BusinessDomain = styled.h2<{ $isVisible: boolean }>`
   text-align: center;
   font-weight: 600;
   color: #fff;
-  letter-spacing: 14px;
+  letter-spacing: 0.2em;
   opacity: ${(props) => (props.$isVisible ? "1" : "0")};
   transition: opacity 1s ease-in-out;
+
   @media (max-width: 768px) {
     font-size: 25px;
   }

@@ -10,13 +10,17 @@ import * as Font from "../../styles/NextFont";
 export const Component = () => {
   return (
     <Container>
-      <TitleH2_Service className={Font.Font.CustomJosefinSans.className}>
-        SERVICE
-        <br />
-        &
-        <br />
-        PRODUCT
-      </TitleH2_Service>
+      <SwitchWrapper>
+        <TitleH2_Service className={Font.Font.CustomJosefinSans.className}>
+          SERVICE
+        </TitleH2_Service>
+        <TitleH2_AND className={Font.Font.CustomJosefinSans.className}>
+          &
+        </TitleH2_AND>
+        <TitleH2_Service className={Font.Font.CustomJosefinSans.className}>
+          PRODUCT
+        </TitleH2_Service>
+      </SwitchWrapper>
 
       <Slider.Component />
 
@@ -39,12 +43,40 @@ const Container = styled.div`
   }
 `;
 
+const SwitchWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: #fff;
+  align-items: center;
+  gap: 36px;
+
+  @media (max-width: 768px) {
+    gap: 16px;
+  }
+`;
+
 const TitleH2_Service = styled.h2`
   font-size: 70px;
   text-align: center;
   font-weight: 600;
   color: #fff;
-  letter-spacing: 14px;
+  letter-spacing: 0.2em;
+  line-height: 150%;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
+`;
+
+const TitleH2_AND = styled.h2`
+  font-size: 50px;
+  text-align: center;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+
   line-height: 150%;
   @media (max-width: 768px) {
     font-size: 25px;

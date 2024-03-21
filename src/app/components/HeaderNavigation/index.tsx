@@ -15,32 +15,38 @@ export const Component = () => {
 
   const menu = [
     {
-      SPText: "トップ TOP",
+      SPText: "TOP",
+      SPTextSmall: "トップ",
       PCText: "TOP",
       link: "/",
     },
     {
-      SPText: "ミッション MISSION",
+      SPText: "MISSION",
+      SPTextSmall: "ミッション",
       PCText: "MISSION",
       link: "/",
     },
     {
-      SPText: "事業紹介 SERVICE",
+      SPText: "SERVICE",
+      SPTextSmall: "事業紹介",
       PCText: "SERVICE",
       link: "/",
     },
     {
-      SPText: "ニュース NEWS",
+      SPText: "NEWS",
+      SPTextSmall: "ニュース",
       PCText: "NEWS",
       link: "https://note.com/excelinc/",
     },
     {
-      SPText: "会社概要 COMPANY",
+      SPText: "COMPANY",
+      SPTextSmall: "会社概要",
       PCText: "COMPANY",
       link: "#company",
     },
     {
-      SPText: "お問い合わせ CONTACT",
+      SPText: "CONTACT",
+      SPTextSmall: "お問い合わせ",
       PCText: "CONTACT",
       link: "/contact",
     },
@@ -83,7 +89,7 @@ export const Component = () => {
           </StyledLink>
         </RowWrapper>
 
-        <RowWrapper className={Font.Font.CustomJosefinSans.className}>
+        <RowWrapper>
           {menu.map((item, index) =>
             item.PCText === "CONTACT" ? (
               <StyledLinkContact
@@ -91,7 +97,11 @@ export const Component = () => {
                 passHref
                 key={index}
               >
-                <StyledSpanContact>{item.PCText}</StyledSpanContact>
+                <StyledSpanContact
+                  className={Font.Font.CustomJosefinSans.className}
+                >
+                  {item.PCText}
+                </StyledSpanContact>
               </StyledLinkContact>
             ) : (
               <StyledLink
@@ -99,7 +109,9 @@ export const Component = () => {
                 passHref
                 key={index}
               >
-                <StyledSpan>{item.PCText}</StyledSpan>
+                <StyledSpan className={Font.Font.CustomJosefinSans.className}>
+                  {item.PCText}
+                </StyledSpan>
               </StyledLink>
             )
           )}
@@ -157,7 +169,10 @@ export const Component = () => {
                   href={item.link}
                   passHref
                 >
-                  <StyledSpan>{item.SPText}</StyledSpan>
+                  <StyledSpan>
+                    {item.SPText}
+                    <StyledSpanSmall>{item.SPTextSmall}</StyledSpanSmall>
+                  </StyledSpan>
                 </StyledLink>
               </RowWrapperWithUpderLine>
             ))}
@@ -411,7 +426,7 @@ const StyledLinkContact = styled(Link)`
   text-decoration: none;
   border: 1px solid #fff;
   background-color: #fff;
-  padding: 4px 18px;
+  padding: 6px 24px;
 `;
 
 // memo: メニューのテキスト
@@ -422,6 +437,7 @@ const StyledSpan = styled.span`
   letter-spacing: 1.6px;
   position: relative;
   overflow: hidden;
+  margin-left: 12px;
 
   &::before {
     content: "";
@@ -440,8 +456,16 @@ const StyledSpan = styled.span`
   }
 `;
 
+const StyledSpanSmall = styled.span`
+  font-size: 10px;
+  margin-left: 6px;
+  color: #868686;
+  text-decoration: none;
+`;
+
 const StyledSpanContact = styled.span`
   color: #000;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
+  letter-spacing: 1.6px;
 `;
