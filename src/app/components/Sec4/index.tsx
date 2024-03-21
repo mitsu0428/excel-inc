@@ -26,7 +26,7 @@ export const Component = () => {
 
       <StyledButton.Component
         linkTo="/contact"
-        text="CONTACT→"
+        text="CONTACT"
       />
     </Container>
   );

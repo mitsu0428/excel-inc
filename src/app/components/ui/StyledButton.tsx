@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 import * as Font from "../../styles/NextFont";
@@ -12,14 +13,27 @@ type Props = {
 
 export const Component = (props: Props) => {
   const linkToPage = props.linkTo;
+
+  const arrowPath = {
+    prev: "/left-arrow.svg",
+    next: "/right-arrow.svg",
+  };
+
   return (
     <Wrap>
       <StyledLink
-        className={Font.Font.CustomJosefinSansThin.className}
+        className={Font.Font.CustomJosefinSans.className}
         href={linkToPage}
         target="_blank"
       >
-        {props.text}
+        <Span>{props.text}</Span>
+
+        <Image
+          src={arrowPath.next}
+          alt="prev"
+          width={40}
+          height={40}
+        />
       </StyledLink>
     </Wrap>
   );
@@ -33,6 +47,10 @@ const Wrap = styled.div`
   margin-top: 64px;
 `;
 
+const Span = styled.span`
+  margin-top: 3px; // memo: 画像との間隔を調整
+`;
+
 const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
@@ -40,8 +58,8 @@ const StyledLink = styled(Link)`
   text-align: center;
 
   width: 331px;
-  height: 55px;
-  font-size: 30px;
+  height: 65px;
+  font-size: 26px;
   letter-spacing: 3px;
   border: 2px solid #fff;
   text-decoration: none;

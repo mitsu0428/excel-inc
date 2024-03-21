@@ -38,12 +38,12 @@ export const Component = () => {
 
   return (
     <StyledContainer>
-      <Grid
+      <StyledGridParent
         container
-        spacing={12}
+        spacing={8}
       >
         {newsJson.map((news, index) => (
-          <Grid
+          <StyledGridChild
             item
             xs={12}
             sm={6}
@@ -79,19 +79,31 @@ export const Component = () => {
                 </CardContent>
               </CustomCard>
             </StyledLink>
-          </Grid>
+          </StyledGridChild>
         ))}
-      </Grid>
+      </StyledGridParent>
     </StyledContainer>
   );
 };
 
 const StyledContainer = styled(Container)`
   margin-top: 64px;
+
+  @media (max-width: 480px) {
+    margin-top: 36px;
+  }
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+`;
+
+const StyledGridParent = styled(Grid)``;
+
+const StyledGridChild = styled(Grid)`
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
 `;
 
 const CustomCard = styled(Card)`

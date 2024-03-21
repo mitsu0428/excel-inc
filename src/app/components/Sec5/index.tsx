@@ -18,7 +18,7 @@ export const Component = () => {
 
       <StyledButton.Component
         linkTo="https://note.com/excelinc"
-        text="MORE VIEW→"
+        text="MORE VIEW"
       />
     </Container>
   );

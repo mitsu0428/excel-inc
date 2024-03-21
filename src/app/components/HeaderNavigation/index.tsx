@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styled, { keyframes } from "styled-components";
@@ -8,7 +8,7 @@ import styled, { keyframes } from "styled-components";
 import * as Font from "../../styles/NextFont";
 
 export const Component = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
   const toggleMenu = (isOpen: boolean) => {
     setIsOpen(!isOpen);
   };
@@ -221,7 +221,11 @@ const underlineAnimation = keyframes`
 
 const Wrapper = styled.div`
   position: relative;
-  z-index: 100;
+
+  @media (max-width: 768px) {
+    position: relative;
+    z-index: 100;
+  }
 `;
 
 // memo: PC_SCREENのメニュー
