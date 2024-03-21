@@ -219,7 +219,10 @@ const underlineAnimation = keyframes`
   }
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  position: relative;
+  z-index: 100;
+`;
 
 // memo: PC_SCREENのメニュー
 const PC_SCREEN = styled.div`

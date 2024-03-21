@@ -37,27 +37,27 @@ export const Component: React.FC = () => {
 
   const properties = {
     prevArrow: (
-      <button
+      <StyledButton
         className={Font.Font.CustomDarkerGrotesque.className}
         style={{ ...arrowStyle }}
       >
         ←PREV
-      </button>
+      </StyledButton>
     ),
     nextArrow: (
-      <button
+      <StyledButton
         className={Font.Font.CustomDarkerGrotesque.className}
         style={{ ...arrowStyle }}
       >
         NEXT→
-      </button>
+      </StyledButton>
     ),
   };
 
   return (
     <StyledWrapper>
       <Slide
-        slidesToShow={2}
+        slidesToShow={1}
         slidesToScroll={1}
         responsive={responsiveSettings}
         autoplay={true}
@@ -94,3 +94,5 @@ const StyledWrapper = styled.div`
     }
   }
 `;
+
+const StyledButton = styled.button``;
