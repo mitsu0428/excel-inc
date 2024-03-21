@@ -235,8 +235,7 @@ const SP_SCREEN = styled.div`
   position: fixed;
   z-index: 1;
   mix-blend-mode: normal;
-  height: 71px;
-  padding: 36px 20px;
+  padding: 18px 18px;
 
   @media (min-width: 768px) {
     display: none;
@@ -253,7 +252,7 @@ const SP_SCREEN_MENU = styled.div<{ $isOpen: boolean }>`
   height: 100%;
   background-color: #000;
   z-index: 100;
-  padding: 36px 20px;
+  padding: 18px 18px;
 `;
 
 // memo: 横並びにする
@@ -383,8 +382,8 @@ const CloseButton = styled.span<{ $isOpen: boolean }>`
   vertical-align: middle;
   color: #fff;
   line-height: 1;
-  width: 1em;
-  height: 0.1em;
+  width: 2em;
+  height: 0.05em;
   background: currentColor;
   border-radius: 0.1em;
   position: relative;
