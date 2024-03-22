@@ -15,8 +15,7 @@ export const Component = (props: Props) => {
   const linkToPage = props.linkTo;
 
   const arrowPath = {
-    prev: "/left-arrow.svg",
-    next: "/right-arrow.svg",
+    rightWhite: "/right-white.svg",
   };
 
   return (
@@ -28,9 +27,9 @@ export const Component = (props: Props) => {
       >
         <Span>{props.text}</Span>
 
-        <Image
-          src={arrowPath.next}
-          alt="prev"
+        <StyledImage
+          src={arrowPath.rightWhite}
+          alt="arrow"
           width={40}
           height={40}
         />
@@ -49,6 +48,10 @@ const Wrap = styled.div`
 
 const Span = styled.span`
   margin-top: 3px; // memo: 画像との間隔を調整
+`;
+
+const StyledImage = styled(Image)`
+  mix-blend-mode: difference;
 `;
 
 const StyledLink = styled(Link)`

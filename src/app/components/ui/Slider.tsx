@@ -20,8 +20,8 @@ export const Component: React.FC = () => {
   ];
 
   const arrowPath = {
-    prev: "/left-arrow.svg",
-    next: "/right-arrow.svg",
+    prev: "/left-white.svg",
+    next: "/right-white.svg",
   };
 
   const responsiveSettings = [
