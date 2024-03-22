@@ -100,7 +100,7 @@ const Container = styled.div`
 
   @media (max-width: 768px) {
     margin-top: 81px;
-    padding: 0 16px;
+    padding: 0 8px;
   }
 `;
 
@@ -119,7 +119,7 @@ const StyledMobileView = styled.div`
   @media (max-width: 768px) {
     border-radius: 52px 52px 0 0;
     background: #f9f9f9;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 0;
   }
 `;
