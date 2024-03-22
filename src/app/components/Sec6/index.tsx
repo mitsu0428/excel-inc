@@ -112,7 +112,7 @@ const StyledMobileView = styled.div`
 
   border-radius: 89px 89px 0 0;
   background: #f9f9f9;
-  padding: 0 50px;
+  padding: 0 50px 50px 50px;
   box-sizing: border-box;
   margin-top: auto;
 
