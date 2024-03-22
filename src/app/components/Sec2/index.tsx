@@ -175,7 +175,7 @@ const TextRight = styled.p`
   white-space: pre-wrap;
 
   @media (max-width: 768px) {
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0.28px;
   }
 `;
