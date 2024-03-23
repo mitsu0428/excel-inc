@@ -5,6 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import styled, { keyframes } from "styled-components";
 
+import * as SNSList from "../../domain/snsList";
+import * as HeaderMenu from "../../domain/headerMenu";
+import * as AssetsPath from "../../domain/assetsPath";
 import * as Font from "../../styles/NextFont";
 
 export const Component = () => {
@@ -12,67 +15,6 @@ export const Component = () => {
   const toggleMenu = (isOpen: boolean) => {
     setIsOpen(!isOpen);
   };
-
-  const menu = [
-    {
-      SPText: "TOP",
-      SPTextSmall: "トップ",
-      PCText: "TOP",
-      link: "/",
-    },
-    {
-      SPText: "MISSION",
-      SPTextSmall: "ミッション",
-      PCText: "MISSION",
-      link: "/",
-    },
-    {
-      SPText: "SERVICE",
-      SPTextSmall: "事業紹介",
-      PCText: "SERVICE",
-      link: "/",
-    },
-    {
-      SPText: "NEWS",
-      SPTextSmall: "ニュース",
-      PCText: "NEWS",
-      link: "https://note.com/excelinc/",
-    },
-    {
-      SPText: "COMPANY",
-      SPTextSmall: "会社概要",
-      PCText: "COMPANY",
-      link: "#company",
-    },
-    {
-      SPText: "CONTACT",
-      SPTextSmall: "お問い合わせ",
-      PCText: "CONTACT",
-      link: "/contact",
-    },
-  ];
-
-  const snsLink = [
-    {
-      text: "Instagram",
-      link: "/",
-      icon: "/sns-instagram.png",
-    },
-    {
-      text: "TikTok",
-      link: "https://www.tiktok.com/@inforzsb7b?_t=8kOyyHCZkNm&_r=",
-      icon: "/sns-tiktok.png",
-    },
-    {
-      text: "Line",
-      link: "https://line.me/R/ti/p/@595weqhc?oat_content=url",
-      icon: "/sns-line.png",
-    },
-  ];
-
-  const logoLink = "/assets/logo.svg";
-
-  const FOLLOW_US = "FOLLOW US";
 
   return (
     <Wrapper>
@@ -83,14 +25,14 @@ export const Component = () => {
             passHref
           >
             <Logo
-              src={logoLink}
+              src={AssetsPath.logoLink}
               alt="Excel inc."
             />
           </StyledLink>
         </RowWrapper>
 
         <RowWrapper>
-          {menu.map((item, index) =>
+          {HeaderMenu.headerMenu.map((item, index) =>
             item.PCText === "CONTACT" ? (
               <StyledLinkContact
                 href={item.link}
@@ -125,7 +67,7 @@ export const Component = () => {
             passHref
           >
             <Logo
-              src={logoLink}
+              src={AssetsPath.logoLink}
               alt="Excel inc."
             />
           </StyledLink>
@@ -148,7 +90,7 @@ export const Component = () => {
               onClick={() => toggleMenu(isOpen)}
             >
               <Logo
-                src={logoLink}
+                src={AssetsPath.logoLink}
                 alt="Excel inc."
               />
             </StyledLink>
@@ -160,7 +102,7 @@ export const Component = () => {
           </SP_SCREEN_HEADER>
 
           <SP_SCREEN_CONTENTS className={Font.Font.CustomJosefinSans.className}>
-            {menu.map((item, index) => (
+            {HeaderMenu.headerMenu.map((item, index) => (
               <RowWrapperWithUpderLine
                 key={index}
                 onClick={() => toggleMenu(isOpen)}
@@ -180,11 +122,11 @@ export const Component = () => {
 
           <SP_SCREEN_FOOTER>
             <StyledSpan className={Font.Font.CustomNotoSansMyanmar.className}>
-              {FOLLOW_US}
+              FOLLOW US
             </StyledSpan>
 
             <SNSWrapper>
-              {snsLink.map((item, index) => (
+              {SNSList.snsLink.map((item, index) => (
                 <StyledLink
                   href={item.link}
                   passHref
