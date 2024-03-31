@@ -9,11 +9,11 @@ export const Component = () => {
   return (
     <Container>
       <ImageWrap>
-        <StyledImagePC
+        <StyledImageSP
           src="/top-image-prod-sp.png"
           alt="トップ画像"
         />
-        <StyledImageSmartPhone
+        <StyledImageSmartPC
           src="/top-image-prod.png"
           alt="トップ画像"
         />
@@ -72,7 +72,7 @@ const ImageWrap = styled.div`
   height: 100vh;
 `;
 
-const StyledImagePC = styled.img`
+const StyledImageSP = styled.img`
   display: none;
   width: 100%;
   height: 100%;
@@ -84,7 +84,7 @@ const StyledImagePC = styled.img`
   }
 `;
 
-const StyledImageSmartPhone = styled.img`
+const StyledImageSmartPC = styled.img`
   display: block;
   width: 100%;
   height: 100%;
