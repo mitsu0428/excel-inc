@@ -215,7 +215,7 @@ const SpecialStyledTd = styled.td`
   @media (max-width: 768px) {
     font-size: 14px;
     padding: 8px 8px;
-    line-height: 14px;
+    line-height: 24px;
   }
 `;
 
@@ -251,6 +251,6 @@ const StyledIframe = styled.iframe`
   border: none;
   @media (max-width: 768px) {
     width: 100%;
-    height: 100%;
+    height: 300px;
   }
 `;
