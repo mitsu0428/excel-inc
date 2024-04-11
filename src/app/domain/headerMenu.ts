@@ -1,3 +1,27 @@
+export const headerMenuList = {
+  TOP: "TOP",
+  MISSION: "MISSION",
+  SERVICE: "SERVICE",
+  NEWS: "NEWS",
+  COMPANY: "COMPANY",
+  CONTACT: "CONTACT",
+};
+
+export const serviceList = {
+  SERVICE: {
+    one: "- Marketing Solution",
+    two: "- Movie Production",
+    three: "- Owned Media",
+    four: "- Web Design",
+  },
+};
+
+export const storeInformation = "STORE INFORMATION";
+export const storeInformationList = {
+  storeOne: "- Space Sleep 日本最高の頭の癒し専門店",
+  storeTwo: " - SHOT Village 会員制Golf Lounge",
+};
+
 export const headerMenu = [
   {
     SPText: "TOP",

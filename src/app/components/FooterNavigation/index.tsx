@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 
+import * as HeaderMenu from "../../domain/headerMenu";
+import * as RoutePath from "../../domain/routePath";
 import * as Font from "../../styles/NextFont";
 
 export const Component = () => {
@@ -13,10 +15,10 @@ export const Component = () => {
             className={Font.Font.CustomJosefinSans.className}
           >
             <StyledLink
-              href={"/"}
+              href={RoutePath.routePath.HOME}
               passHref
             >
-              TOP
+              {HeaderMenu.headerMenuList.TOP}
             </StyledLink>
           </NavTextWithUnderLine>
 
@@ -24,10 +26,10 @@ export const Component = () => {
             className={Font.Font.CustomJosefinSans.className}
           >
             <StyledLink
-              href={"/"}
+              href={RoutePath.routePath.UNDETERMINED}
               passHref
             >
-              MISSION
+              {HeaderMenu.headerMenuList.MISSION}
             </StyledLink>
           </NavTextWithUnderLine>
 
@@ -35,10 +37,10 @@ export const Component = () => {
             className={Font.Font.CustomJosefinSans.className}
           >
             <StyledLink
-              href={"/"}
+              href={RoutePath.routePath.UNDETERMINED}
               passHref
             >
-              NEWS
+              {HeaderMenu.headerMenuList.NEWS}
             </StyledLink>
           </NavTextWithUnderLine>
 
@@ -46,10 +48,10 @@ export const Component = () => {
             className={Font.Font.CustomJosefinSans.className}
           >
             <StyledLink
-              href={"#company"}
+              href={RoutePath.routePath.COMPANY}
               passHref
             >
-              COMPANY
+              {HeaderMenu.headerMenuList.COMPANY}
             </StyledLink>
           </NavTextWithUnderLine>
 
@@ -57,39 +59,39 @@ export const Component = () => {
             className={Font.Font.CustomJosefinSans.className}
           >
             <StyledLink
-              href={"/contact"}
+              href={RoutePath.routePath.CONTACT}
               passHref
             >
-              CONTACT
+              {HeaderMenu.headerMenuList.CONTACT}
             </StyledLink>
           </NavTextWithUnderLine>
         </Contents>
 
         <Contents>
           <NavText className={Font.Font.CustomJosefinSans.className}>
-            SERVICE
+            {HeaderMenu.headerMenuList.SERVICE}
           </NavText>
 
           <NavText className={Font.Font.CustomJosefinSans.className}>
-            - Marketing Solution
+            {HeaderMenu.serviceList.SERVICE.one}
           </NavText>
 
           <NavText className={Font.Font.CustomJosefinSans.className}>
-            - Movie Production
+            {HeaderMenu.serviceList.SERVICE.two}
           </NavText>
 
           <NavText className={Font.Font.CustomJosefinSans.className}>
-            - Owned Media
+            {HeaderMenu.serviceList.SERVICE.three}
           </NavText>
 
           <NavText className={Font.Font.CustomJosefinSans.className}>
-            - Web Design
+            {HeaderMenu.serviceList.SERVICE.four}
           </NavText>
         </Contents>
 
         <Contents>
           <NavText className={Font.Font.CustomJosefinSans.className}>
-            STORE INFORMATION
+            {HeaderMenu.storeInformation}
           </NavText>
 
           <NavTextWithUnderLine
@@ -100,7 +102,7 @@ export const Component = () => {
               target="_blank"
               passHref
             >
-              - Space Sleep 日本最高の頭の癒し専門店{" "}
+              {HeaderMenu.storeInformationList.storeOne}
             </StyledLink>
           </NavTextWithUnderLine>
 
@@ -112,7 +114,7 @@ export const Component = () => {
               target="_blank"
               passHref
             >
-              - SHOT Village 会員制Golf Lounge
+              {HeaderMenu.storeInformationList.storeTwo}
             </StyledLink>
           </NavTextWithUnderLine>
         </Contents>

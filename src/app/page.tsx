@@ -3,11 +3,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import * as Section2 from "./components/Sec2";
-import * as Section3 from "./components/Sec3";
-import * as Section4 from "./components/Sec4";
-import * as Section5 from "./components/Sec5";
-import * as Section6 from "./components/Sec6";
+import * as Section2 from "./components/Section2";
+import * as Section3 from "./components/Section3";
+import * as Section4 from "./components/Section4";
+import * as Section5 from "./components/Section5";
+import * as Section6 from "./components/Section6";
 import * as FooterNavigation from "./components/FooterNavigation";
 
 export default function Home() {
