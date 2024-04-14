@@ -24,37 +24,37 @@ export default function RootLayout({
         {/* HPのOGP */}
         <meta
           property="og:image"
-          content="<generated>"
+          content="/opengraph-image.png"
         />
         <meta
           property="og:image:type"
-          content="<generated>"
+          content="/opengraph-image.png"
         />
         <meta
           property="og:image:width"
-          content="<generated>"
+          content="/opengraph-image.png"
         />
         <meta
           property="og:image:height"
-          content="<generated>"
+          content="/opengraph-image.png"
         />
         {/* HPのOGP */}
         {/* TwitterOGP */}
         <meta
           name="twitter:image"
-          content="<generated>"
+          content="/twitter-image.png"
         />
         <meta
           name="twitter:image:type"
-          content="<generated>"
+          content="/twitter-image.png"
         />
         <meta
           name="twitter:image:width"
-          content="<generated>"
+          content="/twitter-image.png"
         />
         <meta
           name="twitter:image:height"
-          content="<generated>"
+          content="/twitter-image.png"
         />
         {/* TwitterOGP */}
         <link
