@@ -7,24 +7,6 @@ export const metadata: Metadata = {
   title: "株式会社Excel inc. | クリエイティブの力で、この社会に熱狂と感動を。",
   description:
     "SNSを活用したマーケティングソリューションを軸に、各企業様に合ったサービスを幅広く展観しております。",
-  openGraph: {
-    url: "https://www.excelinc-tokyo.com/",
-    type: "website",
-    title:
-      "株式会社Excel inc. | クリエイティブの力で、この社会に熱狂と感動を。",
-    description:
-      "SNSを活用したマーケティングソリューションを軸に、各企業様に合ったサービスを幅広く展観しております。",
-    images: [
-      {
-        url: "https://www.excelinc-tokyo.com/opengraph-image.png",
-        alt: "株式会社Excel inc. | クリエイティブの力で、この社会に熱狂と感動を。",
-      },
-    ],
-    locale: "ja_JP",
-  },
-  twitter: {
-    card: "summary_large_image",
-  },
 };
 
 export default function RootLayout({
@@ -41,7 +23,19 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://www.excelinc-tokyo.com/opengraph-image.png"
+          content="<generated>"
+        />
+        <meta
+          property="og:image:type"
+          content="<generated>"
+        />
+        <meta
+          property="og:image:width"
+          content="<generated>"
+        />
+        <meta
+          property="og:image:height"
+          content="<generated>"
         />
         <link
           rel="apple-touch-icon"
