@@ -14,10 +14,10 @@ export const metadata: Metadata = {
       "SNSを活用したマーケティングソリューションを軸に、各企業様に合ったサービスを幅広く展観しております。",
     type: "website",
     locale: "ja_JP",
-    url: "https://www.example.com/",
+    url: "https://www.excelinc-tokyo.com/",
     images: [
       {
-        url: "https://www.example.com/ogp.jpg",
+        url: "https://www.excelinc-tokyo.com/ogp.jpg",
         alt: "株式会社Excel inc. | クリエイティブの力で、この社会に熱狂と感動を。",
       },
     ],
