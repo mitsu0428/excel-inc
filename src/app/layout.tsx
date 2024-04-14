@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     url: "https://www.excelinc-tokyo.com/",
     images: [
       {
-        url: "https://www.excelinc-tokyo.com/ogp.jpg",
+        url: "https://www.excelinc-tokyo.com/opengraph-image.png",
         alt: "株式会社Excel inc. | クリエイティブの力で、この社会に熱狂と感動を。",
       },
     ],
