@@ -21,6 +21,7 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
+        {/* HPのOGP */}
         <meta
           property="og:image"
           content="<generated>"
@@ -37,6 +38,25 @@ export default function RootLayout({
           property="og:image:height"
           content="<generated>"
         />
+        {/* HPのOGP */}
+        {/* TwitterOGP */}
+        <meta
+          name="twitter:image"
+          content="<generated>"
+        />
+        <meta
+          name="twitter:image:type"
+          content="<generated>"
+        />
+        <meta
+          name="twitter:image:width"
+          content="<generated>"
+        />
+        <meta
+          name="twitter:image:height"
+          content="<generated>"
+        />
+        {/* TwitterOGP */}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
