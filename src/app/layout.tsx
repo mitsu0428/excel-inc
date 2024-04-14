@@ -4,8 +4,27 @@ import * as HearderNavigation from "./components/HeaderNavigation";
 import "./styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "EXCEL Inc.",
-  description: "（株）EXCEL Inc.オフィシャルサイト",
+  title: "株式会社Excel inc. | クリエイティブの力で、この社会に熱狂と感動を。",
+  description:
+    "SNSを活用したマーケティングソリューションを軸に、各企業様に合ったサービスを幅広く展観しております。",
+  openGraph: {
+    title:
+      "株式会社Excel inc. | クリエイティブの力で、この社会に熱狂と感動を。",
+    description:
+      "SNSを活用したマーケティングソリューションを軸に、各企業様に合ったサービスを幅広く展観しております。",
+    type: "website",
+    locale: "ja_JP",
+    url: "https://www.example.com/",
+    images: [
+      {
+        url: "https://www.example.com/ogp.jpg",
+        alt: "株式会社Excel inc. | クリエイティブの力で、この社会に熱狂と感動を。",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
