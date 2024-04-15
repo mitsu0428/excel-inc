@@ -5,23 +5,24 @@ import styled from "styled-components";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import * as Font from "../../styles/NextFont";
+import * as AssetsPath from "../../domain/assetsPath";
 
 export const Component: React.FC = () => {
   const images = [
-    { src: "/slide1.png", alt: "事業領域の画像" },
-    { src: "/slide2.png", alt: "事業領域の画像" },
-    { src: "/slide3.png", alt: "事業領域の画像" },
-    { src: "/slide4.png", alt: "事業領域の画像" },
+    { src: AssetsPath.slide.slide1, alt: "事業領域の画像" },
+    { src: AssetsPath.slide.slide2, alt: "事業領域の画像" },
+    { src: AssetsPath.slide.slide3, alt: "事業領域の画像" },
+    { src: AssetsPath.slide.slide4, alt: "事業領域の画像" },
     // memo: 2週目
-    { src: "/slide1.png", alt: "事業領域の画像" },
-    { src: "/slide2.png", alt: "事業領域の画像" },
-    { src: "/slide3.png", alt: "事業領域の画像" },
-    { src: "/slide4.png", alt: "事業領域の画像" },
+    { src: AssetsPath.slide.slide1, alt: "事業領域の画像" },
+    { src: AssetsPath.slide.slide2, alt: "事業領域の画像" },
+    { src: AssetsPath.slide.slide3, alt: "事業領域の画像" },
+    { src: AssetsPath.slide.slide4, alt: "事業領域の画像" },
   ];
 
   const arrowPath = {
-    prev: "/left-white.svg",
-    next: "/right-white.svg",
+    prev: AssetsPath.arrow.leftWhite,
+    next: AssetsPath.arrow.rightWhite,
   };
 
   const responsiveSettings = [

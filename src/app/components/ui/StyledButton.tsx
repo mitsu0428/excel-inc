@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
 import * as Font from "../../styles/NextFont";
+import * as AssetsPath from "../../domain/assetsPath";
 
 type Props = {
   text: string;
@@ -15,7 +16,7 @@ export const Component = (props: Props) => {
   const linkToPage = props.linkTo;
 
   const arrowPath = {
-    rightWhite: "/right-white.svg",
+    rightWhite: AssetsPath.arrow.rightWhite,
   };
 
   return (
