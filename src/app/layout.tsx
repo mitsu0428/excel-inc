@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     description:
       "SNSを活用したマーケティングソリューションを軸に、各企業様に合ったサービスを幅広く展観しております。",
     type: "website",
-    url: "https://www.excelinc-tokyo.com",
+    url: new URL("https://www.excelinc-tokyo.com"),
     images: [
       {
-        url: "https://www.excelinc-tokyo.com/opengraph-image.png",
+        url: new URL("https://www.excelinc-tokyo.com/opengraph-image.png"),
         width: 1200,
         height: 630,
         alt: "Excel inc. | クリエイティブの力で、この社会に熱狂と感動を。",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: [
       {
-        url: "https://www.excelinc-tokyo.com/twitter-image.png",
+        url: new URL("https://www.excelinc-tokyo.com/twitter-image.png"),
         width: 1200,
         height: 630,
         alt: "Excel inc. | クリエイティブの力で、この社会に熱狂と感動を。",
