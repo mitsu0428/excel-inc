@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
-import * as Font from "../../styles/NextFont";
+import * as Font from "@/app/styles/NextFont";
 
 type Props = {
   text: string;

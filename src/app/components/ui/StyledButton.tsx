@@ -4,8 +4,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
-import * as Font from "../../styles/NextFont";
-import * as AssetsPath from "../../domain/assetsPath";
+import * as Font from "@/app/styles/NextFont";
+import * as AssetsPath from "@/app/domain/assetsPath";
 
 type Props = {
   text: string;

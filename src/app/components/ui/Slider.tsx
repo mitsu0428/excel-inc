@@ -4,8 +4,8 @@ import Image from "next/image";
 import styled from "styled-components";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import * as Font from "../../styles/NextFont";
-import * as AssetsPath from "../../domain/assetsPath";
+import * as Font from "@/app/styles/NextFont";
+import * as AssetsPath from "@/app/domain/assetsPath";
 
 export const Component: React.FC = () => {
   const images = [

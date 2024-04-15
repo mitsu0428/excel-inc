@@ -2,11 +2,11 @@ import React from "react";
 import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 
-import * as HeaderMenu from "../../domain/headerMenu";
-import * as RoutePath from "../../domain/routePath";
-import * as SnsList from "../../domain/snsList";
+import * as HeaderMenu from "@/app/domain/headerMenu";
+import * as RoutePath from "@/app/domain/routePath";
+import * as SnsList from "@/app/domain/snsList";
 
-import * as Font from "../../styles/NextFont";
+import * as Font from "@/app/styles/NextFont";
 
 export const Component = () => {
   return (

@@ -2,11 +2,12 @@
 
 import React from "react";
 import styled from "styled-components";
-import * as NewsArea from "../ui/NewsArea";
-import * as Font from "../../styles/NextFont";
+import * as NewsArea from "@/app/components/ui/NewsArea";
 
-import * as AssetsPath from "../../domain/assetsPath";
-import * as SNSList from "../../domain/snsList";
+import * as AssetsPath from "@/app/domain/assetsPath";
+import * as SNSList from "@/app/domain/snsList";
+
+import * as Font from "@/app/styles/NextFont";
 
 export const Component = () => {
   return (

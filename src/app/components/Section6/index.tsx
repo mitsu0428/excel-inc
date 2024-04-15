@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import styled from "styled-components";
-import * as Font from "../../styles/NextFont";
+import * as Font from "@/app/styles/NextFont";
 
 export const Component = () => {
   return (

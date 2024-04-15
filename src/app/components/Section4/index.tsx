@@ -3,9 +3,10 @@
 import React from "react";
 import styled from "styled-components";
 
-import * as Slider from "../ui/Slider";
-import * as StyledButton from "../ui/StyledButton";
-import * as Font from "../../styles/NextFont";
+import * as Font from "@/app/styles/NextFont";
+
+import * as Slider from "@/app/components/ui/Slider";
+import * as StyledButton from "@/app/components/ui/StyledButton";
 
 export const Component = () => {
   return (

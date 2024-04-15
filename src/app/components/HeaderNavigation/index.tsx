@@ -5,12 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import styled, { keyframes } from "styled-components";
 
-import * as SNSList from "../../domain/snsList";
-import * as HeaderMenu from "../../domain/headerMenu";
-import * as RoutePath from "../../domain/routePath";
-import * as AssetsPath from "../../domain/assetsPath";
+import * as SNSList from "@/app/domain/snsList";
+import * as HeaderMenu from "@/app/domain/headerMenu";
+import * as RoutePath from "@/app/domain/routePath";
+import * as AssetsPath from "@/app/domain/assetsPath";
 
-import * as Font from "../../styles/NextFont";
+import * as Font from "@/app/styles/NextFont";
 
 export const Component = () => {
   const [isOpen, setIsOpen] = React.useState(false);

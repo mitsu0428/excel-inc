@@ -5,9 +5,9 @@ import styled from "styled-components";
 
 import * as StyledButton from "../ui/StyledButton";
 import * as NewsCard from "../ui/NewsCard";
-import * as Font from "../../styles/NextFont";
+import * as Font from "@/app/styles/NextFont";
 
-import * as SNSList from "../../domain/snsList";
+import * as SNSList from "@/app/domain/snsList";
 
 export const Component = () => {
   return (
