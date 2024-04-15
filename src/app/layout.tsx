@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "株式会社Excel inc. | クリエイティブの力で、この社会に熱狂と感動を。",
   description:
     "SNSを活用したマーケティングソリューションを軸に、各企業様に合ったサービスを幅広く展観しております。",
+  metadataBase: new URL("https://www.excelinc-tokyo.com"),
   openGraph: {
     title:
       "株式会社Excel inc. | クリエイティブの力で、この社会に熱狂と感動を。",
