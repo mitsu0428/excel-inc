@@ -7,7 +7,9 @@ import styled, { keyframes } from "styled-components";
 
 import * as SNSList from "../../domain/snsList";
 import * as HeaderMenu from "../../domain/headerMenu";
+import * as RoutePath from "../../domain/routePath";
 import * as AssetsPath from "../../domain/assetsPath";
+
 import * as Font from "../../styles/NextFont";
 
 export const Component = () => {
@@ -21,7 +23,7 @@ export const Component = () => {
       <PC_SCREEN>
         <RowWrapper>
           <StyledLink
-            href={"/"}
+            href={RoutePath.routePath.HOME}
             passHref
           >
             <Logo
@@ -63,7 +65,7 @@ export const Component = () => {
       <SP_SCREEN>
         <SP_SCREEN_HEADER>
           <StyledLink
-            href={"/"}
+            href={RoutePath.routePath.HOME}
             passHref
           >
             <Logo
@@ -85,7 +87,7 @@ export const Component = () => {
         <SP_SCREEN_MENU $isOpen={isOpen}>
           <SP_SCREEN_HEADER>
             <StyledLink
-              href={"/"}
+              href={RoutePath.routePath.HOME}
               passHref
               onClick={() => toggleMenu(isOpen)}
             >
@@ -126,21 +128,44 @@ export const Component = () => {
             </StyledSpan>
 
             <SNSWrapper>
-              {SNSList.snsLink.map((item, index) => (
-                <StyledLink
-                  href={item.link}
-                  passHref
-                  key={index}
-                  target="_blank"
-                >
-                  <Image
-                    src={item.icon}
-                    alt={item.text}
-                    width={30}
-                    height={30}
-                  />
-                </StyledLink>
-              ))}
+              <StyledLink
+                href={SNSList.snsLink.instagram.link}
+                passHref
+                target="_blank"
+              >
+                <Image
+                  src={SNSList.snsLink.instagram.icon}
+                  alt={SNSList.snsLink.instagram.text}
+                  width={30}
+                  height={30}
+                />
+              </StyledLink>
+
+              <StyledLink
+                href={SNSList.snsLink.line.link}
+                passHref
+                target="_blank"
+              >
+                <Image
+                  src={SNSList.snsLink.line.icon}
+                  alt={SNSList.snsLink.line.text}
+                  width={30}
+                  height={30}
+                />
+              </StyledLink>
+
+              <StyledLink
+                href={SNSList.snsLink.tiktok.link}
+                passHref
+                target="_blank"
+              >
+                <Image
+                  src={SNSList.snsLink.tiktok.icon}
+                  alt={SNSList.snsLink.tiktok.text}
+                  width={30}
+                  height={30}
+                />
+              </StyledLink>
             </SNSWrapper>
           </SP_SCREEN_FOOTER>
         </SP_SCREEN_MENU>

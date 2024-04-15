@@ -7,6 +7,8 @@ import * as StyledButton from "../ui/StyledButton";
 import * as NewsCard from "../ui/NewsCard";
 import * as Font from "../../styles/NextFont";
 
+import * as SNSList from "../../domain/snsList";
+
 export const Component = () => {
   return (
     <Container>
@@ -17,7 +19,7 @@ export const Component = () => {
       <NewsCard.Component />
 
       <StyledButton.Component
-        linkTo="https://note.com/excelinc"
+        linkTo={SNSList.snsLink.note.link}
         text="MORE VIEW"
       />
     </Container>

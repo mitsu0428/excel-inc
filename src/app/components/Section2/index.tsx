@@ -5,16 +5,19 @@ import styled from "styled-components";
 import * as NewsArea from "../ui/NewsArea";
 import * as Font from "../../styles/NextFont";
 
+import * as AssetsPath from "../../domain/assetsPath";
+import * as SNSList from "../../domain/snsList";
+
 export const Component = () => {
   return (
     <Container>
       <ImageWrap>
         <StyledImageSP
-          src="/top-image-prod-sp.png"
+          src={AssetsPath.topImage.topImageProdSP}
           alt="トップ画像"
         />
         <StyledImageSmartPC
-          src="/top-image-prod.png"
+          src={AssetsPath.topImage.topImageProdPC}
           alt="トップ画像"
         />
       </ImageWrap>
@@ -55,7 +58,7 @@ export const Component = () => {
 
       <NewsArea.Component
         text="NEWS. 2024/02/20 Web site OPEN"
-        linkTo="https://note.com/excelinc/"
+        linkTo={SNSList.snsLink.note.link}
       />
     </Container>
   );

@@ -4,6 +4,8 @@ import styled, { keyframes } from "styled-components";
 
 import * as HeaderMenu from "../../domain/headerMenu";
 import * as RoutePath from "../../domain/routePath";
+import * as SnsList from "../../domain/snsList";
+
 import * as Font from "../../styles/NextFont";
 
 export const Component = () => {
@@ -121,7 +123,7 @@ export const Component = () => {
 
         <Contents>
           <StyledLink
-            href={"/"}
+            href={RoutePath.routePath.HOME}
             passHref
           >
             <StyledImage
@@ -132,34 +134,34 @@ export const Component = () => {
 
           <Sns>
             <StyledLink
-              href={"/"}
+              href={SnsList.snsLink.instagram.link}
               passHref
             >
               <SnsIcon
-                src="/sns-instagram.png"
-                alt="Instagram"
+                src={SnsList.snsLink.instagram.icon}
+                alt={SnsList.snsLink.instagram.text}
               />
             </StyledLink>
 
             <StyledLink
-              href={"https://lin.ee/kaU291k"}
+              href={SnsList.snsLink.line.link}
               target="_blank"
               passHref
             >
               <SnsIcon
-                src="/sns-line.png"
-                alt="Line"
+                src={SnsList.snsLink.line.icon}
+                alt={SnsList.snsLink.line.text}
               />
             </StyledLink>
 
             <StyledLink
-              href={"https://www.tiktok.com/@inforzsb7b?_t=8kOyyHCZkNm&_r="}
+              href={SnsList.snsLink.tiktok.link}
               target="_blank"
               passHref
             >
               <SnsIcon
-                src="/sns-tiktok.png"
-                alt="TikTok"
+                src={SnsList.snsLink.tiktok.icon}
+                alt={SnsList.snsLink.tiktok.text}
               />
             </StyledLink>
           </Sns>
