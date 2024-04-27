@@ -131,6 +131,9 @@ export default function Tokusyoho() {
           <Text className={Font.Font.CustomGotchicA1.className}>
             当社は、細心の注意を払って、当社提供サービスに情報を掲載していますが、その妥当性や正確性などについて保証するものではありません。
           </Text>
+          <Text className={Font.Font.CustomGotchicA1.className}>
+            当社は、理由のいかんにかかわらず、当社提供サービスのご利用に関して生じたいかなる損害についても責任を負うものではありません。
+          </Text>
         </Comment>
 
         <Comment>
