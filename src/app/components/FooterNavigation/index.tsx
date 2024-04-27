@@ -170,18 +170,33 @@ export const Component = () => {
             className={Font.Font.CustomJosefinSans.className}
           >
             <StyledLinkWithCenter
-              href={"#company"}
+              href={RoutePath.routePath.PRIVACY_POLICY}
+              target="_blank"
               passHref
             >
               PRIVACY POLICY
             </StyledLinkWithCenter>
           </NavTextWithUnderLine>
+
+          <NavTextWithUnderLine
+            className={Font.Font.CustomJosefinSans.className}
+          >
+            <StyledLinkWithCenter
+              href={RoutePath.routePath.TOKUSHOHO}
+              target="_blank"
+              passHref
+            >
+              特定商取引法に基づく表示
+            </StyledLinkWithCenter>
+          </NavTextWithUnderLine>
         </Contents>
       </Wrapper>
 
-      <RightReservedText className={Font.Font.CustomJosefinSans.className}>
-        ©2024 EXCEL Inc. All Rights Reserved.
-      </RightReservedText>
+      <WrapperCommon>
+        <LegalText className={Font.Font.CustomJosefinSans.className}>
+          ©2024 EXCEL Inc. All Rights Reserved.
+        </LegalText>
+      </WrapperCommon>
     </Footer>
   );
 };
@@ -205,6 +220,14 @@ const Wrapper = styled.div`
   @media (max-width: 768px) {
     display: none;
   }
+`;
+
+const WrapperCommon = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 `;
 
 const Contents = styled.div`
@@ -274,8 +297,8 @@ const NavTextWithUnderLine = styled.p`
   }
 `;
 
-const RightReservedText = styled.p`
-  padding: 20px 0;
+const LegalText = styled.p`
+  padding: 10px 0;
   font-size: 14px;
   letter-spacing: 0.5px;
   text-align: center;

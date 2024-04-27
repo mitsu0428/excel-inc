@@ -168,6 +168,30 @@ export const Component = () => {
               </StyledLink>
             </SNSWrapper>
           </SP_SCREEN_FOOTER>
+
+          <NavTextWithUnderLine
+            className={Font.Font.CustomJosefinSans.className}
+          >
+            <StyledLinkWithCenter
+              href={RoutePath.routePath.PRIVACY_POLICY}
+              target="_blank"
+              passHref
+            >
+              PRIVACY POLICY
+            </StyledLinkWithCenter>
+          </NavTextWithUnderLine>
+
+          <NavTextWithUnderLine
+            className={Font.Font.CustomJosefinSans.className}
+          >
+            <StyledLinkWithCenter
+              href={RoutePath.routePath.TOKUSHOHO}
+              target="_blank"
+              passHref
+            >
+              特定商取引法に基づく表示
+            </StyledLinkWithCenter>
+          </NavTextWithUnderLine>
         </SP_SCREEN_MENU>
       </SP_SCREEN>
     </Wrapper>
@@ -442,4 +466,48 @@ const StyledSpanContact = styled.span`
   text-decoration: none;
   font-size: 15px;
   letter-spacing: 1.6px;
+`;
+
+const NavTextWithUnderLine = styled.p`
+  width: 100%;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 1.25px;
+
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: width 0.3s ease, left 0.3s ease;
+    z-index: 1;
+  }
+
+  &:hover::before {
+    animation: ${underlineAnimation} 0.3s ease forwards;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 50px;
+  }
+`;
+
+const StyledLinkWithCenter = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: #fff;
+  text-decoration: none;
+  margin-top: 10px;
 `;

@@ -6,4 +6,6 @@ export const routePath = {
   COMPANY: "#company",
   CONTACT: "/contact",
   UNDETERMINED: "/",
+  TOKUSHOHO: "/tokusyoho",
+  PRIVACY_POLICY: "/privacy-policy",
 };
