@@ -13,6 +13,10 @@ export default function Tokusyoho() {
           <TitleH2_Tokusyoho className={Font.Font.CustomGotchicA1.className}>
             プライバシーポリシー | Privacy Policy
           </TitleH2_Tokusyoho>
+          <Text className={Font.Font.CustomGotchicA1.className}>
+            株式会社EXCEL
+            Inc.（以下｢当社｣といいます。）は、当社運営のサービスにおいて、皆様から個人情報（個人に関する情報であって、当該情報に含まれる氏名、生年月日その他の記述等により、または他の情報と容易に照合することにより、特定の個人を識別することができるもの）をご提供いただく場合があります。当社は、ご提供いただいた個人情報を、以下に従ってお取り扱いいたします。また当社提供サービスの運営は、以下のポリシーに従って行います。
+          </Text>
         </Comment>
 
         <Comment>
@@ -126,15 +130,6 @@ export default function Tokusyoho() {
           </TitleH2_Tokusyoho>
           <Text className={Font.Font.CustomGotchicA1.className}>
             当社は、細心の注意を払って、当社提供サービスに情報を掲載していますが、その妥当性や正確性などについて保証するものではありません。
-          </Text>
-        </Comment>
-
-        <Comment>
-          <TitleH2_Tokusyoho className={Font.Font.CustomGotchicA1.className}>
-            損害について
-          </TitleH2_Tokusyoho>
-          <Text className={Font.Font.CustomGotchicA1.className}>
-            当社は、理由のいかんにかかわらず、当社提供サービスのご利用に関して生じたいかなる損害についても責任を負うものではありません。
           </Text>
         </Comment>
 
