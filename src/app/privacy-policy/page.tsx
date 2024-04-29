@@ -209,6 +209,7 @@ const Wrap = styled.main`
 
 const CommentWrap = styled.div`
   width: 100%;
+  max-width: 1181px;
   margin-top: 84px;
 `;
 

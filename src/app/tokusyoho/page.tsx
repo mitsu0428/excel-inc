@@ -150,6 +150,7 @@ const Wrap = styled.main`
 const CommentWrap = styled.div`
   margin-top: 84px;
   width: 100%;
+  max-width: 1181px;
 `;
 
 const Comment = styled.div`

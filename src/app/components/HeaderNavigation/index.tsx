@@ -331,6 +331,7 @@ const Logo = styled.img`
   width: 100%;
   height: 100%;
   max-width: 88px;
+  margin: 8px;
   z-index: 2;
 
   @media (max-width: 768px) {
@@ -345,6 +346,7 @@ const OpenWrapper = styled.div<{ $isOpen: boolean }>`
   position: relative;
   width: 30px;
   height: 20px;
+  margin: 8px;
   vertical-align: middle;
 
   & > span {
@@ -397,6 +399,7 @@ const CloseButton = styled.span<{ $isOpen: boolean }>`
   line-height: 1;
   width: 2em;
   height: 0.05em;
+  margin: 8px;
   background: currentColor;
   border-radius: 0.1em;
   position: relative;
