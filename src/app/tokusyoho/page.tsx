@@ -84,10 +84,7 @@ export default function Tokusyoho() {
             商品代金以外に必要な料金
           </TitleH2_Tokusyoho>
           <Text className={Font.Font.CustomGotchicA1.className}>
-            ・配送料（宅急便：〇〇円、メール便：□□円）
-          </Text>
-          <Text className={Font.Font.CustomGotchicA1.className}>
-            ・手数料（コンビニ決済：△△円、代引き:××円）
+            ・配送料: 1000円
           </Text>
         </Comment>
         <Comment>
@@ -103,10 +100,10 @@ export default function Tokusyoho() {
             支払時期
           </TitleH2_Tokusyoho>
           <Text className={Font.Font.CustomGotchicA1.className}>
-            ・クレジットカード決済：商品注文時にお支払いが確定します。
+            ・クレジットカード決済: 商品注文時にお支払いが確定します。
           </Text>
           <Text className={Font.Font.CustomGotchicA1.className}>
-            ・コンビニ決済：注文後○日以内にお支払いください。
+            ・コンビニ決済: 注文後3日以内にお支払いください。
           </Text>
         </Comment>
         <Comment>
