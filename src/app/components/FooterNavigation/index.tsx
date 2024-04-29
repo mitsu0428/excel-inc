@@ -9,196 +9,172 @@ import * as SnsList from "@/app/domain/snsList";
 import * as Font from "@/app/styles/NextFont";
 
 export const Component = () => {
-  return (
-    <Footer>
-      <Wrapper>
-        <Contents>
-          <NavTextWithUnderLine
-            className={Font.Font.CustomJosefinSans.className}
-          >
-            <StyledLink
-              href={RoutePath.routePath.HOME}
-              passHref
-            >
-              {HeaderMenu.headerMenuList.TOP}
-            </StyledLink>
-          </NavTextWithUnderLine>
+	return (
+		<Footer>
+			<Wrapper>
+				<Contents>
+					<NavTextWithUnderLine
+						className={Font.Font.CustomJosefinSans.className}
+					>
+						<StyledLink href={RoutePath.routePath.HOME} passHref>
+							{HeaderMenu.headerMenuList.TOP}
+						</StyledLink>
+					</NavTextWithUnderLine>
 
-          <NavTextWithUnderLine
-            className={Font.Font.CustomJosefinSans.className}
-          >
-            <StyledLink
-              href={RoutePath.routePath.UNDETERMINED}
-              passHref
-            >
-              {HeaderMenu.headerMenuList.MISSION}
-            </StyledLink>
-          </NavTextWithUnderLine>
+					<NavTextWithUnderLine
+						className={Font.Font.CustomJosefinSans.className}
+					>
+						<StyledLink href={RoutePath.routePath.UNDETERMINED} passHref>
+							{HeaderMenu.headerMenuList.MISSION}
+						</StyledLink>
+					</NavTextWithUnderLine>
 
-          <NavTextWithUnderLine
-            className={Font.Font.CustomJosefinSans.className}
-          >
-            <StyledLink
-              href={RoutePath.routePath.UNDETERMINED}
-              passHref
-            >
-              {HeaderMenu.headerMenuList.NEWS}
-            </StyledLink>
-          </NavTextWithUnderLine>
+					<NavTextWithUnderLine
+						className={Font.Font.CustomJosefinSans.className}
+					>
+						<StyledLink href={RoutePath.routePath.UNDETERMINED} passHref>
+							{HeaderMenu.headerMenuList.NEWS}
+						</StyledLink>
+					</NavTextWithUnderLine>
 
-          <NavTextWithUnderLine
-            className={Font.Font.CustomJosefinSans.className}
-          >
-            <StyledLink
-              href={RoutePath.routePath.COMPANY}
-              passHref
-            >
-              {HeaderMenu.headerMenuList.COMPANY}
-            </StyledLink>
-          </NavTextWithUnderLine>
+					<NavTextWithUnderLine
+						className={Font.Font.CustomJosefinSans.className}
+					>
+						<StyledLink href={RoutePath.routePath.COMPANY} passHref>
+							{HeaderMenu.headerMenuList.COMPANY}
+						</StyledLink>
+					</NavTextWithUnderLine>
 
-          <NavTextWithUnderLine
-            className={Font.Font.CustomJosefinSans.className}
-          >
-            <StyledLink
-              href={RoutePath.routePath.CONTACT}
-              passHref
-            >
-              {HeaderMenu.headerMenuList.CONTACT}
-            </StyledLink>
-          </NavTextWithUnderLine>
-        </Contents>
+					<NavTextWithUnderLine
+						className={Font.Font.CustomJosefinSans.className}
+					>
+						<StyledLink href={RoutePath.routePath.CONTACT} passHref>
+							{HeaderMenu.headerMenuList.CONTACT}
+						</StyledLink>
+					</NavTextWithUnderLine>
+				</Contents>
 
-        <Contents>
-          <NavText className={Font.Font.CustomJosefinSans.className}>
-            {HeaderMenu.headerMenuList.SERVICE}
-          </NavText>
+				<Contents>
+					<NavText className={Font.Font.CustomJosefinSans.className}>
+						{HeaderMenu.headerMenuList.SERVICE}
+					</NavText>
 
-          <NavText className={Font.Font.CustomJosefinSans.className}>
-            {HeaderMenu.serviceList.SERVICE.one}
-          </NavText>
+					<NavText className={Font.Font.CustomJosefinSans.className}>
+						{HeaderMenu.serviceList.SERVICE.one}
+					</NavText>
 
-          <NavText className={Font.Font.CustomJosefinSans.className}>
-            {HeaderMenu.serviceList.SERVICE.two}
-          </NavText>
+					<NavText className={Font.Font.CustomJosefinSans.className}>
+						{HeaderMenu.serviceList.SERVICE.two}
+					</NavText>
 
-          <NavText className={Font.Font.CustomJosefinSans.className}>
-            {HeaderMenu.serviceList.SERVICE.three}
-          </NavText>
+					<NavText className={Font.Font.CustomJosefinSans.className}>
+						{HeaderMenu.serviceList.SERVICE.three}
+					</NavText>
 
-          <NavText className={Font.Font.CustomJosefinSans.className}>
-            {HeaderMenu.serviceList.SERVICE.four}
-          </NavText>
-        </Contents>
+					<NavText className={Font.Font.CustomJosefinSans.className}>
+						{HeaderMenu.serviceList.SERVICE.four}
+					</NavText>
+				</Contents>
 
-        <Contents>
-          <NavText className={Font.Font.CustomJosefinSans.className}>
-            {HeaderMenu.storeInformation}
-          </NavText>
+				<Contents>
+					<NavText className={Font.Font.CustomJosefinSans.className}>
+						{HeaderMenu.storeInformation}
+					</NavText>
 
-          <NavTextWithUnderLine
-            className={Font.Font.CustomJosefinSans.className}
-          >
-            <StyledLink
-              href={"https://www.space-sleep.com/"}
-              target="_blank"
-              passHref
-            >
-              {HeaderMenu.storeInformationList.storeOne}
-            </StyledLink>
-          </NavTextWithUnderLine>
+					<NavTextWithUnderLine
+						className={Font.Font.CustomJosefinSans.className}
+					>
+						<StyledLink
+							href={"https://www.space-sleep.com/"}
+							target="_blank"
+							passHref
+						>
+							{HeaderMenu.storeInformationList.storeOne}
+						</StyledLink>
+					</NavTextWithUnderLine>
 
-          <NavTextWithUnderLine
-            className={Font.Font.CustomJosefinSans.className}
-          >
-            <StyledLink
-              href={"https://shot-village.com/"}
-              target="_blank"
-              passHref
-            >
-              {HeaderMenu.storeInformationList.storeTwo}
-            </StyledLink>
-          </NavTextWithUnderLine>
-        </Contents>
+					<NavTextWithUnderLine
+						className={Font.Font.CustomJosefinSans.className}
+					>
+						<StyledLink
+							href={"https://shot-village.com/"}
+							target="_blank"
+							passHref
+						>
+							{HeaderMenu.storeInformationList.storeTwo}
+						</StyledLink>
+					</NavTextWithUnderLine>
+				</Contents>
 
-        <Contents>
-          <StyledLink
-            href={RoutePath.routePath.HOME}
-            passHref
-          >
-            <StyledImage
-              src="/assets/logo-for-footer.svg"
-              alt="Excel inc."
-            />
-          </StyledLink>
+				<Contents>
+					<StyledLink href={RoutePath.routePath.HOME} passHref>
+						<StyledImage src="/assets/logo-for-footer.svg" alt="Excel inc." />
+					</StyledLink>
 
-          <Sns>
-            <StyledLink
-              href={SnsList.snsLink.instagram.link}
-              passHref
-            >
-              <SnsIcon
-                src={SnsList.snsLink.instagram.icon}
-                alt={SnsList.snsLink.instagram.text}
-              />
-            </StyledLink>
+					<Sns>
+						<StyledLink href={SnsList.snsLink.instagram.link} passHref>
+							<SnsIcon
+								src={SnsList.snsLink.instagram.icon}
+								alt={SnsList.snsLink.instagram.text}
+							/>
+						</StyledLink>
 
-            <StyledLink
-              href={SnsList.snsLink.line.link}
-              target="_blank"
-              passHref
-            >
-              <SnsIcon
-                src={SnsList.snsLink.line.icon}
-                alt={SnsList.snsLink.line.text}
-              />
-            </StyledLink>
+						<StyledLink
+							href={SnsList.snsLink.line.link}
+							target="_blank"
+							passHref
+						>
+							<SnsIcon
+								src={SnsList.snsLink.line.icon}
+								alt={SnsList.snsLink.line.text}
+							/>
+						</StyledLink>
 
-            <StyledLink
-              href={SnsList.snsLink.tiktok.link}
-              target="_blank"
-              passHref
-            >
-              <SnsIcon
-                src={SnsList.snsLink.tiktok.icon}
-                alt={SnsList.snsLink.tiktok.text}
-              />
-            </StyledLink>
-          </Sns>
+						<StyledLink
+							href={SnsList.snsLink.tiktok.link}
+							target="_blank"
+							passHref
+						>
+							<SnsIcon
+								src={SnsList.snsLink.tiktok.icon}
+								alt={SnsList.snsLink.tiktok.text}
+							/>
+						</StyledLink>
+					</Sns>
 
-          <NavTextWithUnderLine
-            className={Font.Font.CustomJosefinSans.className}
-          >
-            <StyledLinkWithCenter
-              href={RoutePath.routePath.PRIVACY_POLICY}
-              target="_blank"
-              passHref
-            >
-              PRIVACY POLICY
-            </StyledLinkWithCenter>
-          </NavTextWithUnderLine>
+					<NavTextWithUnderLine
+						className={Font.Font.CustomJosefinSans.className}
+					>
+						<StyledLinkWithCenter
+							href={RoutePath.routePath.PRIVACY_POLICY}
+							target="_blank"
+							passHref
+						>
+							PRIVACY POLICY
+						</StyledLinkWithCenter>
+					</NavTextWithUnderLine>
 
-          <NavTextWithUnderLine
-            className={Font.Font.CustomJosefinSans.className}
-          >
-            <StyledLinkWithCenter
-              href={RoutePath.routePath.TOKUSHOHO}
-              target="_blank"
-              passHref
-            >
-              特定商取引法に基づく表示
-            </StyledLinkWithCenter>
-          </NavTextWithUnderLine>
-        </Contents>
-      </Wrapper>
+					<NavTextWithUnderLine
+						className={Font.Font.CustomJosefinSans.className}
+					>
+						<StyledLinkWithCenter
+							href={RoutePath.routePath.TOKUSHOHO}
+							target="_blank"
+							passHref
+						>
+							特定商取引法に基づく表示
+						</StyledLinkWithCenter>
+					</NavTextWithUnderLine>
+				</Contents>
+			</Wrapper>
 
-      <WrapperCommon>
-        <LegalText className={Font.Font.CustomJosefinSans.className}>
-          ©2024 EXCEL Inc. All Rights Reserved.
-        </LegalText>
-      </WrapperCommon>
-    </Footer>
-  );
+			<WrapperCommon>
+				<LegalText className={Font.Font.CustomJosefinSans.className}>
+					©2024 EXCEL Inc. All Rights Reserved.
+				</LegalText>
+			</WrapperCommon>
+		</Footer>
+	);
 };
 
 const Footer = styled.footer`

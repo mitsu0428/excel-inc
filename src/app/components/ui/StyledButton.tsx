@@ -8,35 +8,35 @@ import * as Font from "@/app/styles/NextFont";
 import * as AssetsPath from "@/app/domain/assetsPath";
 
 type Props = {
-  text: string;
-  linkTo: string;
+	text: string;
+	linkTo: string;
 };
 
 export const Component = (props: Props) => {
-  const linkToPage = props.linkTo;
+	const linkToPage = props.linkTo;
 
-  const arrowPath = {
-    rightWhite: AssetsPath.arrow.rightWhite,
-  };
+	const arrowPath = {
+		rightWhite: AssetsPath.arrow.rightWhite,
+	};
 
-  return (
-    <Wrap>
-      <StyledLink
-        className={Font.Font.CustomJosefinSans.className}
-        href={linkToPage}
-        target="_blank"
-      >
-        <Span>{props.text}</Span>
+	return (
+		<Wrap>
+			<StyledLink
+				className={Font.Font.CustomJosefinSans.className}
+				href={linkToPage}
+				target="_blank"
+			>
+				<Span>{props.text}</Span>
 
-        <StyledImage
-          src={arrowPath.rightWhite}
-          alt="arrow"
-          width={40}
-          height={40}
-        />
-      </StyledLink>
-    </Wrap>
-  );
+				<StyledImage
+					src={arrowPath.rightWhite}
+					alt="arrow"
+					width={40}
+					height={40}
+				/>
+			</StyledLink>
+		</Wrap>
+	);
 };
 
 const Wrap = styled.div`

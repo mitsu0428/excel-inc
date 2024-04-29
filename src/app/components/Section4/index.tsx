@@ -9,28 +9,25 @@ import * as Slider from "@/app/components/ui/Slider";
 import * as StyledButton from "@/app/components/ui/StyledButton";
 
 export const Component = () => {
-  return (
-    <Container>
-      <SwitchWrapper>
-        <TitleH2_Service className={Font.Font.CustomJosefinSans.className}>
-          SERVICE
-        </TitleH2_Service>
-        <TitleH2_AND className={Font.Font.CustomJosefinSans.className}>
-          &
-        </TitleH2_AND>
-        <TitleH2_Service className={Font.Font.CustomJosefinSans.className}>
-          PRODUCT
-        </TitleH2_Service>
-      </SwitchWrapper>
+	return (
+		<Container>
+			<SwitchWrapper>
+				<TitleH2_Service className={Font.Font.CustomJosefinSans.className}>
+					SERVICE
+				</TitleH2_Service>
+				<TitleH2_AND className={Font.Font.CustomJosefinSans.className}>
+					&
+				</TitleH2_AND>
+				<TitleH2_Service className={Font.Font.CustomJosefinSans.className}>
+					PRODUCT
+				</TitleH2_Service>
+			</SwitchWrapper>
 
-      <Slider.Component />
+			<Slider.Component />
 
-      <StyledButton.Component
-        linkTo="/contact"
-        text="CONTACT"
-      />
-    </Container>
-  );
+			<StyledButton.Component linkTo="/contact" text="CONTACT" />
+		</Container>
+	);
 };
 
 const Container = styled.div`

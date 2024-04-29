@@ -6,23 +6,23 @@ import styled from "styled-components";
 import * as Font from "@/app/styles/NextFont";
 
 type Props = {
-  text: string;
-  linkTo: string;
+	text: string;
+	linkTo: string;
 };
 
 export const Component = (props: Props) => {
-  const linkToPage = props.linkTo;
-  return (
-    <Wrap>
-      <StyledLink
-        className={Font.Font.CustomNotoSansMyanmar.className}
-        href={linkToPage}
-        target="_blank"
-      >
-        {props.text}
-      </StyledLink>
-    </Wrap>
-  );
+	const linkToPage = props.linkTo;
+	return (
+		<Wrap>
+			<StyledLink
+				className={Font.Font.CustomNotoSansMyanmar.className}
+				href={linkToPage}
+				target="_blank"
+			>
+				{props.text}
+			</StyledLink>
+		</Wrap>
+	);
 };
 
 const Wrap = styled.div`

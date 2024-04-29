@@ -10,59 +10,59 @@ import * as SNSList from "@/app/domain/snsList";
 import * as Font from "@/app/styles/NextFont";
 
 export const Component = () => {
-  return (
-    <Container>
-      <ImageWrap>
-        <StyledImageSP
-          src={AssetsPath.topImage.topImageProdSP}
-          alt="トップ画像"
-        />
-        <StyledImageSmartPC
-          src={AssetsPath.topImage.topImageProdPC}
-          alt="トップ画像"
-        />
-      </ImageWrap>
+	return (
+		<Container>
+			<ImageWrap>
+				<StyledImageSP
+					src={AssetsPath.topImage.topImageProdSP}
+					alt="トップ画像"
+				/>
+				<StyledImageSmartPC
+					src={AssetsPath.topImage.topImageProdPC}
+					alt="トップ画像"
+				/>
+			</ImageWrap>
 
-      <TextAreaSecond>
-        <TitleH2_About className={Font.Font.CustomJosefinSans.className}>
-          ABOUT
-        </TitleH2_About>
-        <TitleH2_Company className={Font.Font.CustomJosefinSans.className}>
-          EXCEL inc.
-        </TitleH2_Company>
-        <TitleH2_Concept className={Font.Font.CustomJosefinSansThin.className}>
-          BEYOND EXPECTATIONS AND IMAGINATIONS.
-        </TitleH2_Concept>
-      </TextAreaSecond>
+			<TextAreaSecond>
+				<TitleH2_About className={Font.Font.CustomJosefinSans.className}>
+					ABOUT
+				</TitleH2_About>
+				<TitleH2_Company className={Font.Font.CustomJosefinSans.className}>
+					EXCEL inc.
+				</TitleH2_Company>
+				<TitleH2_Concept className={Font.Font.CustomJosefinSansThin.className}>
+					BEYOND EXPECTATIONS AND IMAGINATIONS.
+				</TitleH2_Concept>
+			</TextAreaSecond>
 
-      <TextAreaThird>
-        <TextRight className={Font.Font.CustomGotchicA1.className}>
-          革新的でワクワクする要素を探究しながら、常にクールに。
-        </TextRight>
-        <TextRight className={Font.Font.CustomGotchicA1.className}>
-          未来に翔ける先駆者として、私たちが道を切り開いていこう。
-        </TextRight>
-        <br />
-        <TextRight className={Font.Font.CustomGotchicA1.className}>
-          明日さえも予測不可能な現代社会で、
-        </TextRight>
-        <TextRight className={Font.Font.CustomGotchicA1.className}>
-          「誰よりも深く思考し」
-        </TextRight>
-        <TextRight className={Font.Font.CustomGotchicA1.className}>
-          「誰よりも熱く行動し続け」
-        </TextRight>
-        <TextRight className={Font.Font.CustomGotchicA1.className}>
-          世の中の期待と想像を超えるサービスを提供していきます。
-        </TextRight>
-      </TextAreaThird>
+			<TextAreaThird>
+				<TextRight className={Font.Font.CustomGotchicA1.className}>
+					革新的でワクワクする要素を探究しながら、常にクールに。
+				</TextRight>
+				<TextRight className={Font.Font.CustomGotchicA1.className}>
+					未来に翔ける先駆者として、私たちが道を切り開いていこう。
+				</TextRight>
+				<br />
+				<TextRight className={Font.Font.CustomGotchicA1.className}>
+					明日さえも予測不可能な現代社会で、
+				</TextRight>
+				<TextRight className={Font.Font.CustomGotchicA1.className}>
+					「誰よりも深く思考し」
+				</TextRight>
+				<TextRight className={Font.Font.CustomGotchicA1.className}>
+					「誰よりも熱く行動し続け」
+				</TextRight>
+				<TextRight className={Font.Font.CustomGotchicA1.className}>
+					世の中の期待と想像を超えるサービスを提供していきます。
+				</TextRight>
+			</TextAreaThird>
 
-      <NewsArea.Component
-        text="NEWS. 2024/02/20 Web site OPEN"
-        linkTo={SNSList.snsLink.note.link}
-      />
-    </Container>
-  );
+			<NewsArea.Component
+				text="NEWS. 2024/02/20 Web site OPEN"
+				linkTo={SNSList.snsLink.note.link}
+			/>
+		</Container>
+	);
 };
 
 const Container = styled.div`

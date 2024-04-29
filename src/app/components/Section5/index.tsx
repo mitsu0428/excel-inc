@@ -10,20 +10,20 @@ import * as Font from "@/app/styles/NextFont";
 import * as SNSList from "@/app/domain/snsList";
 
 export const Component = () => {
-  return (
-    <Container>
-      <TitleH2_News className={Font.Font.CustomJosefinSans.className}>
-        NEWS
-      </TitleH2_News>
+	return (
+		<Container>
+			<TitleH2_News className={Font.Font.CustomJosefinSans.className}>
+				NEWS
+			</TitleH2_News>
 
-      <NewsCard.Component />
+			<NewsCard.Component />
 
-      <StyledButton.Component
-        linkTo={SNSList.snsLink.note.link}
-        text="MORE VIEW"
-      />
-    </Container>
-  );
+			<StyledButton.Component
+				linkTo={SNSList.snsLink.note.link}
+				text="MORE VIEW"
+			/>
+		</Container>
+	);
 };
 
 const Container = styled.div`

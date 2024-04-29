@@ -5,86 +5,86 @@ import styled from "styled-components";
 import * as Font from "@/app/styles/NextFont";
 
 export const Component = () => {
-  return (
-    <Container id="company">
-      <StyledMobileView>
-        <MobileBorder />
+	return (
+		<Container id="company">
+			<StyledMobileView>
+				<MobileBorder />
 
-        <TitleH2_MobileView className={Font.Font.CustomJosefinSans.className}>
-          OUR COMPANY
-        </TitleH2_MobileView>
+				<TitleH2_MobileView className={Font.Font.CustomJosefinSans.className}>
+					OUR COMPANY
+				</TitleH2_MobileView>
 
-        <Contents>
-          <ContentsLeft>
-            <ContentsTable className={Font.Font.CustomGotchicA1.className}>
-              <tbody>
-                <tr>
-                  <StyledTdWithBorder>会社名</StyledTdWithBorder>
-                  <StyledTd>EXCEL Inc.（エクセルインク）</StyledTd>
-                </tr>
+				<Contents>
+					<ContentsLeft>
+						<ContentsTable className={Font.Font.CustomGotchicA1.className}>
+							<tbody>
+								<tr>
+									<StyledTdWithBorder>会社名</StyledTdWithBorder>
+									<StyledTd>EXCEL Inc.（エクセルインク）</StyledTd>
+								</tr>
 
-                <tr>
-                  <StyledTdWithBorder>設立</StyledTdWithBorder>
-                  <StyledTd>2023年1月</StyledTd>
-                </tr>
+								<tr>
+									<StyledTdWithBorder>設立</StyledTdWithBorder>
+									<StyledTd>2023年1月</StyledTd>
+								</tr>
 
-                <tr>
-                  <StyledTdWithBorder>資本金</StyledTdWithBorder>
-                  <StyledTd>500万円</StyledTd>
-                </tr>
+								<tr>
+									<StyledTdWithBorder>資本金</StyledTdWithBorder>
+									<StyledTd>500万円</StyledTd>
+								</tr>
 
-                <tr>
-                  <StyledTdWithBorder>所在地</StyledTdWithBorder>
-                  <StyledTd>
-                    〒107-0062
-                    <br />
-                    東京都港区南青山5-12-27 WISE 512ビル 305
-                  </StyledTd>
-                </tr>
+								<tr>
+									<StyledTdWithBorder>所在地</StyledTdWithBorder>
+									<StyledTd>
+										〒107-0062
+										<br />
+										東京都港区南青山5-12-27 WISE 512ビル 305
+									</StyledTd>
+								</tr>
 
-                <tr>
-                  <StyledTdWithBorder>電話番号</StyledTdWithBorder>
-                  <StyledTd>03-6824-4903</StyledTd>
-                </tr>
+								<tr>
+									<StyledTdWithBorder>電話番号</StyledTdWithBorder>
+									<StyledTd>03-6824-4903</StyledTd>
+								</tr>
 
-                <tr>
-                  <StyledTdWithBorder>代表者</StyledTdWithBorder>
-                  <StyledTd>代表取締役　樋口 絢太</StyledTd>
-                </tr>
+								<tr>
+									<StyledTdWithBorder>代表者</StyledTdWithBorder>
+									<StyledTd>代表取締役　樋口 絢太</StyledTd>
+								</tr>
 
-                <tr>
-                  <StyledTdWithBorder>従業員数</StyledTdWithBorder>
-                  <StyledTd>２０名（業務委託・アルバイト含む）</StyledTd>
-                </tr>
+								<tr>
+									<StyledTdWithBorder>従業員数</StyledTdWithBorder>
+									<StyledTd>２０名（業務委託・アルバイト含む）</StyledTd>
+								</tr>
 
-                <tr>
-                  <StyledTdWithBorder>事業内容</StyledTdWithBorder>
-                  <SpecialStyledTd>
-                    ・マーケティングソリューション事業
-                    <br />
-                    ・映像制作事業
-                    <br />
-                    ・メディア運営事業
-                    <br />
-                    ・サイト制作事業
-                  </SpecialStyledTd>
-                </tr>
-              </tbody>
-            </ContentsTable>
-          </ContentsLeft>
+								<tr>
+									<StyledTdWithBorder>事業内容</StyledTdWithBorder>
+									<SpecialStyledTd>
+										・マーケティングソリューション事業
+										<br />
+										・映像制作事業
+										<br />
+										・メディア運営事業
+										<br />
+										・サイト制作事業
+									</SpecialStyledTd>
+								</tr>
+							</tbody>
+						</ContentsTable>
+					</ContentsLeft>
 
-          <ContentsMap>
-            <StyledIframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6291416158138!2d139.71004377578265!3d35.66150773105737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b6093b6911b%3A0x8221cc0251336e2f!2z44CSMTA3LTAwNjIg5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGx77yV5LiB55uu77yR77yS4oiS77yS77yXIOODr-OCpOOCuu-8le-8ke-8kuODk-ODqw!5e0!3m2!1sja!2sjp!4v1709983095576!5m2!1sja!2sjp"
-              width="600"
-              height="450"
-              loading="lazy"
-            ></StyledIframe>
-          </ContentsMap>
-        </Contents>
-      </StyledMobileView>
-    </Container>
-  );
+					<ContentsMap>
+						<StyledIframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.6291416158138!2d139.71004377578265!3d35.66150773105737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b6093b6911b%3A0x8221cc0251336e2f!2z44CSMTA3LTAwNjIg5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGx77yV5LiB55uu77yR77yS4oiS77yS77yXIOODr-OCpOOCuu-8le-8ke-8kuODk-ODqw!5e0!3m2!1sja!2sjp!4v1709983095576!5m2!1sja!2sjp"
+							width="600"
+							height="450"
+							loading="lazy"
+						></StyledIframe>
+					</ContentsMap>
+				</Contents>
+			</StyledMobileView>
+		</Container>
+	);
 };
 
 const Container = styled.div`

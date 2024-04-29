@@ -6,107 +6,107 @@ import styled from "styled-components";
 import * as Font from "@/app/styles/NextFont";
 
 export default function Contact() {
-  const [formData, setFormData] = React.useState({
-    name: "",
-    company: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+	const [formData, setFormData] = React.useState({
+		name: "",
+		company: "",
+		email: "",
+		phone: "",
+		message: "",
+	});
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+	const handleChange = (
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+	) => {
+		const { name, value } = e.target;
+		setFormData((prevData) => ({
+			...prevData,
+			[name]: value,
+		}));
+	};
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
 
-    try {
-      const response = await fetch("/api/send-mail", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+		try {
+			const response = await fetch("/api/send-mail", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(formData),
+			});
 
-      if (response.ok) {
-        const responseBody = await response.json();
-        console.log("Success:", responseBody);
-        // 成功時の処理 (例: 送信成功メッセージの表示)
-      } else {
-        console.error("Failed to send message");
-        // 失敗時の処理 (例: エラーメッセージの表示)
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      // 例外発生時の処理
-    }
-  };
+			if (response.ok) {
+				const responseBody = await response.json();
+				console.log("Success:", responseBody);
+				// 成功時の処理 (例: 送信成功メッセージの表示)
+			} else {
+				console.error("Failed to send message");
+				// 失敗時の処理 (例: エラーメッセージの表示)
+			}
+		} catch (error) {
+			console.error("Error:", error);
+			// 例外発生時の処理
+		}
+	};
 
-  return (
-    <Wrap>
-      <TitleH2_Contact className={Font.Font.CustomJosefinSans.className}>
-        CONTACT
-      </TitleH2_Contact>
-      <Text>
-        マーケティング支援やサービスに関するご相談など、お問い合わせはこちらのフォームより受け付けております
-      </Text>
+	return (
+		<Wrap>
+			<TitleH2_Contact className={Font.Font.CustomJosefinSans.className}>
+				CONTACT
+			</TitleH2_Contact>
+			<Text>
+				マーケティング支援やサービスに関するご相談など、お問い合わせはこちらのフォームより受け付けております
+			</Text>
 
-      <Divider />
+			<Divider />
 
-      <Form onSubmit={handleSubmit}>
-        <SubWrap>
-          <TextLarge>Your Name*</TextLarge>
-          <Input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
+			<Form onSubmit={handleSubmit}>
+				<SubWrap>
+					<TextLarge>Your Name*</TextLarge>
+					<Input
+						type="text"
+						name="name"
+						value={formData.name}
+						onChange={handleChange}
+					/>
 
-          <TextLarge>Company</TextLarge>
-          <Input
-            type="text"
-            name="company"
-            value={formData.company}
-            onChange={handleChange}
-          />
+					<TextLarge>Company</TextLarge>
+					<Input
+						type="text"
+						name="company"
+						value={formData.company}
+						onChange={handleChange}
+					/>
 
-          <TextLarge>E-mail Address*</TextLarge>
-          <Input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
+					<TextLarge>E-mail Address*</TextLarge>
+					<Input
+						type="email"
+						name="email"
+						value={formData.email}
+						onChange={handleChange}
+					/>
 
-          <TextLarge>Phone Number</TextLarge>
-          <Input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-          />
+					<TextLarge>Phone Number</TextLarge>
+					<Input
+						type="tel"
+						name="phone"
+						value={formData.phone}
+						onChange={handleChange}
+					/>
 
-          <TextLarge>Message*</TextLarge>
-          <TextArea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-          />
-        </SubWrap>
+					<TextLarge>Message*</TextLarge>
+					<TextArea
+						name="message"
+						value={formData.message}
+						onChange={handleChange}
+					/>
+				</SubWrap>
 
-        <Button type="submit">Submit</Button>
-      </Form>
-    </Wrap>
-  );
+				<Button type="submit">Submit</Button>
+			</Form>
+		</Wrap>
+	);
 }
 
 const Wrap = styled.main`

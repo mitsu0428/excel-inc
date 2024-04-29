@@ -13,189 +13,157 @@ import * as AssetsPath from "@/app/domain/assetsPath";
 import * as Font from "@/app/styles/NextFont";
 
 export const Component = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
-  const toggleMenu = (isOpen: boolean) => {
-    setIsOpen(!isOpen);
-  };
+	const [isOpen, setIsOpen] = React.useState(false);
+	const toggleMenu = (isOpen: boolean) => {
+		setIsOpen(!isOpen);
+	};
 
-  return (
-    <Wrapper>
-      <PC_SCREEN>
-        <RowWrapper>
-          <StyledLink
-            href={RoutePath.routePath.HOME}
-            passHref
-          >
-            <Logo
-              src={AssetsPath.logoLink}
-              alt="Excel inc."
-            />
-          </StyledLink>
-        </RowWrapper>
+	return (
+		<Wrapper>
+			<PC_SCREEN>
+				<RowWrapper>
+					<StyledLink href={RoutePath.routePath.HOME} passHref>
+						<Logo src={AssetsPath.logoLink} alt="Excel inc." />
+					</StyledLink>
+				</RowWrapper>
 
-        <RowWrapper>
-          {HeaderMenu.headerMenu.map((item, index) =>
-            item.PCText === "CONTACT" ? (
-              <StyledLinkContact
-                href={item.link}
-                passHref
-                key={index}
-              >
-                <StyledSpanContact
-                  className={Font.Font.CustomJosefinSans.className}
-                >
-                  {item.PCText}
-                </StyledSpanContact>
-              </StyledLinkContact>
-            ) : (
-              <StyledLink
-                href={item.link}
-                passHref
-                key={index}
-              >
-                <StyledSpan className={Font.Font.CustomJosefinSans.className}>
-                  {item.PCText}
-                </StyledSpan>
-              </StyledLink>
-            )
-          )}
-        </RowWrapper>
-      </PC_SCREEN>
+				<RowWrapper>
+					{HeaderMenu.headerMenu.map((item, index) =>
+						item.PCText === "CONTACT" ? (
+							<StyledLinkContact href={item.link} passHref key={index}>
+								<StyledSpanContact
+									className={Font.Font.CustomJosefinSans.className}
+								>
+									{item.PCText}
+								</StyledSpanContact>
+							</StyledLinkContact>
+						) : (
+							<StyledLink href={item.link} passHref key={index}>
+								<StyledSpan className={Font.Font.CustomJosefinSans.className}>
+									{item.PCText}
+								</StyledSpan>
+							</StyledLink>
+						),
+					)}
+				</RowWrapper>
+			</PC_SCREEN>
 
-      <SP_SCREEN>
-        <SP_SCREEN_HEADER>
-          <StyledLink
-            href={RoutePath.routePath.HOME}
-            passHref
-          >
-            <Logo
-              src={AssetsPath.logoLink}
-              alt="Excel inc."
-            />
-          </StyledLink>
+			<SP_SCREEN>
+				<SP_SCREEN_HEADER>
+					<StyledLink href={RoutePath.routePath.HOME} passHref>
+						<Logo src={AssetsPath.logoLink} alt="Excel inc." />
+					</StyledLink>
 
-          <OpenWrapper
-            $isOpen={isOpen}
-            onClick={() => toggleMenu(isOpen)}
-          >
-            <OpenOneSpan $isOpen={isOpen} />
-            <OpenTwoSpan $isOpen={isOpen} />
-            <OpenThreeSpan $isOpen={isOpen} />
-          </OpenWrapper>
-        </SP_SCREEN_HEADER>
+					<OpenWrapper $isOpen={isOpen} onClick={() => toggleMenu(isOpen)}>
+						<OpenOneSpan $isOpen={isOpen} />
+						<OpenTwoSpan $isOpen={isOpen} />
+						<OpenThreeSpan $isOpen={isOpen} />
+					</OpenWrapper>
+				</SP_SCREEN_HEADER>
 
-        <SP_SCREEN_MENU $isOpen={isOpen}>
-          <SP_SCREEN_HEADER>
-            <StyledLink
-              href={RoutePath.routePath.HOME}
-              passHref
-              onClick={() => toggleMenu(isOpen)}
-            >
-              <Logo
-                src={AssetsPath.logoLink}
-                alt="Excel inc."
-              />
-            </StyledLink>
+				<SP_SCREEN_MENU $isOpen={isOpen}>
+					<SP_SCREEN_HEADER>
+						<StyledLink
+							href={RoutePath.routePath.HOME}
+							passHref
+							onClick={() => toggleMenu(isOpen)}
+						>
+							<Logo src={AssetsPath.logoLink} alt="Excel inc." />
+						</StyledLink>
 
-            <CloseButton
-              $isOpen={isOpen}
-              onClick={() => toggleMenu(isOpen)}
-            />
-          </SP_SCREEN_HEADER>
+						<CloseButton $isOpen={isOpen} onClick={() => toggleMenu(isOpen)} />
+					</SP_SCREEN_HEADER>
 
-          <SP_SCREEN_CONTENTS className={Font.Font.CustomJosefinSans.className}>
-            {HeaderMenu.headerMenu.map((item, index) => (
-              <RowWrapperWithUpderLine
-                key={index}
-                onClick={() => toggleMenu(isOpen)}
-              >
-                <StyledLink
-                  href={item.link}
-                  passHref
-                >
-                  <StyledSpan>
-                    {item.SPText}
-                    <StyledSpanSmall>{item.SPTextSmall}</StyledSpanSmall>
-                  </StyledSpan>
-                </StyledLink>
-              </RowWrapperWithUpderLine>
-            ))}
-          </SP_SCREEN_CONTENTS>
+					<SP_SCREEN_CONTENTS className={Font.Font.CustomJosefinSans.className}>
+						{HeaderMenu.headerMenu.map((item, index) => (
+							<RowWrapperWithUpderLine
+								key={index}
+								onClick={() => toggleMenu(isOpen)}
+							>
+								<StyledLink href={item.link} passHref>
+									<StyledSpan>
+										{item.SPText}
+										<StyledSpanSmall>{item.SPTextSmall}</StyledSpanSmall>
+									</StyledSpan>
+								</StyledLink>
+							</RowWrapperWithUpderLine>
+						))}
+					</SP_SCREEN_CONTENTS>
 
-          <SP_SCREEN_FOOTER>
-            <StyledSpan className={Font.Font.CustomNotoSansMyanmar.className}>
-              FOLLOW US
-            </StyledSpan>
+					<SP_SCREEN_FOOTER>
+						<StyledSpan className={Font.Font.CustomNotoSansMyanmar.className}>
+							FOLLOW US
+						</StyledSpan>
 
-            <SNSWrapper>
-              <StyledLink
-                href={SNSList.snsLink.instagram.link}
-                passHref
-                target="_blank"
-              >
-                <Image
-                  src={SNSList.snsLink.instagram.icon}
-                  alt={SNSList.snsLink.instagram.text}
-                  width={30}
-                  height={30}
-                />
-              </StyledLink>
+						<SNSWrapper>
+							<StyledLink
+								href={SNSList.snsLink.instagram.link}
+								passHref
+								target="_blank"
+							>
+								<Image
+									src={SNSList.snsLink.instagram.icon}
+									alt={SNSList.snsLink.instagram.text}
+									width={30}
+									height={30}
+								/>
+							</StyledLink>
 
-              <StyledLink
-                href={SNSList.snsLink.line.link}
-                passHref
-                target="_blank"
-              >
-                <Image
-                  src={SNSList.snsLink.line.icon}
-                  alt={SNSList.snsLink.line.text}
-                  width={30}
-                  height={30}
-                />
-              </StyledLink>
+							<StyledLink
+								href={SNSList.snsLink.line.link}
+								passHref
+								target="_blank"
+							>
+								<Image
+									src={SNSList.snsLink.line.icon}
+									alt={SNSList.snsLink.line.text}
+									width={30}
+									height={30}
+								/>
+							</StyledLink>
 
-              <StyledLink
-                href={SNSList.snsLink.tiktok.link}
-                passHref
-                target="_blank"
-              >
-                <Image
-                  src={SNSList.snsLink.tiktok.icon}
-                  alt={SNSList.snsLink.tiktok.text}
-                  width={30}
-                  height={30}
-                />
-              </StyledLink>
-            </SNSWrapper>
-          </SP_SCREEN_FOOTER>
+							<StyledLink
+								href={SNSList.snsLink.tiktok.link}
+								passHref
+								target="_blank"
+							>
+								<Image
+									src={SNSList.snsLink.tiktok.icon}
+									alt={SNSList.snsLink.tiktok.text}
+									width={30}
+									height={30}
+								/>
+							</StyledLink>
+						</SNSWrapper>
+					</SP_SCREEN_FOOTER>
 
-          <NavTextWithUnderLine
-            className={Font.Font.CustomJosefinSans.className}
-          >
-            <StyledLinkWithCenter
-              href={RoutePath.routePath.PRIVACY_POLICY}
-              target="_blank"
-              passHref
-            >
-              PRIVACY POLICY
-            </StyledLinkWithCenter>
-          </NavTextWithUnderLine>
+					<NavTextWithUnderLine
+						className={Font.Font.CustomJosefinSans.className}
+					>
+						<StyledLinkWithCenter
+							href={RoutePath.routePath.PRIVACY_POLICY}
+							target="_blank"
+							passHref
+						>
+							PRIVACY POLICY
+						</StyledLinkWithCenter>
+					</NavTextWithUnderLine>
 
-          <NavTextWithUnderLine
-            className={Font.Font.CustomJosefinSans.className}
-          >
-            <StyledLinkWithCenter
-              href={RoutePath.routePath.TOKUSHOHO}
-              target="_blank"
-              passHref
-            >
-              特定商取引法に基づく表示
-            </StyledLinkWithCenter>
-          </NavTextWithUnderLine>
-        </SP_SCREEN_MENU>
-      </SP_SCREEN>
-    </Wrapper>
-  );
+					<NavTextWithUnderLine
+						className={Font.Font.CustomJosefinSans.className}
+					>
+						<StyledLinkWithCenter
+							href={RoutePath.routePath.TOKUSHOHO}
+							target="_blank"
+							passHref
+						>
+							特定商取引法に基づく表示
+						</StyledLinkWithCenter>
+					</NavTextWithUnderLine>
+				</SP_SCREEN_MENU>
+			</SP_SCREEN>
+		</Wrapper>
+	);
 };
 
 // memo: 下線を引くアニメーション

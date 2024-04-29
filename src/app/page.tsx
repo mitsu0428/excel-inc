@@ -11,17 +11,17 @@ import * as Section6 from "./components/Section6";
 import * as FooterNavigation from "./components/FooterNavigation";
 
 export default function Home() {
-  return (
-    <Main>
-      {/* Section1でローディングなのかMovieなのか。 */}
-      <Section2.Component />
-      <Section3.Component />
-      <Section4.Component />
-      <Section5.Component />
-      <Section6.Component />
-      <FooterNavigation.Component />
-    </Main>
-  );
+	return (
+		<Main>
+			{/* Section1でローディングなのかMovieなのか。 */}
+			<Section2.Component />
+			<Section3.Component />
+			<Section4.Component />
+			<Section5.Component />
+			<Section6.Component />
+			<FooterNavigation.Component />
+		</Main>
+	);
 }
 
 const Main = styled.main`

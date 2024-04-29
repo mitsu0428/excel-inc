@@ -6,74 +6,74 @@ import styled from "styled-components";
 import * as Font from "@/app/styles/NextFont";
 
 export const Component = () => {
-  const [isVisible, setIsVisible] = React.useState(false);
-  const [isTextVisible, setIsTextVisible] = React.useState(false);
+	const [isVisible, setIsVisible] = React.useState(false);
+	const [isTextVisible, setIsTextVisible] = React.useState(false);
 
-  React.useEffect(() => {
-    const handleScroll = () => {
-      const top = window.scrollY;
-      const height = window.innerHeight;
-      const offset = 100;
-      if (top > height - offset) {
-        setIsVisible(true);
-      }
-    };
+	React.useEffect(() => {
+		const handleScroll = () => {
+			const top = window.scrollY;
+			const height = window.innerHeight;
+			const offset = 100;
+			if (top > height - offset) {
+				setIsVisible(true);
+			}
+		};
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	}, []);
 
-  React.useEffect(() => {
-    if (isVisible) {
-      const timer = setTimeout(() => {
-        setIsTextVisible(true);
-      }, 500); // Adjust the delay time as needed
-      return () => clearTimeout(timer);
-    }
-  }, [isVisible]);
+	React.useEffect(() => {
+		if (isVisible) {
+			const timer = setTimeout(() => {
+				setIsTextVisible(true);
+			}, 500); // Adjust the delay time as needed
+			return () => clearTimeout(timer);
+		}
+	}, [isVisible]);
 
-  return (
-    <Container $isVisible={isVisible}>
-      <TitleH2_BusinessDomain
-        className={Font.Font.CustomJosefinSans.className}
-        $isVisible={isVisible}
-      >
-        BUSINESS DOMAIN
-      </TitleH2_BusinessDomain>
+	return (
+		<Container $isVisible={isVisible}>
+			<TitleH2_BusinessDomain
+				className={Font.Font.CustomJosefinSans.className}
+				$isVisible={isVisible}
+			>
+				BUSINESS DOMAIN
+			</TitleH2_BusinessDomain>
 
-      <Wrap>
-        <TitleH3_Description
-          className={Font.Font.CustomGafata.className}
-          $isVisible={isTextVisible}
-        >
-          クリエイティブのチカラで、
-          <br />
-          この社会に熱狂と感動を。
-        </TitleH3_Description>
-      </Wrap>
+			<Wrap>
+				<TitleH3_Description
+					className={Font.Font.CustomGafata.className}
+					$isVisible={isTextVisible}
+				>
+					クリエイティブのチカラで、
+					<br />
+					この社会に熱狂と感動を。
+				</TitleH3_Description>
+			</Wrap>
 
-      <TextArea $isVisible={isTextVisible}>
-        <Description className={Font.Font.CustomGotchicA1.className}>
-          課題を整理し、正しく理解する。
-        </Description>
-        <Description className={Font.Font.CustomGotchicA1.className}>
-          解決方法を見つける。
-        </Description>
-        <Description className={Font.Font.CustomGotchicA1.className}>
-          具体的な形、仕組みとしてアウトプットを構築する。
-        </Description>
-        <Description className={Font.Font.CustomGotchicA1.className}>
-          時流の変化にあわせて変化を続ける。
-        </Description>
-        <br />
-        <Description className={Font.Font.CustomGotchicA1.className}>
-          ビジネスを推進するすべての流れを私たちがプロデュースします。
-        </Description>
-      </TextArea>
-    </Container>
-  );
+			<TextArea $isVisible={isTextVisible}>
+				<Description className={Font.Font.CustomGotchicA1.className}>
+					課題を整理し、正しく理解する。
+				</Description>
+				<Description className={Font.Font.CustomGotchicA1.className}>
+					解決方法を見つける。
+				</Description>
+				<Description className={Font.Font.CustomGotchicA1.className}>
+					具体的な形、仕組みとしてアウトプットを構築する。
+				</Description>
+				<Description className={Font.Font.CustomGotchicA1.className}>
+					時流の変化にあわせて変化を続ける。
+				</Description>
+				<br />
+				<Description className={Font.Font.CustomGotchicA1.className}>
+					ビジネスを推進するすべての流れを私たちがプロデュースします。
+				</Description>
+			</TextArea>
+		</Container>
+	);
 };
 
 const Container = styled.div<{ $isVisible: boolean }>`
