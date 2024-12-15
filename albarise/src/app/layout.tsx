@@ -2,23 +2,20 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "株式会社Excel inc. | クリエイティブの力で、この社会に熱狂と感動を。",
-  description:
-    "SNSを活用したマーケティングソリューションを軸に、各企業様に合ったサービスを幅広く展観しております。",
-  metadataBase: new URL("https://www.excelinc-tokyo.com"),
+  title: " ALBARISE Inc.",
+  description: "NAVIGATING THE WORLD.",
+  metadataBase: new URL("https://www.albarise.jp"),
   openGraph: {
-    title:
-      "株式会社Excel inc. | クリエイティブの力で、この社会に熱狂と感動を。",
-    description:
-      "SNSを活用したマーケティングソリューションを軸に、各企業様に合ったサービスを幅広く展観しております。",
+    title: " ALBARISE Inc.",
+    description: "世界をマーケティングにより先導する。",
     type: "website",
-    url: new URL("https://www.excelinc-tokyo.com"),
+    url: new URL("https://www.albarise.jp"),
     images: [
       {
-        url: new URL("https://www.excelinc-tokyo.com/opengraph-image.png"),
+        url: new URL("https://www.albarise.jp/opengraph-image.png"),
         width: 1200,
         height: 630,
-        alt: "Excel inc. | クリエイティブの力で、この社会に熱狂と感動を。",
+        alt: "ALBARISE Inc.",
       },
     ],
   },
@@ -26,10 +23,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: [
       {
-        url: new URL("https://www.excelinc-tokyo.com/twitter-image.png"),
+        url: new URL("https://www.albarise.jp/twitter-image.png"),
         width: 1200,
         height: 630,
-        alt: "Excel inc. | クリエイティブの力で、この社会に熱狂と感動を。",
+        alt: "ALBARISE Inc.",
       },
     ],
   },
