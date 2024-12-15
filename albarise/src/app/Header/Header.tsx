@@ -17,6 +17,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "left",
+    width: "100%",
     padding: "40px",
   }),
 };

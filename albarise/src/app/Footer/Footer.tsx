@@ -19,6 +19,7 @@ export const Component = () => {
 
 const styles = {
   container: css({
+    width: "100%",
     marginTop: "200px",
     padding: "33px",
   }),

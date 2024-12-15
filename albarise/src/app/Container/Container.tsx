@@ -72,6 +72,7 @@ const styles = {
   Wrapper: css({
     display: "flex",
     flexDirection: "column",
+    width: "100%",
     padding: "40px",
   }),
   IntroWrapper1: css({
