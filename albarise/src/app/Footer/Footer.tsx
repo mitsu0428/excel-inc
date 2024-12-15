@@ -33,5 +33,8 @@ const styles = {
   textStyle: css({
     fontSize: "13px",
     color: "#fff",
+    "@media screen and (max-width: 768px)": {
+      fontSize: "10px",
+    },
   }),
 };

@@ -143,17 +143,26 @@ const styles = {
     fontSize: "30px",
     fontWeight: "700",
     fontStyle: "normal",
+    "@media screen and (max-width: 768px)": {
+      fontSize: "24px",
+    },
   }),
   p: css({
     color: "#fff",
     fontSize: "18px",
     fontWeight: "700",
     fontStyle: "normal",
+    "@media screen and (max-width: 768px)": {
+      fontSize: "16px",
+    },
   }),
   pSmall: css({
     color: "#fff",
     fontSize: "16px",
     fontWeight: "700",
+    "@media screen and (max-width: 768px)": {
+      fontSize: "14px",
+    },
   }),
   pContact: css({
     color: "#fff",
@@ -166,10 +175,16 @@ const styles = {
     textDecorationThickness: "auto",
     textUnderlineOffset: "auto",
     textUnderlinePosition: "from-font",
+    "@media screen and (max-width: 768px)": {
+      fontSize: "16px",
+    },
   }),
   divider: css({
     width: "466px",
     height: "1px",
     backgroundColor: "#fff",
+    "@media screen and (max-width: 768px)": {
+      width: "300px",
+    },
   }),
 };
