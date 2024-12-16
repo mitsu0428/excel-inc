@@ -103,7 +103,7 @@ const Contact = () => {
       <div className={styles.contactWrapper1}>
         <p
           className={
-            styles.pContact + GoogleFont.GoogleFont.inriaWithAnotherClass
+            styles.pContactCommon + GoogleFont.GoogleFont.inriaWithAnotherClass
           }
         >
           Mail
@@ -114,7 +114,7 @@ const Contact = () => {
       <div className={styles.contactWrapper2}>
         <p
           className={
-            styles.pContact + GoogleFont.GoogleFont.inriaWithAnotherClass
+            styles.pContactCommon + GoogleFont.GoogleFont.inriaWithAnotherClass
           }
         >
           Tel
@@ -125,7 +125,7 @@ const Contact = () => {
       <div className={styles.contactWrapper2}>
         <p
           className={
-            styles.pContact + GoogleFont.GoogleFont.inriaWithAnotherClass
+            styles.pContactCommon + GoogleFont.GoogleFont.inriaWithAnotherClass
           }
         >
           Address
@@ -133,10 +133,19 @@ const Contact = () => {
         </p>
         <p
           className={
-            styles.pContact + GoogleFont.GoogleFont.inriaWithAnotherClass
+            styles.pContactPC + GoogleFont.GoogleFont.inriaWithAnotherClass
           }
         >
           Japan, Tokyo, Minami-Aoyama, 5-12-27, WISE512Building 3F
+        </p>
+        <p
+          className={
+            styles.pContactSP + GoogleFont.GoogleFont.inriaWithAnotherClass
+          }
+        >
+          Japan, Tokyo, Minami-Aoyama,
+          <br />
+          5-12-27, WISE512Building 3F
         </p>
       </div>
     </>
@@ -286,15 +295,38 @@ const styles = {
       fontSize: "13px",
     },
   }),
-  pContact: css({
+  pContactCommon: css({
     width: "100%",
     color: "#fff",
     fontSize: "18px",
     fontWeight: "700",
     fontStyle: "normal",
     "@media screen and (max-width: 768px)": {
-      fontSize: "13px",
       textAlign: "center",
+      fontSize: "13px",
+    },
+  }),
+  pContactPC: css({
+    display: "block",
+    width: "100%",
+    color: "#fff",
+    fontSize: "18px",
+    fontWeight: "700",
+    fontStyle: "normal",
+    "@media screen and (max-width: 768px)": {
+      display: "none",
+    },
+  }),
+  pContactSP: css({
+    display: "none",
+    width: "100%",
+    color: "#fff",
+    fontWeight: "700",
+    fontStyle: "normal",
+    fontSize: "13px",
+    textAlign: "center",
+    "@media screen and (max-width: 768px)": {
+      display: "block",
     },
   }),
   divider: css({
