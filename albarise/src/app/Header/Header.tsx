@@ -1,12 +1,16 @@
 import { css } from "../../../styled-system/css";
-import { Logo } from "../constants/imageComponent";
+import { LogoPc, LogoSp } from "../constants/imageComponent";
 
 export const Component = () => {
   return (
     <div className={styles.Wrapper}>
-      <Logo
+      <LogoPc
         width="181px"
         height="44px"
+      />
+      <LogoSp
+        width="126px"
+        height="93px"
       />
     </div>
   );
@@ -18,6 +22,10 @@ const styles = {
     flexDirection: "column",
     justifyContent: "left",
     width: "100%",
-    padding: "40px",
+    padding: "32px",
+    "@media screen and (max-width: 768px)": {
+      alignItems: "center",
+      justifyContent: "center",
+    },
   }),
 };
