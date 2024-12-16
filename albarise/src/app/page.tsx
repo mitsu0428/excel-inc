@@ -8,12 +8,12 @@ import * as SP from "./SPContainer";
 import * as Footer from "./Footer/Footer";
 
 export default function Home() {
-  const [isPc, setIsPc] = React.useState(true);
+  const [isSp, setIsSp] = React.useState(true);
 
   React.useEffect(() => {
-    const mediaQueryList = window.matchMedia("(min-width: 768px)");
+    const mediaQueryList = window.matchMedia("(max-width: 767px)");
     const handleMediaQueryChange = (e: MediaQueryListEvent) => {
-      setIsPc(e.matches);
+      setIsSp(e.matches);
     };
     mediaQueryList.addEventListener("change", handleMediaQueryChange);
     return () => {
@@ -23,9 +23,9 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      {isPc && <Header.Component />}
-      {isPc && <PC.Component />}
-      {!isPc && <SP.Component />}
+      {!isSp && <Header.Component />}
+      {!isSp && <PC.Component />}
+      {isSp && <SP.Component />}
       <Footer.Component />
     </div>
   );
