@@ -5,8 +5,6 @@ import * as CustomTitle from "../components/CustomTitle";
 import { LogoSp } from "../constants/imageComponent";
 
 export const Component = () => {
-  // const data = useContainer();
-
   return (
     <div className={styles.Wrapper}>
       {/* ロゴエリア */}

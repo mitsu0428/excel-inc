@@ -8,17 +8,14 @@ import * as SP from "./SPContainer";
 import * as Footer from "./Footer/Footer";
 
 export default function Home() {
-  const [isSp, setIsSp] = React.useState(true);
+  const [isSp, setIsSp] = React.useState<boolean>(
+    window.matchMedia("(max-width: 767px)").matches
+  );
 
   React.useEffect(() => {
-    const mediaQueryList = window.matchMedia("(max-width: 767px)");
-    const handleMediaQueryChange = (e: MediaQueryListEvent) => {
-      setIsSp(e.matches);
-    };
-    mediaQueryList.addEventListener("change", handleMediaQueryChange);
-    return () => {
-      mediaQueryList.removeEventListener("change", handleMediaQueryChange);
-    };
+    const sp = window.matchMedia("(max-width: 767px)");
+    setIsSp(sp.matches);
+    sp.addEventListener("change", (e) => setIsSp(e.matches));
   }, []);
 
   return (
