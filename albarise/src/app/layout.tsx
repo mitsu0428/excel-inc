@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: " ALBARISE Inc.",
+  title: " 株式会社アルバライズ / ALBARISE Inc.",
   description: "NAVIGATING THE WORLD.",
   metadataBase: new URL("https://www.albarise.jp"),
   openGraph: {
-    title: " ALBARISE Inc.",
-    description: "世界をマーケティングにより先導する。",
+    title: " 株式会社アルバライズ / ALBARISE Inc.",
+    description:
+      "TikTok LIVE・プロモーション・制作についてのお問い合わせ、ご相談は弊社まで。",
     type: "website",
     url: new URL("https://www.albarise.jp"),
     images: [
