@@ -160,7 +160,7 @@ const styles = {
     padding: "0 87px 0 87px",
     "@media screen and (max-width: 768px)": {
       flexDirection: "column",
-      padding: "0 32px",
+      padding: "0",
     },
   }),
   SpOnlyIntro: css({
