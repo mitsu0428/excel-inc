@@ -18,12 +18,15 @@ export const Component = () => {
       </div>
 
       <div className={styles.LeftContents}>
-        <div className={styles.TitleWrapper}>
-          <CustomTitle.Component text="We are ALBARISE Inc." />
+        <div>
+          <div className={styles.TitleWrapper}>
+            <CustomTitle.Component text="We are ALBARISE Inc." />
+          </div>
+          <div className={styles.SpOnlyMember}>
+            <MemberWrapper />
+            <BusinessDomain />
+          </div>
         </div>
-
-        <MemberWrapper />
-        <BusinessDomain />
         <Contact />
       </div>
 
@@ -165,6 +168,8 @@ const styles = {
     width: "50%",
     "@media screen and (max-width: 768px)": {
       width: "100%",
+      justifyContent: "center",
+      alignItems: "center",
     },
   }),
   TitleWrapper: css({
@@ -176,8 +181,10 @@ const styles = {
     marginTop: "25px",
     "@media screen and (max-width: 768px)": {
       marginTop: "70px",
-      marginLeft: "70px",
     },
+  }),
+  SpOnlyMember: css({
+    maxWidth: "250px",
   }),
   MemberWrapper: css({
     width: "100%",
@@ -189,7 +196,6 @@ const styles = {
     marginTop: "19px",
     "@media screen and (max-width: 768px)": {
       marginTop: "28px",
-      marginLeft: "70px",
       gap: "10px",
     },
   }),
@@ -202,7 +208,6 @@ const styles = {
     marginTop: "35px",
     "@media screen and (max-width: 768px)": {
       marginTop: "28px",
-      marginLeft: "70px",
     },
   }),
   BusinessDomainContents: css({
@@ -214,7 +219,6 @@ const styles = {
     gap: "5px",
     marginTop: "21px",
     "@media screen and (max-width: 768px)": {
-      marginLeft: "70px",
       gap: "0px",
     },
   }),
