@@ -20,7 +20,6 @@ export const Component = () => {
 const styles = {
   container: css({
     width: "100%",
-    marginTop: "200px",
     padding: "33px",
   }),
   textWrapper: css({
@@ -33,8 +32,5 @@ const styles = {
   textStyle: css({
     fontSize: "13px",
     color: "#fff",
-    "@media screen and (max-width: 768px)": {
-      fontSize: "10px",
-    },
   }),
 };

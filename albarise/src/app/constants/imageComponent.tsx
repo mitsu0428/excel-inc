@@ -4,6 +4,7 @@ import { css } from "../../../styled-system/css";
 import Image from "next/image";
 import LogoImage from "../../../public/logo.png";
 import LogoSimpleImage from "../../../public/logo-simple.png";
+import LogoSpImage from "../../../public/assets/sp/logo-sp.png";
 
 type Props = {
   width?: string;
@@ -22,6 +23,15 @@ export const Logo = ({ width, height }: Props) => (
 export const LogoSimple = ({ width, height }: Props) => (
   <Image
     src={LogoSimpleImage}
+    alt="logo"
+    className={styles.common}
+    style={{ width, height }}
+  />
+);
+
+export const LogoSp = ({ width, height }: Props) => (
+  <Image
+    src={LogoSpImage}
     alt="logo"
     className={styles.common}
     style={{ width, height }}
