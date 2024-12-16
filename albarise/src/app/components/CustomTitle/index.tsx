@@ -3,7 +3,7 @@ import * as GoogleFont from "../../../styles/font";
 
 type Props = {
   text: string;
-  fontSize: string;
+  overRideFontSize?: string;
   textAlign?: "left" | "center" | "right";
 };
 export const Component = (props: Props) => {
@@ -11,7 +11,7 @@ export const Component = (props: Props) => {
     <div className={styles.Wrapper}>
       <h2
         className={styles.h2 + GoogleFont.GoogleFont.inriaWithAnotherClass}
-        style={{ textAlign: props.textAlign, fontSize: props.fontSize }}
+        style={{ textAlign: props.textAlign, fontSize: props.overRideFontSize }}
       >
         {props.text}
       </h2>
@@ -32,5 +32,9 @@ const styles = {
     fontStyle: "normal",
     fontWeight: "700",
     lineHeight: "normal",
+    fontSize: "30px",
+    "@media screen and (max-width: 768px)": {
+      fontSize: "25px",
+    },
   }),
 };

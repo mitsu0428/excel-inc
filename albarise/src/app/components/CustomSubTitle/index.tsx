@@ -4,13 +4,14 @@ import * as GoogleFont from "../../../styles/font";
 type Props = {
   text: string;
   fontSize: string;
+  textAlign?: "left" | "center" | "right";
 };
 export const Component = (props: Props) => {
   return (
     <div className={styles.Wrapper}>
       <h1
         className={styles.h2 + GoogleFont.GoogleFont.inriaWithAnotherClass}
-        style={{ fontSize: props.fontSize }}
+        style={{ fontSize: props.fontSize, textAlign: props.textAlign }}
       >
         {props.text}
       </h1>

@@ -11,29 +11,29 @@ type Props = {
   height?: string;
 };
 
-export const Logo = ({ width, height }: Props) => (
-  <Image
-    src={LogoImage}
-    alt="logo"
-    className={styles.common}
-    style={{ width, height }}
-  />
-);
-
-export const LogoSimple = ({ width, height }: Props) => (
-  <Image
-    src={LogoSimpleImage}
-    alt="logo"
-    className={styles.common}
-    style={{ width, height }}
-  />
-);
-
 export const LogoSp = ({ width, height }: Props) => (
   <Image
     src={LogoSpImage}
     alt="logo"
-    className={styles.common}
+    className={styles.common + " " + styles.sp}
+    style={{ width, height }}
+  />
+);
+
+export const LogoPc = ({ width, height }: Props) => (
+  <Image
+    src={LogoImage}
+    alt="logo"
+    className={styles.common + " " + styles.pc}
+    style={{ width, height }}
+  />
+);
+
+export const LogoPcSimple = ({ width, height }: Props) => (
+  <Image
+    src={LogoSimpleImage}
+    alt="logo"
+    className={styles.common + " " + styles.pc}
     style={{ width, height }}
   />
 );
@@ -41,4 +41,16 @@ export const LogoSp = ({ width, height }: Props) => (
 const styles = {
   common: css({ width: "100%", height: "auto" }),
   threeStrings: css({ width: "auto" }),
+  sp: css({
+    display: "none",
+    "@media screen and (max-width: 768px)": {
+      display: "block",
+    },
+  }),
+  pc: css({
+    display: "block",
+    "@media screen and (max-width: 768px)": {
+      display: "none",
+    },
+  }),
 };
