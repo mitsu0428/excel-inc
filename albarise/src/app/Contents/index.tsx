@@ -193,7 +193,9 @@ const styles = {
     },
   }),
   SpOnlyMember: css({
-    maxWidth: "250px",
+    "@media screen and (max-width: 768px)": {
+      maxWidth: "250px",
+    },
   }),
   MemberWrapper: css({
     width: "100%",
